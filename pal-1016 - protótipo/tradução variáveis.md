@@ -3,8 +3,11 @@
 ##### Tipos de dados:
 |Origem|Tradução 1|Tradução 2|Tradução 3|Tradução 4|Tradução 5|
 |------|----------|----------|----------|----------|----------|
+|alignment|alinhamento|||||
+|amount|quantidade|||||
 |angle|ângulo|||||
 |bit|bit|||||
+|bottom coord|coordenada inferior|||||
 |box|caixa|||||
 |buffer|depósito|||||
 |byte|byte|||||
@@ -17,14 +20,17 @@
 |date/time|data/hora|||||
 |degree|grau|||||
 |description|descrição|||||
+|designator|designador|||||
 |directory|pasta|||||
 |directory name|nome de pasta|||||
+|distance|distância|||||
 |dot|ponto|||||
 |drive|disco|||||
 |drive kind|tipo de disco|||||
 |drive name|nome de disco|||||
-|event|evento|||||
 |ellipse|elipse|||||
+|event|evento|||||
+|extension|extensão|||||
 |file|arquivo|||||
 |file name|nome de arquivo|||||
 |flag|signa|sinalizador||||
@@ -42,11 +48,13 @@
 |item|recurso|||||
 |key|tecla|||||
 |landscape sheet|folha horizontal|||||
+|left coord|coordenada esquerda|||||
 |lightness|brilho|luminosidade||||
 |line|reta|traço||||
 |millisecond|milissegundo|||||
 |name|nome|||||
 |number|número|nº||||
+|operation|operação|||||
 |pair|par|||||
 |path|rota|caminho||||
 |pen|pincel|||||
@@ -63,6 +71,7 @@
 |refer|referência|||||
 |remainder|resto|||||
 |rider|iterador|percorredor||||
+|right coord|coordenada direita|||||
 |row|linha|||||
 |roundy box|caixa arredondada|||||
 |saturation|saturação|||||
@@ -79,11 +88,14 @@
 |thing|elemento|coisa||||
 |tick|tique|||||
 |timer|temporizador|||||
+|top coord|coordenada superior|||||
 |vertex|vértice|||||
 |wave|som||||||
 |wave file|arquivo de som|||||
 |width|largura|||||
 |window|janela|||||
+|x-coord|coordenada-x|coord-x||||
+|y-coord|coordenada-y|coord-y||||
 
 ##### Variáveis globais
 |Origem|Tradução 1|Tradução 2|Tradução 3|Tradução 4|Tradução 5|

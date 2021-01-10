@@ -1364,7 +1364,11 @@ The cluck sound is a_ wave equal to $524946463A02000057415645666D742012000000010
 
 The colon byte is a_ byte equal to 58.
 
-a_ color has a_ hue, a_ saturation, a_ lightness, a_ brightness at the lightness,
+a_ color has
+a_ hue,
+a_ saturation,
+a_ lightness,
+a_ brightness at the lightness,
 \PAL
 uma matiz at the hue,
 uma saturação at the saturation,
@@ -2373,7 +2377,7 @@ Copy bytes from the buffer's first to the pointer for_ the buffer's length.
 Call "kernel32.dll" "GlobalUnlock" with the handle.
 Call "ole32.dll" "CreateStreamOnHGlobal" with the handle and 1 [true] and an istream's whereabouts.
 Call "gdiplus.dll" "GdipCreateBitmapFromStream" with the istream and the gpbitmap's whereabouts returning a_ number.
-If the number is not 0, put "No sé como procesar este tipo de imagen." into o erro de e/s; void the gpbitmap.
+If the number is not 0, put "Não sei como processar este tipo de imagen." into o erro de e/s; void the gpbitmap.
 Call the istream's vtable's release with the istream.
 
 To create a_ gpimageattributes (grayscale):
@@ -6117,11 +6121,11 @@ Para desenhar uma sequência em uma caixa sobre um número com uma cor e uma fonte
 \CAL
 To draw a_ string in a_ box over a_ number with a_ color and a_ font and an alignment:
 Privatize the box.
-If the alignment is "esquerda", add the number to the box's left.
 If the alignment is "left", add the number to the box's left.
-If the alignment is "zquierda", add the number to the box's left.
+If the alignment is "right", subtract the number from the box's right.
+\PAL
+If the alignment is "esquerda", add the number to the box's left.
 If the alignment is "direita", subtract the number from the box's right.
-If the alignment is "derecho", subtract the number from the box's right.
 Draw the string in the box with the color and the font and the alignment.
 
 \PAL
@@ -7232,9 +7236,11 @@ Subtract the box's top from the vertex's y-coord.
 Put the box's bottom minus the vertex's y-coord into the vertex's y-coord.
 Repeat.
 
+\PAL
+Para descartar todos os eventos;
+\CAL
 To flush all input;
 To flush all inputs;
-Para descartar todos los eventos;
 To flush all events:
 Flush any messages.
 Flush the event queue.
@@ -7634,7 +7640,7 @@ Get a_ gcd given the number and the other number.
 Call "kernel32.dll" "MulDiv" with the number and the other number and the gcd returning the lcm.
 
 \PAL
-Para obter uma carta do alfabeto;
+Para obter um byte do alfabeto;
 \CAL
 To get a_ letter from the alphabet:
 Put the next letter into the letter.
@@ -8818,7 +8824,7 @@ Put the other twips into the roundy box's bottom.
 Put the radius into the roundy box's radius.
 
 \PAL
-Para fazer uma caixa arredondada com uma esquerda e uma superior e uma direita e uma inferior e um raio;
+Para fazer uma caixa arredondada com uma coordenada esquerda e uma coordenada superior e uma coordenada direita e uma coordenada inferior e um raio;
 \CAL
 To imagine a_ roundy box with a_ left coord and a_ top coord and a_ right coord and a_ bottom coord and a_ radius;
 To make a_ roundy box with a_ left coord and a_ top coord and a_ right coord and a_ bottom coord and a_ radius:
@@ -9496,7 +9502,7 @@ Create another vertex given the spot.
 Insert the other vertex into the polygon's vertices after the vertex.
 
 \PAL
-Para inserir uma sequência em outra sequência ante de uma posição de sequência;
+Para inserir uma sequência em outra sequência antes de um número;
 \CAL
 To insert a_ string into another string before a_ byte#:
 \CAL
@@ -9694,10 +9700,11 @@ a_ win32finddata,
 a_ handle,
 \PAL
 uma rota at the path, um caminho at the path,
-uma pasta at the path,
+uma pasta at the directory,
 um designador at the designator,
 uma extensão at the extension,
-um tamanho at the size.
+um número chamado tamanho at the size,
+uma sequência chamada data/hora at the creation date/time.
 
 The j-key is a_ key equal to 74.
 
@@ -12972,7 +12979,7 @@ Add 1 to the count.
 Repeat.
 
 \PAL
-Para pôr uma esquerda e uma superior e uma direita e uma inferior e um raio em uma caixa arredondada;
+Para pôr uma coordenada esquerda e uma coordenada superior e uma coordenada direita e uma coordenada inferior e um raio em uma caixa arredondada;
 \CAL
 To put a_ left coord and a_ top coord and a_ right coord and a_ bottom coord and a_ radius into a_ roundy box:
 Put the left into the roundy box's left.
@@ -12982,7 +12989,7 @@ Put the bottom into the roundy box's bottom.
 Put the radius into the roundy box's radius.
 
 \PAL
-Para pôr uma esquerda e uma superior e uma direita e uma inferior em uma caixa;
+Para pôr uma coordenada esquerda e uma coordenada superior e uma coordenada direita e uma coordenada inferior em uma caixa;
 \CAL
 To put a_ left coord and a_ top coord and a_ right coord and a_ bottom coord into a_ box:
 Put the left into the box's left.
@@ -12991,7 +12998,7 @@ Put the right into the box's right.
 Put the bottom into the box's bottom.
 
 \PAL
-Para pôr uma esquerda e uma superior e uma direita e uma inferior em uma elipse;
+Para pôr uma coordenada esquerda e uma coordenada superior e uma coordenada direita e uma coordenada inferior em uma elipse;
 \CAL
 To put a_ left coord and a_ top coord and a_ right coord and a_ bottom coord into an ellipse:
 Put the left into the ellipse's left.
@@ -13925,7 +13932,7 @@ Loop.
 Put 0 into a_ size.  
 Call "winhttp.dll" "WinHttpQueryDataAvailable"
 With the winhttp request's request and the size's whereabouts returning a_ result number.
-If the result is 0, put "No se pudo consultar los datos disponibles." into o erro de e/s; clear the response; break.
+If the result is 0, put "Não se pode consultar os dados disponíveis." into o erro de e/s; clear the response; break.
 Put the response's length into a_ saved length.
 Reassign the response's first given the saved length plus the buffer size.
 Put the response's first plus the saved length into a_ pointer.
@@ -14757,6 +14764,10 @@ uma coordenada chamada esquerda redefinindo a left coord,
 uma coordenada chamada topo redefinindo a top coord,
 uma coordenada chamada direita redefinindo a right coord,
 uma coordenada chamada base redefinindo a bottom coord,
+uma coordenada esquerda redefinindo a left coord,
+uma coordenada superior redefinindo a top coord,
+uma coordenada direita redefinindo a right coord,
+uma coordenada inferior redefinindo a bottom coord,
 um loco esquerdo-superior redefinindo a left,
 um loco direito-inferior redefinindo a right,
 um raio redefinindo o radius.
@@ -14766,7 +14777,7 @@ a_ row is a_ thing with
 a_ row#
 and a_ string
 \PAL
-e um número chamado posição redefinindo a row#
+e um número redefinindo a row#
 e uma sequência redefinindo o string.
 
 a_ row# is a_ number.
@@ -15079,10 +15090,10 @@ a_ caret at the caret column#,
 \PAL
 Um número chamado coluna âncora redefinindo a anchor column#,
 Um número chamado linha âncora redefinindo a anchor row#,
-Uma âncora redefinindo a anchor column#,
+Uma posição chamada âncora redefinindo a anchor column#,
 Um número chamado coluna marcadora redefinindo a caret column#,
 Um número chamado linha marcadora redefinindo a caret row#,
-Um marcador redefinindo a caret column#.
+Uma posição chamada marcador redefinindo a caret column#.
 
 The semi-colon byte is a_ byte equal to 59.
 
@@ -19520,6 +19531,12 @@ Um mm é 1/10 cm.
 
 \ tipos de dados em Português
 
+\ alignment
+Um alinhamento é uma sequência [centro, esquerda ou direita].
+
+\ amount
+Uma quantidade é um número.
+
 \ angle 
 Um ângulo é alguns graus precisos [0 a 3599].
 
@@ -19538,6 +19555,14 @@ Um tom é um cor.
 
 \ coord
 Uma coordenada é a_ coord.
+\ left coord
+Uma coordenada esquerda é uma coordenada.
+\ right coord
+Uma coordenada direita é uma coordenada.
+\ top coord
+Uma coordenada superior é uma coordenada.
+\ bottom coord
+Uma coordenada inferior é uma coordenada.
 
 \ count
 Um contador é um número.
@@ -19553,10 +19578,19 @@ Um grau preciso é um número [0 a 3599].
 \ description
 Uma descrição é uma sequência.
 
+\ designator
+Um designador é uma sequência.
+
+\ difference
+Uma diferença é a_ pair.
+
 \ directory
 Uma pasta é uma rota.
 \ directory name
 Um nome de pasta é uma sequência.
+
+\ distance
+Uma distância é alguns twips.
 
 \ dot
 Um ponto é a_ dot.
@@ -19570,11 +19604,14 @@ Um tipo de disco é uma sequência.
 \ drive name
 Um nome de disco é uma sequência.
 
+\ ellipse
+Uma elipse é an ellipse.
+
 \ event
 Um evento é a_ event.
 
-\ ellipse
-Uma elipse é an ellipse.
+\ extension
+Uma extensão é uma sequência.
 
 \ file 
 Um arquivo é a_ handle.
@@ -19647,6 +19684,12 @@ Um nome é uma sequência.
 
 \ number
 Um número é a_ number.
+\ sinônimos de number
+Um nº é um número.
+
+\ operation
+\ for remembering text for undo and redo so we don't waste saves on every character typed
+Uma operação é uma sequência.                                        
 
 \ pair
 Um par é a_ pair.
@@ -19771,50 +19814,25 @@ Uma largura é alguns twips.
 \ window
 Uma janela é a_ window.
 
+\ x-coord
+Uma coord-x é uma coordenada.
+Uma coordenada-x é uma coordenada.
 
-Uma âncora é uma posição.
-
+\ y-coord
+Uma coord-y é uma coordenada.
+Uma coordenada-y é uma coordenada.
 
 Uma elevação é a_ number.
 Uma subida é a_ number.
-Um designador é uma sequência.
-Um marcador é uma posição.
-Um múltiplo é um número.
-Um número-x é um número.
-Um número-y é um número.
-\Um poco é a_ number.
-Um alcance é um número.
-Uma contagem de elementos é a_ number.
 Um tamanho é a_ size.
-Um tipo é a_ kind.
 Um verso é um elemento com uma sequência.
-Um alinhamento é uma sequência [centro, esquerda ou direita].
-Uma quantidade é um número.
-Uma carta é a_ byte.
 Uma corrida é a_ number.
-\Uma classe é uma sequência.
-Uma bolha de eventos são alguns eventos.
 \Um console é a_ console.
 Uma consulta é uma sequência.
-Uma coord-x é uma coordenada.
-Uma coord-y é uma coordenada.
-Uma coordenada-x é uma coordenada.
-Uma coordenada-y é uma coordenada.
-Uma direita é uma coordenada.
-Uma diferença é a_ pair.
 Uma direção é alguns degraus. \ heading
-Uma distância é alguns twips.
 Uma escolha é um elemento com um nome e uma caixa.
-Uma entrada é an event.
-Uma extensão é uma sequência.
-Uma inferior é uma coordenada.
-Uma esquerda é uma coordenada.
-\Uma letra é um byte.                                               \ do not use -tipo de letra is a font \ use carta
 Uma palavra é uma sequência.
-Uma posição de sequência é a_ number.
-Uma operação é uma sequência.                                        \ for remembering text for undo and redo so we don't waste saves on every character typed
 Uma resposta é uma sequência.
-Uma superior é uma coordenada.
 
 \ variáveis globais em Português
 
