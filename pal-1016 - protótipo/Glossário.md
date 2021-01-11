@@ -566,7 +566,7 @@ Lista de Termos em Ordem Alfabética
 |five byte|–|–|–|–|byte-5|
 |five key|–|–|–|–|tecla-5|
 |f-key|–|–|–|–|tecla-f|
-|flag <sup>[D]</sup>|sinal|sinalizador|bandeira|–|–|
+|flag <sup>[D]</sup>|signa|sinalizador|bandeira|–|–|
 |flag <sup>[E]</sup>|–|–|–|–|–|
 |flip|inverter|–|–|–|–|
 |flush|descarregar|–|–|–|–|
@@ -1263,8 +1263,8 @@ Lista de Termos em Ordem Alfabética
 |question-mark byte|–|byte-?|–|–|–|
 |quora|question or answer|-|-|-|pesquisa|
 |quote (verbo)|citar|referenciar|fazer referência|-|aspear|
-|quoted|–|–|–|–|aspeado|
-|quotient|quociente|–|–|–|–|
+|quoted|–|–|–|citado|aspeado|
+|quotient|quociente|cociente|–|–|–|
 |quit|encerrar|sair|fechar|finalizar|-|
 
 
