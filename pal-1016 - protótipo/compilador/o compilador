@@ -708,11 +708,15 @@ If the string is any contraction giving the third string (portuguese rules - "no
 If the string is "na", append "em a" to the other string; exit.
 If the string is "nos", append "em os" to the other string; exit.
 If the string is "nas", append "em as" to the other string; exit.
-\If the string is "noutro", append "em outro" to the other string; exit.
-\If the string is "noutra", append "em outra" to the other string; exit.
-\If the string is "noutros", append "em outros" to the other string; exit.
-\If the string is "noutras", append "em outras" to the other string; exit.
+If the string is "noutro", append "em outro" to the other string; exit.
+If the string is "noutra", append "em outra" to the other string; exit.
+If the string is "noutros", append "em outros" to the other string; exit.
+If the string is "noutras", append "em outras" to the other string; exit.
 If the string is "num", append "em um" to the other string; exit.
+If the string is "nalgum", append "em algum" to the other string; exit.
+If the string is "nalguma", append "em alguma" to the other string; exit.
+If the string is "nalguns", append "em alguns" to the other string; exit.
+If the string is "nalgumas", append "em algumas" to the other string; exit.
 If the string is "numa", append "em uma" to the other string; exit.
 If the string is "nuns", append "em uns" to the other string; exit.
 If the string is "numas", append "em umas" to the other string; exit.
@@ -2583,8 +2587,12 @@ To decide if a_ string is any portuguese indefinite article:
 \PAL
 If the string is "um", say yes.
 If the string is "uma", say yes.
+If the string is "uns", say yes.
+If the string is "umas", say yes.
 If the string is "outro", say yes.
 If the string is "outra", say yes.
+If the string is "outros", say yes.
+If the string is "outras", say yes.
 If the string is "algum", say yes.
 If the string is "alguma", say yes.
 If the string is "alguns", say yes.
@@ -4877,7 +4885,7 @@ Put "byte" into the field's type name.
 
 To scan a_ field given a_ rider (type part - normal):
 If the compiler's abort flag is set, exit.
-If the rider's token is not any indefinite article, abort with "Esperava um artigo indefinido, mas encontrei '" then the rider's token then "'." and the rider; exit.
+If the rider's token is not any indefinite article, abort with "Esperava um artigo ou pronome indefinido, mas encontrei '" then the rider's token then "'." and the rider; exit.
 If the rider's token is "another", put "other" into the field's name.
 \PAL
 If the rider's token is "outra", put "segunda" into the field's name.

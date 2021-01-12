@@ -2997,7 +2997,7 @@ To debug a_ color:
 Clear a_ string.
 Append "matiz=" to the string.
 Append the color's hue to the string.
-Append ", saturación=" to the string.
+Append ", saturação=" to the string.
 Append the color's saturation to the string.
 Append ", luminosidade=" to the string.
 Append the color's lightness to the string.
@@ -3015,7 +3015,7 @@ Para depurar uma fonte;
 \CAL
 To debug a_ font:
 Clear a_ string.
-Append "nombre='" to the string then "'".
+Append "nome='" to the string then "'".
 Append the font's name to the string.
 Append ", altura=" to the string.
 Append the font's height to the string.
@@ -13597,7 +13597,7 @@ If the selection's caret column# is not 1, add 1 to the count.
 To put a_ text's status string into a_ string:
 If the text is nil, clear the string; exit.
 Put the text's selected row count into a_ count.
-If the count is not 0, format the count and "línea" or "líneas" into the string; exit.
+If the count is not 0, format the count and "linha" or "linhas" into the string; exit.
 Put the text's selected byte count into another count.
 If the other count is not 0, format the other count and "byte" or "bytes" into the string; exit.
 Convert the text's caret row# to the string.
@@ -19127,7 +19127,9 @@ A tecla-entrar é uma tecla igual a 13.
 A tecla-maiúsculo é uma tecla igual a 16.            
 A tecla-shift é uma tecla igual a 16.            
 A tecla-ctrl é uma tecla igual a 17.             
+A tecla-controle é uma tecla igual a 17.
 A tecla-alt é uma tecla igual a 18.              
+A tecla-alterar é uma tecla igual a 18.              
 A tecla-pausa é uma tecla igual a 19.            
 A tecla-fixar é uma tecla igual a 20.            
 A tecla-esc é uma tecla igual a 27.              
@@ -19352,7 +19354,7 @@ O byte-circunflexo é um byte igual a 94.
 O byte-_ é um byte igual a 95.
 O byte-sublinhado é um byte igual a 95.
 O byte-` é um byte igual a 96.
-O byte-acento é um byte igual a 96.
+O byte-crase é um byte igual a 96.
 O byte-a é um byte igual a 97.
 O byte-b é um byte igual a 98.
 O byte-c é um byte igual a 99.
@@ -19764,6 +19766,8 @@ Uma folha vertical é a_ portrait sheet.
 
 \ spot 
 Um loco é a_ spot.
+\ sinônimos de spot
+Um lugar é a_ spot.
 
 \ square root
 Uma raiz quadrada é um número.

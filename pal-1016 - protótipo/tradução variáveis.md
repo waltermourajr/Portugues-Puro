@@ -78,7 +78,7 @@
 |second|segundo|||||
 |selection|seleção|||||
 |sheet|folha|||||
-|spot|loco|||||
+|spot|loco|lugar||||
 |square root|raiz quadrada|||||
 |string|sequência|série|escrito|escrita||
 |string thing|elemento de sequência|elemento de série|elemento de escrito|elemento de escrita||
