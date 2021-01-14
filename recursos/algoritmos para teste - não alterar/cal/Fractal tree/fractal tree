@@ -1,0 +1,17 @@
+To draw a forest tree given a size:
+If the size is less than 1/32 inch, exit.
+Put the size divided by 1/4 inch into the pen size.
+If the size is less than 1/4 inch, pick a greenish color.
+Remember where we are.
+Pick a number between 1 and 3.
+Draw a line using the size divided by the number for the length.
+Pick a ratio between 1/32 and 1/24.
+Turn left the ratio. Draw another forest tree given the size times 2/3. Turn right the ratio.
+Turn right the ratio. Draw a third forest tree given the size times 2/3. Turn left the ratio.
+Go back to where we were.
+
+To run:
+Start up.
+Draw a forest tree given 3 inches.
+Wait for the escape key.
+Shut down.
