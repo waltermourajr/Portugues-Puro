@@ -89,13 +89,16 @@
 |tick|tique|||||
 |timer|temporizador|||||
 |top coord|coordenada superior|||||
+|twip|tuipe|||||
 |vertex|vértice|||||
 |wave|som||||||
 |wave file|arquivo de som|||||
 |width|largura|||||
 |window|janela|||||
 |x-coord|coordenada-x|coord-x||||
+|x-twips|tuipes-x|||||
 |y-coord|coordenada-y|coord-y||||
+|y-twips|tuipes-y|||||
 
 ##### Variáveis globais
 |Origem|Tradução 1|Tradução 2|Tradução 3|Tradução 4|Tradução 5|
