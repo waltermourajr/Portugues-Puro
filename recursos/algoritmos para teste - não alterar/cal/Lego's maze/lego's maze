@@ -65,7 +65,7 @@ Turn the front knob to the right. Wait for 1/10 second.
 Turn the side knob to the left. Wait for 1 second.
 
 To do the lego maze:
-Start fresh.
+Start up.
 Start up the hawk servo board.
 Center both knobs.
 Write and say "MAKE SURE THE BOARD IS LEVEL, THEN PRESS ENTER".
@@ -100,3 +100,8 @@ Tilt the board backward and left.
 Shut down the hawk servo board.
 Write and say "ALL DONE".
 Write and say "COOL".
+
+To run:
+Do the lego maze.
+Wait for the a-key.
+Exit.

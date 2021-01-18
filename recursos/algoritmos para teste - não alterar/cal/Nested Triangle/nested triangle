@@ -13,6 +13,8 @@ Go back to where we were. Move the size.
 Remember where we are.
 Repeat.
 
+A limit is a number.
+
 To run:
 Start up.
 Clear the screen with the tan color. Use the dark brown pen.
@@ -21,3 +23,7 @@ Turn right 1/12 of the way around.
 Draw a nested triangle Triangle starting with 8 inches.
 Wait for the escape key.
 Shut down.
+
+To clear the screen with a color:
+Draw the screen's box with the color and the color.
+Refresh the screen.
