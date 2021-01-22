@@ -61,7 +61,7 @@ Para desenhar o texto:
   Desenhar a sequência na caixa do texto.
  
 Para desenhar um trabalho:
-  Se o trabalho é nil, sair.
+  Se o trabalho é nulo, sair.
   Se o trabalho não está finalizado, sair.
   Desenhar a pintura do trabalho.
  

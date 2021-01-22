@@ -49,6 +49,7 @@
 |key|tecla|||||
 |landscape sheet|folha horizontal|||||
 |left coord|coordenada esquerda|||||
+|length|tamanho|||||
 |lightness|brilho|luminosidade||||
 |line|reta|traço||||
 |millisecond|milissegundo|||||

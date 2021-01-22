@@ -19665,6 +19665,9 @@ Um recurso é an item.
 \ key
 Uma tecla is a_ key.
 
+\ length
+Um tamanho é a_ length.
+
 \ lightness
 Um brilho é a_ lightness.
 \ sinônimos de lightness
@@ -19838,7 +19841,6 @@ Alguns tuipes-y são alguns tuipes.
 
 Uma elevação é a_ number.
 Uma subida é a_ number.
-Um tamanho é a_ size.
 Um verso é um elemento com uma sequência.
 Uma corrida é a_ number.
 \Um console é a_ console.
