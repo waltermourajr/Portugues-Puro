@@ -60,7 +60,7 @@ Add the fraction's numerator to the other fraction's numerator.
 Reduce the other fraction.
 
 \PAL
-Para adicionar alguns twips horizontais e alguns twips verticais ao loco atual;
+Para adicionar alguns tuipes horizontais e alguns tuipes verticais ao loco atual;
 \CAL
 To add some horizontal twips and some vertical twips to the current spot:
 Add the horizontal twips to the context's spot's x-coord.
@@ -1364,7 +1364,11 @@ The cluck sound is a_ wave equal to $524946463A02000057415645666D742012000000010
 
 The colon byte is a_ byte equal to 58.
 
-a_ color has a_ hue, a_ saturation, a_ lightness, a_ brightness at the lightness,
+a_ color has
+a_ hue,
+a_ saturation,
+a_ lightness,
+a_ brightness at the lightness,
 \PAL
 uma matiz at the hue,
 uma saturação at the saturation,
@@ -2373,7 +2377,7 @@ Copy bytes from the buffer's first to the pointer for_ the buffer's length.
 Call "kernel32.dll" "GlobalUnlock" with the handle.
 Call "ole32.dll" "CreateStreamOnHGlobal" with the handle and 1 [true] and an istream's whereabouts.
 Call "gdiplus.dll" "GdipCreateBitmapFromStream" with the istream and the gpbitmap's whereabouts returning a_ number.
-If the number is not 0, put "No sé como procesar este tipo de imagen." into o erro de e/s; void the gpbitmap.
+If the number is not 0, put "Não sei como processar este tipo de imagen." into o erro de e/s; void the gpbitmap.
 Call the istream's vtable's release with the istream.
 
 To create a_ gpimageattributes (grayscale):
@@ -2993,7 +2997,7 @@ To debug a_ color:
 Clear a_ string.
 Append "matiz=" to the string.
 Append the color's hue to the string.
-Append ", saturación=" to the string.
+Append ", saturação=" to the string.
 Append the color's saturation to the string.
 Append ", luminosidade=" to the string.
 Append the color's lightness to the string.
@@ -3011,7 +3015,7 @@ Para depurar uma fonte;
 \CAL
 To debug a_ font:
 Clear a_ string.
-Append "nombre='" to the string then "'".
+Append "nome='" to the string then "'".
 Append the font's name to the string.
 Append ", altura=" to the string.
 Append the font's height to the string.
@@ -3609,7 +3613,7 @@ If the context's spot's x-coord is greater than the box's right, say yes.
 Say no.
 
 \PAL
-Para decidir se o loco atual está dentro de alguns twips de uma caixa;
+Para decidir se o loco atual está dentro de alguns tuipes de uma caixa;
 \CAL
 To decide if the current spot is within some twips of a_ box:
 If the context's spot is within the twips of the box, say yes.
@@ -4521,7 +4525,7 @@ If the difference is within the grid, say yes.
 Say no.
 
 \PAL
-Para decidir se um loco está dentro de alguns twips de outro loco;
+Para decidir se um loco está dentro de alguns tuipes de outro loco;
 \CAL
 To decide if a_ spot is within some twips of another spot:
 Put the twips and the twips into a_ grid.
@@ -4529,7 +4533,7 @@ If the spot is within the grid of the other spot, say yes.
 Say no.
 
 \PAL
-Para decidir se um loco está dentro de alguns twips de uma caixa;
+Para decidir se um loco está dentro de alguns tuipes de uma caixa;
 \CAL
 To decide if a_ spot is within some twips of a_ box:
 Privatize the box.
@@ -6117,11 +6121,11 @@ Para desenhar uma sequência em uma caixa sobre um número com uma cor e uma fonte
 \CAL
 To draw a_ string in a_ box over a_ number with a_ color and a_ font and an alignment:
 Privatize the box.
-If the alignment is "esquerda", add the number to the box's left.
 If the alignment is "left", add the number to the box's left.
-If the alignment is "zquierda", add the number to the box's left.
+If the alignment is "right", subtract the number from the box's right.
+\PAL
+If the alignment is "esquerda", add the number to the box's left.
 If the alignment is "direita", subtract the number from the box's right.
-If the alignment is "derecho", subtract the number from the box's right.
 Draw the string in the box with the color and the font and the alignment.
 
 \PAL
@@ -6518,16 +6522,16 @@ The end-of-transmission byte is a_ byte equal to 4.
 The end-of-transmission-block byte is a_ byte equal to 23.
 
 \PAL
-Para aumentar uma caixa dado alguns twips;
-Para aumentar uma caixa em alguns twips;
+Para aumentar uma caixa alguns tuipes;
+Para aumentar uma caixa em alguns tuipes;
 \CAL
 To enlarge a_ box by some twips:
 Subtract the twips from the box's left-top.
 Add the twips to the box's right-bottom.
 
 \PAL
-Para aumentar uma elipse dado alguns twips;
-Para aumentar uma elipse em alguns twips;
+Para aumentar uma elipse alguns tuipes;
+Para aumentar uma elipse em alguns tuipes;
 \CAL
 To enlarge an ellipse by some twips:
 Subtract the twips from the ellipse's left-top.
@@ -7232,9 +7236,11 @@ Subtract the box's top from the vertex's y-coord.
 Put the box's bottom minus the vertex's y-coord into the vertex's y-coord.
 Repeat.
 
+\PAL
+Para descartar todos os eventos;
+\CAL
 To flush all input;
 To flush all inputs;
-Para descartar todos los eventos;
 To flush all events:
 Flush any messages.
 Flush the event queue.
@@ -7634,7 +7640,7 @@ Get a_ gcd given the number and the other number.
 Call "kernel32.dll" "MulDiv" with the number and the other number and the gcd returning the lcm.
 
 \PAL
-Para obter uma carta do alfabeto;
+Para obter um byte do alfabeto;
 \CAL
 To get a_ letter from the alphabet:
 Put the next letter into the letter.
@@ -8650,8 +8656,8 @@ The i-key is a_ key equal to 73.
 a_ iid is a_ uuid.
 
 \PAL
-Para imaginar uma caixa alguns twips por alguns outros twips;
-Para fazer uma caixa alguns twips por alguns outros twips;
+Para imaginar uma caixa alguns tuipes por outros tuipes;
+Para fazer uma caixa alguns tuipes por alguns tuipes;
 \CAL
 To imagine a_ box some twips by some other twips;
 To make a_ box some twips by some other twips:
@@ -8807,7 +8813,7 @@ To make a_ roundy box from a_ box and a_ radius:
 Put the box and the radius into the roundy box.
 
 \PAL
-Para fazer uma caixa arredondada dados uma largura e uma altura com um raio;
+Para fazer uma caixa arredondada usando uma largura e uma altura com um raio;
 \CAL
 To imagine a_ roundy box some twips by some other twips;
 To make a_ roundy box some twips by some other twips with a_ radius:
@@ -8818,7 +8824,7 @@ Put the other twips into the roundy box's bottom.
 Put the radius into the roundy box's radius.
 
 \PAL
-Para fazer uma caixa arredondada com uma esquerda e uma superior e uma direita e uma inferior e um raio;
+Para fazer uma caixa arredondada com uma coordenada esquerda e uma coordenada superior e uma coordenada direita e uma coordenada inferior e um raio;
 \CAL
 To imagine a_ roundy box with a_ left coord and a_ top coord and a_ right coord and a_ bottom coord and a_ radius;
 To make a_ roundy box with a_ left coord and a_ top coord and a_ right coord and a_ bottom coord and a_ radius:
@@ -9496,7 +9502,7 @@ Create another vertex given the spot.
 Insert the other vertex into the polygon's vertices after the vertex.
 
 \PAL
-Para inserir uma sequência em outra sequência ante de uma posição de sequência;
+Para inserir uma sequência em outra sequência antes de um número;
 \CAL
 To insert a_ string into another string before a_ byte#:
 \CAL
@@ -9694,10 +9700,11 @@ a_ win32finddata,
 a_ handle,
 \PAL
 uma rota at the path, um caminho at the path,
-uma pasta at the path,
+uma pasta at the directory,
 um designador at the designator,
 uma extensão at the extension,
-um tamanho at the size.
+um número chamado tamanho at the size,
+uma sequência chamada data/hora at the creation date/time.
 
 The j-key is a_ key equal to 74.
 
@@ -10550,8 +10557,8 @@ Subtract 1 from the text's anchor column#.
 Repeat.
 
 \PAL
-Para voltar alguns twips;
-Para retroceder alguns twips;
+Para voltar alguns tuipes;
+Para retroceder alguns tuipes;
 \CAL
 To move back some twips:
 Turn around.
@@ -10568,10 +10575,10 @@ Pick a_ length between 0 and the box's width times 3/4.
 Move the box right the length.
 
 \PAL
-Para mover uma caixa para baixo em alguns twips;
-Para mover uma caixa para baixo alguns twips;
-Para mover uma caixa abaixo em alguns twips;
-Para mover uma caixa abaixo alguns twips;
+Para mover uma caixa para baixo em alguns tuipes;
+Para mover uma caixa para baixo alguns tuipes;
+Para mover uma caixa abaixo em alguns tuipes;
+Para mover uma caixa abaixo alguns tuipes;
 \CAL
 To move a_ box down some twips:
 Move the box given 0 and the twips.
@@ -10594,7 +10601,7 @@ Some x-twips are some twips.
 Some y-twips are some twips.
 
 \PAL
-Para mover uma caixa dado alguns x-twips e alguns y-twips;
+Para mover uma caixa usando alguns tuipes-x e alguns tuipes-y;
 \CAL
 To move a_ box given some x-twips and some y-twips:
 Add the x-twips to the box's left.
@@ -10609,6 +10616,7 @@ To move a_ box left to a_ coord:
 Move the box left the box's left minus the coord.
 
 \PAL
+Para mover uma caixa à esquerda de outra caixa;
 Para mover uma caixa para o lado esquerdo de outra caixa;
 \CAL
 To move a_ box to the left side of another box;
@@ -10616,10 +10624,10 @@ To move a_ box to the left of another box:
 Move the box left the box's left minus the other box's left.
 
 \PAL
-Para mover uma caixa para a esquerda em alguns twips;
-Para mover uma caixa para a esquerda alguns twips;
-Para mover uma caixa à esquerda em alguns twips;
-Para mover uma caixa à esquerda alguns twips;
+Para mover uma caixa para a esquerda em alguns tuipes;
+Para mover uma caixa para a esquerda alguns tuipes;
+Para mover uma caixa à esquerda em alguns tuipes;
+Para mover uma caixa à esquerda alguns tuipes;
 \CAL
 To move a_ box left some twips:
 Move the box given - the twips and 0.
@@ -10632,10 +10640,10 @@ To move a_ box to the right of another box:
 Move the box right the other box's right minus the box's right.
 
 \PAL
-Para mover uma caixa para a direita em alguns twips;
-Para mover uma caixa para a direita alguns twips;
-Para mover uma caixa à direita em alguns twips;
-Para mover uma caixa à direita alguns twips;
+Para mover uma caixa para a direita em alguns tuipes;
+Para mover uma caixa para a direita alguns tuipes;
+Para mover uma caixa à direita em alguns tuipes;
+Para mover uma caixa à direita alguns tuipes;
 \CAL
 To move a_ box right some twips:
 Move the box given the twips and 0.
@@ -10660,10 +10668,10 @@ To move a_ box to the top of another box:
 Move the box up the box's top minus the other box's top.
 
 \PAL
-Para mover uma caixa para cima em alguns twips;
-Para mover uma caixa para cima alguns twips;
-Para mover uma caixa acima em alguns twips;
-Para mover uma caixa acima alguns twips;
+Para mover uma caixa para cima em alguns tuipes;
+Para mover uma caixa para cima alguns tuipes;
+Para mover uma caixa acima em alguns tuipes;
+Para mover uma caixa acima alguns tuipes;
 \CAL
 To move a_ box up some twips:
 Move the box given 0 and - the twips.
@@ -10780,10 +10788,10 @@ Add 1 to the text's caret row#.
 Limit the caret in the text.
 
 \PAL
-Para mover uma elipse para baixo em alguns twips;
-Para mover uma elipse para baixo alguns twips;
-Para mover uma elipse abaixo em alguns twips;
-Para mover uma elipse abaixo alguns twips;
+Para mover uma elipse para baixo em alguns tuipes;
+Para mover uma elipse para baixo alguns tuipes;
+Para mover uma elipse abaixo em alguns tuipes;
+Para mover uma elipse abaixo alguns tuipes;
 \CAL
 To move an ellipse down some twips:
 Move the ellipse given 0 and the twips.
@@ -10795,25 +10803,25 @@ To move an ellipse given a_ pair:
 Move the ellipse given the pair's x-number and the pair's y-number.
 
 \PAL
-Para mover uma elipse dado alguns x-twips e alguns y-twips;
+Para mover uma elipse dado alguns tuipes-x e alguns tuipes-y;
 \CAL
 To move an ellipse given some x-twips and some y-twips:
 Move the ellipse's box given the x-twips and the y-twips.
 
 \PAL
-Para mover uma elipse para a esquerda em alguns twips;
-Para mover uma elipse para a esquerda alguns twips;
-Para mover uma elipse à esquerda em alguns twips;
-Para mover uma elipse à esquerda alguns twips;
+Para mover uma elipse para a esquerda em alguns tuipes;
+Para mover uma elipse para a esquerda alguns tuipes;
+Para mover uma elipse à esquerda em alguns tuipes;
+Para mover uma elipse à esquerda alguns tuipes;
 \CAL
 To move an ellipse left some twips:
 Move the ellipse given - the twips and 0.
 
 \PAL
-Para mover uma elipse para a direita em alguns twips;
-Para mover uma elipse para a direita alguns twips;
-Para mover uma elipse à direita em alguns twips;
-Para mover uma elipse à direita alguns twips;
+Para mover uma elipse para a direita em alguns tuipes;
+Para mover uma elipse para a direita alguns tuipes;
+Para mover uma elipse à direita em alguns tuipes;
+Para mover uma elipse à direita alguns tuipes;
 \CAL
 To move an ellipse right some twips:
 Move the ellipse given the twips and 0.
@@ -10826,10 +10834,10 @@ Get a_ difference between the spot and the ellipse's left-top.
 Move the ellipse given the difference.
 
 \PAL
-Para mover uma elipse para cima em alguns twips;
-Para mover uma elipse para cima alguns twips;
-Para mover uma elipse acima em alguns twips;
-Para mover uma elipse acima alguns twips;
+Para mover uma elipse para cima em alguns tuipes;
+Para mover uma elipse para cima alguns tuipes;
+Para mover uma elipse acima em alguns tuipes;
+Para mover uma elipse acima alguns tuipes;
 \CAL
 To move an ellipse up some twips:
 Move the ellipse given 0 and - the twips.
@@ -10839,10 +10847,10 @@ If the finger is nil, exit.
 Add 1 to the finger.
 
 \PAL
-Para mover para a esquerda alguns twips e para baixo alguns outros twips;
-Para mover para a esquerda alguns twips e abaixo alguns outros twips;
-Para mover à esquerda alguns twips e para baixo alguns outros twips;
-Para mover à esquerda alguns twips e abaixo alguns outros twips;
+Para mover para a esquerda alguns tuipes e para baixo outros tuipes;
+Para mover para a esquerda alguns tuipes e abaixo outros tuipes;
+Para mover à esquerda alguns tuipes e para baixo outros tuipes;
+Para mover à esquerda alguns tuipes e abaixo outros tuipes;
 \CAL
 To move to the left some twips and down some other twips;
 To move left some twips and down some other twips;
@@ -10852,10 +10860,10 @@ Move the context's spot left the twips.
 Move the context's spot down the other twips.
 
 \PAL
-Para mover para a esquerda alguns twips e para cima alguns outros twips;
-Para mover para a esquerda alguns twips e acima alguns outros twips;
-Para mover à esquerda alguns twips e para cima alguns outros twips;
-Para mover à esquerda alguns twips e acima alguns outros twips;
+Para mover para a esquerda alguns tuipes e para cima outros tuipes;
+Para mover para a esquerda alguns tuipes e acima outros tuipes;
+Para mover à esquerda alguns tuipes e para cima outros tuipes;
+Para mover à esquerda alguns tuipes e acima outros tuipes;
 \CAL
 To move to the left some twips and up some other twips;
 To move left some twips and up some other twips;
@@ -10865,10 +10873,10 @@ Move the context's spot left the twips.
 Move the context's spot up the other twips.
 
 \PAL
-Para mover uma reta para baixo em alguns twips;
-Para mover uma reta para baixo alguns twips;
-Para mover uma reta abaixo em alguns twips;
-Para mover uma reta abaixo alguns twips;
+Para mover uma reta para baixo em alguns tuipes;
+Para mover uma reta para baixo alguns tuipes;
+Para mover uma reta abaixo em alguns tuipes;
+Para mover uma reta abaixo alguns tuipes;
 \CAL
 To move a_ line down some twips:
 Move the line given 0 and the twips.
@@ -10880,7 +10888,7 @@ To move a_ line given a_ pair:
 Move the line given the pair's x-number and the pair's y-number.
 
 \PAL
-Para mover uma reta dado alguns x-twips e alguns y-twips;
+Para mover uma reta dado alguns tuipes-x e alguns tuipes-y;
 \CAL
 To move a_ line given some x-twips and some y-twips:
 Add the x-twips to the line's start's x-coord.
@@ -10889,10 +10897,10 @@ Add the x-twips to the line's end's x-coord.
 Add the y-twips to the line's end's y-coord.
 
 \PAL
-Para mover uma reta para a esquerda em alguns twips;
-Para mover uma reta para a esquerda alguns twips;
-Para mover uma reta à esquerda em alguns twips;
-Para mover uma reta à esquerda alguns twips;
+Para mover uma reta para a esquerda em alguns tuipes;
+Para mover uma reta para a esquerda alguns tuipes;
+Para mover uma reta à esquerda em alguns tuipes;
+Para mover uma reta à esquerda alguns tuipes;
 \CAL
 To move a_ line left some twips:
 Move the line given - the twips and 0.
@@ -10905,20 +10913,20 @@ Get a_ difference between the spot and the line's start.
 Move the line given the difference.
 
 \PAL
-Para mover uma reta para a direita em alguns twips;
-Para mover uma reta para a direita alguns twips;
-Para mover uma reta à direita em alguns twips;
-Para mover uma reta à direita alguns twips;
+Para mover uma reta para a direita em alguns tuipes;
+Para mover uma reta para a direita alguns tuipes;
+Para mover uma reta à direita em alguns tuipes;
+Para mover uma reta à direita alguns tuipes;
 \CAL
 To move a_ line some twips to the right;
 To move a_ line right some twips:
 Move the line given the twips and 0.
 
 \PAL
-Para mover uma reta para cima em alguns twips;
-Para mover uma reta para cima alguns twips;
-Para mover uma reta acima em alguns twips;
-Para mover uma reta acima alguns twips;
+Para mover uma reta para cima em alguns tuipes;
+Para mover uma reta para cima alguns tuipes;
+Para mover uma reta acima em alguns tuipes;
+Para mover uma reta acima alguns tuipes;
 \CAL
 To move a_ line up some twips:
 Move the line given 0 and - the twips.
@@ -10942,10 +10950,10 @@ To start in the center of a_ box:
 Put the box's center into the context's spot.
 
 \PAL
-Para mover uma imagem para baixo em alguns twips;
-Para mover uma imagem para baixo alguns twips;
-Para mover uma imagem abaixo em alguns twips;
-Para mover uma imagem abaixo alguns twips;
+Para mover uma imagem para baixo em alguns tuipes;
+Para mover uma imagem para baixo alguns tuipes;
+Para mover uma imagem abaixo em alguns tuipes;
+Para mover uma imagem abaixo alguns tuipes;
 \CAL
 To move a_ picture down some twips:
 Move the picture given 0 and the twips.
@@ -10957,7 +10965,7 @@ To move a_ picture given a_ pair:
 Move the picture given the pair's x-number and the pair's y-number.
 
 \PAL
-Para mover uma imagem dado alguns x-twips e alguns y-twips;
+Para mover uma imagem dado alguns tuipes-x e alguns tuipes-y;
 \CAL
 To move a_ picture given some x-twips and some y-twips:
 If the picture is nil, exit.
@@ -10965,19 +10973,19 @@ Move the picture's box given the x-twips and the y-twips.
 Move the picture's uncropped box given the x-twips and the y-twips.
 
 \PAL
-Para mover uma imagem para a esquerda em alguns twips;
-Para mover uma imagem para a esquerda alguns twips;
-Para mover uma imagem à esquerda em alguns twips;
-Para mover uma imagem à esquerda alguns twips;
+Para mover uma imagem para a esquerda em alguns tuipes;
+Para mover uma imagem para a esquerda alguns tuipes;
+Para mover uma imagem à esquerda em alguns tuipes;
+Para mover uma imagem à esquerda alguns tuipes;
 \CAL
 To move a_ picture left some twips:
 Move the picture given - the twips and 0.
 
 \PAL
-Para mover uma imagem para a direita em alguns twips;
-Para mover uma imagem para a direita alguns twips;
-Para mover uma imagem à direita em alguns twips;
-Para mover uma imagem à direita alguns twips;
+Para mover uma imagem para a direita em alguns tuipes;
+Para mover uma imagem para a direita alguns tuipes;
+Para mover uma imagem à direita em alguns tuipes;
+Para mover uma imagem à direita alguns tuipes;
 \CAL
 To move a_ picture right some twips:
 Move the picture given the twips and 0.
@@ -10991,19 +10999,19 @@ Get a_ difference between the spot and the picture's left-top.
 Move the picture given the difference.
 
 \PAL
-Para mover uma imagem para cima em alguns twips;
-Para mover uma imagem para cima alguns twips;
-Para mover uma imagem acima em alguns twips;
-Para mover uma imagem acima alguns twips;
+Para mover uma imagem para cima em alguns tuipes;
+Para mover uma imagem para cima alguns tuipes;
+Para mover uma imagem acima em alguns tuipes;
+Para mover uma imagem acima alguns tuipes;
 \CAL
 To move a_ picture up some twips:
 Move the picture given 0 and - the twips.
 
 \PAL
-Para mover uma polígono para baixo em alguns twips;
-Para mover uma polígono para baixo alguns twips;
-Para mover uma polígono abaixo em alguns twips;
-Para mover uma polígono abaixo alguns twips;
+Para mover uma polígono para baixo em alguns tuipes;
+Para mover uma polígono para baixo alguns tuipes;
+Para mover uma polígono abaixo em alguns tuipes;
+Para mover uma polígono abaixo alguns tuipes;
 \CAL
 To move a_ polygon down some twips:
 Move the polygon given 0 and the twips.
@@ -11015,7 +11023,7 @@ To move a_ polygon given a_ pair:
 Move the polygon given the pair's x-number and the pair's y-number.
 
 \PAL
-Para mover um polígono dado alguns x-twips e alguns y-twips;
+Para mover um polígono usando alguns tuipes-x e alguns tuipes-y;
 \CAL
 To move a_ polygon given some x-twips and some y-twips:
 If the polygon is nil, exit.
@@ -11026,40 +11034,40 @@ Move the vertex given the x-twips and the y-twips.
 Repeat.
 
 \PAL
-Para mover um polígono alguns twips à esquerda;
+Para mover um polígono alguns tuipes à esquerda;
 \CAL
 To move a_ polygon left some twips:
 Move the polygon given - the twips and 0.
 
 \PAL
-Para mover um polígono alguns twips à esquerda e outros twips abaixo;
+Para mover um polígono alguns tuipes à esquerda e outros tuipes abaixo;
 \CAL
 To move a_ polygon left some twips and down some other twips:
 Move the polygon left the twips.
 Move the polygon down the other twips.
 
 \PAL
-Para mover um polígono alguns twips à esquerda e outros twips acima;
+Para mover um polígono alguns tuipes à esquerda e outros tuipes acima;
 \CAL
 To move a_ polygon left some twips and up some other twips:
 Move the polygon left the twips.
 Move the polygon up the other twips.
 
 \PAL
-Para mover um polígono alguns twips à direita;
+Para mover um polígono alguns tuipes à direita;
 \CAL
 To move a_ polygon right some twips:
 Move the polygon given the twips and 0.
 
 \PAL
-Para mover um polígono alguns twips à direita e outros twips abaixo;
+Para mover um polígono alguns tuipes à direita e outros tuipes abaixo;
 \CAL
 To move a_ polygon right some twips and down some other twips:
 Move the polygon right the twips.
 Move the polygon down the other twips.
 
 \PAL
-Para mover um polígono alguns twips à direita e outros twips acima;
+Para mover um polígono alguns tuipes à direita e outros tuipes acima;
 \CAL
 To move a_ polygon right some twips and up some other twips:
 Move the polygon right the twips.
@@ -11075,7 +11083,7 @@ Get a_ difference between the spot and the polygon's box's left-top.
 Move the polygon given the difference.
 
 \PAL
-Para mover um polígono alguns twips acima;
+Para mover um polígono alguns tuipes acima;
 \CAL
 To move a_ polygon up some twips:
 Move the polygon given 0 and - the twips.
@@ -11175,7 +11183,7 @@ Bump the rider.
 Repeat.
 
 \PAL
-Para mover alguns twips à direita e outros twips abaixo;
+Para mover alguns tuipes à direita e outros tuipes abaixo;
 \CAL
 To move to the right some twips and down some other twips;
 To move right some twips and down some other twips;
@@ -11185,7 +11193,7 @@ Move the context's spot right the twips.
 Move the context's spot down the other twips.
 
 \PAL
-Para mover alguns twips à direita e outros twips acima;
+Para mover alguns tuipes à direita e outros tuipes acima;
 \CAL
 To move to the right some twips and up some other twips;
 To move right some twips and up some other twips;
@@ -11202,8 +11210,8 @@ To move to a_ spot:
 Put the spot into the context's spot.
 
 \PAL
-Para mover um loco sobre alguns twips em qualquer direção;
-Para mover um loco em alguns twips para qualquer direção;
+Para mover um loco sobre alguns tuipes em qualquer direção;
+Para mover um loco em alguns tuipes para qualquer direção;
 \CAL
 To move a_ spot about some twips in any direction:
 Pick another spot within the twips of the spot.
@@ -11223,21 +11231,21 @@ To move a_ spot given a_ pair:
 Move the spot given the pair's x-number and the pair's y-number.
 
 \PAL
-Para mover um loco dado alguns x-twips e alguns y-twips;
+Para mover um loco dado alguns tuipes-x e alguns tuipes-y;
 \CAL
 To move a_ spot given some x-twips and some y-twips:
 Add the x-twips to the spot's x-coord.
 Add the y-twips to the spot's y-coord.
 
 \PAL
-Para mover um loco alguns twips abaixo;
+Para mover um loco alguns tuipes abaixo;
 \CAL
 To move a_ spot some twips down;
 To move a_ spot down some twips:
 Move the spot given 0 and the twips.
 
 \PAL
-Para mover um loco alguns twips à esquerda;
+Para mover um loco alguns tuipes à esquerda;
 \CAL
 To move a_ spot some twips to the left;
 To move a_ spot some twips left;
@@ -11245,7 +11253,7 @@ To move a_ spot left some twips:
 Move the spot given - the twips and 0.
 
 \PAL
-Para mover um loco alguns twips à direita;
+Para mover um loco alguns tuipes à direita;
 \CAL
 To move a_ spot some twips right;
 To move a_ spot some twips to the right;
@@ -11253,7 +11261,7 @@ To move a_ spot right some twips:
 Move the spot given the twips and 0.
 
 \PAL
-Para mover um loco alguns twips à direita e outros twips abaixo;
+Para mover um loco alguns tuipes à direita e outros tuipes abaixo;
 \CAL
 To move a_ spot some twips to the right and some other twips down;
 To move a_ spot some twips right and some other twips down:
@@ -11261,7 +11269,7 @@ Add the twips to the spot's x-coord.
 Add the other twips to the spot's y-coord.
 
 \PAL
-Para mover um loco alguns twips acima;
+Para mover um loco alguns tuipes acima;
 \CAL
 To move a_ spot some twips up;
 To move a_ spot up some twips:
@@ -11282,7 +11290,7 @@ Add the number to the substring's first.
 Add the number to the substring's last.
 
 \PAL
-Para mover um texto alguns twips abaixo;
+Para mover um texto alguns tuipes abaixo;
 \CAL
 To move a_ text down some twips:
 Move the text given 0 and the twips.
@@ -11294,20 +11302,20 @@ To move a_ text given a_ pair:
 Move the text given the pair's x-number and the pair's y-number.
 
 \PAL
-Para mover um texto dado alguns x-twips e alguns y-twips;
+Para mover um texto dado alguns tuipes-x e alguns tuipes-y;
 \CAL
 To move a_ text given some x-twips and some y-twips:
 If the text is nil, exit.
 Move the text's box given the x-twips and the y-twips.
 
 \PAL
-Para mover um texto alguns twips à esquerda;
+Para mover um texto alguns tuipes à esquerda;
 \CAL
 To move a_ text left some twips:
 Move the text given - the twips and 0.
 
 \PAL
-Para mover um texto alguns twips à direita;
+Para mover um texto alguns tuipes à direita;
 \CAL
 To move a_ text right some twips:
 Move the text given the twips and 0.
@@ -11322,7 +11330,7 @@ Get a_ difference between the spot and the text's left-top.
 Move the text given the difference.
 
 \PAL
-Para mover um texto alguns twips acima;
+Para mover um texto alguns tuipes acima;
 \CAL
 To move a_ text up some twips:
 Move the text given 0 and - the twips.
@@ -11345,7 +11353,7 @@ Put the things' last into the other things' last.
 Clear the things.
 
 \PAL
-Para mover alguns twips;
+Para mover alguns tuipes;
 \CAL
 To move some twips:
 \Wait for_ the delay. ***
@@ -11357,14 +11365,14 @@ Add the rise times the twips divided by 10000 to the line's end's y-coord.
 Put the line's end into the context's spot.
 
 \PAL
-Para mover alguns twips abaixo;
+Para mover alguns tuipes abaixo;
 \CAL
 To move some twips down;
 To move down some twips:
 Add the twips to the context's y-coord.
 
 \PAL
-Para mover alguns twips à esquerda;
+Para mover alguns tuipes à esquerda;
 \CAL
 To move some twips to the left;
 To move some twips left;
@@ -11372,7 +11380,7 @@ To move left some twips:
 Subtract the twips from the context's x-coord.
 
 \PAL
-Para mover alguns twips à direita;
+Para mover alguns tuipes à direita;
 \CAL
 To move some twips to the right;
 To move some twips right;
@@ -11380,14 +11388,14 @@ To move right some twips:
 Add the twips to the context's x-coord.
 
 \PAL
-Para mover alguns twips acima;
+Para mover alguns tuipes acima;
 \CAL
 To move some twips up;
 To move up some twips: 
 Subtract the twips from the context's y-coord.
 
 \PAL
-Para mover um vértice alguns twips abaixo;
+Para mover um vértice alguns tuipes abaixo;
 \CAL
 To move a_ vertex down some twips:
 Move the vertex given 0 and the twips.
@@ -11399,7 +11407,7 @@ To move a_ vertex given a_ pair:
 Move the vertex given the pair's x-number and the pair's y-number.
 
 \PAL
-Para mover um vértice dado alguns x-twips e alguns y-twips;
+Para mover um vértice dado alguns tuipes-x e alguns tuipes-y;
 \CAL
 To move a_ vertex given some x-twips and some y-twips:
 If the vertex is nil, exit.
@@ -11407,13 +11415,13 @@ Add the x-twips to the vertex's x-coord.
 Add the y-twips to the vertex's y-coord.
 
 \PAL
-Para mover um vértice alguns twips à esquerda;
+Para mover um vértice alguns tuipes à esquerda;
 \CAL
 To move a_ vertex left some twips:
 Move the vertex given - the twips and 0.
 
 \PAL
-Para mover um vértice alguns twips à direita;
+Para mover um vértice alguns tuipes à direita;
 \CAL
 To move a_ vertex right some twips:
 Move the vertex given the twips and 0.
@@ -11427,7 +11435,7 @@ If the vertex is nil, exit.
 Put the spot into the vertex's spot.
 
 \PAL
-Para mover um vértice alguns twips acima;
+Para mover um vértice alguns tuipes acima;
 \CAL
 To move a_ vertex up some twips:
 Move the vertex given 0 and - the twips.
@@ -12112,7 +12120,7 @@ Pick the heading between 0 and 3839.
 Put the heading into the context's heading.
 
 \PAL
-Para escolher uma altura de letra entre alguns twips e alguns outros twips;
+Para escolher uma altura de letra entre alguns tuipes e outros tuipes;
 \CAL
 To pick a_ letter height between some twips and some other twips:
 Pick a_ random number between the twips and the other twips.
@@ -12606,7 +12614,7 @@ Round the difference to the nearest multiple of the tpp.
 Move the box given the difference.
 
 \PAL
-Para centralizar uma caixa alguns twips por outros twips em outra caixa;
+Para centralizar uma caixa alguns tuipes por outros tuipes em outra caixa;
 \CAL
 To put a_ box some twips by some other twips in the center of another box;
 To center a_ box some twips by some other twips in another box:
@@ -12972,7 +12980,7 @@ Add 1 to the count.
 Repeat.
 
 \PAL
-Para pôr uma esquerda e uma superior e uma direita e uma inferior e um raio em uma caixa arredondada;
+Para pôr uma coordenada esquerda e uma coordenada superior e uma coordenada direita e uma coordenada inferior e um raio em uma caixa arredondada;
 \CAL
 To put a_ left coord and a_ top coord and a_ right coord and a_ bottom coord and a_ radius into a_ roundy box:
 Put the left into the roundy box's left.
@@ -12982,7 +12990,7 @@ Put the bottom into the roundy box's bottom.
 Put the radius into the roundy box's radius.
 
 \PAL
-Para pôr uma esquerda e uma superior e uma direita e uma inferior em uma caixa;
+Para pôr uma coordenada esquerda e uma coordenada superior e uma coordenada direita e uma coordenada inferior em uma caixa;
 \CAL
 To put a_ left coord and a_ top coord and a_ right coord and a_ bottom coord into a_ box:
 Put the left into the box's left.
@@ -12991,7 +12999,7 @@ Put the right into the box's right.
 Put the bottom into the box's bottom.
 
 \PAL
-Para pôr uma esquerda e uma superior e uma direita e uma inferior em uma elipse;
+Para pôr uma coordenada esquerda e uma coordenada superior e uma coordenada direita e uma coordenada inferior em uma elipse;
 \CAL
 To put a_ left coord and a_ top coord and a_ right coord and a_ bottom coord into an ellipse:
 Put the left into the ellipse's left.
@@ -13590,7 +13598,7 @@ If the selection's caret column# is not 1, add 1 to the count.
 To put a_ text's status string into a_ string:
 If the text is nil, clear the string; exit.
 Put the text's selected row count into a_ count.
-If the count is not 0, format the count and "línea" or "líneas" into the string; exit.
+If the count is not 0, format the count and "linha" or "linhas" into the string; exit.
 Put the text's selected byte count into another count.
 If the other count is not 0, format the other count and "byte" or "bytes" into the string; exit.
 Convert the text's caret row# to the string.
@@ -13925,7 +13933,7 @@ Loop.
 Put 0 into a_ size.  
 Call "winhttp.dll" "WinHttpQueryDataAvailable"
 With the winhttp request's request and the size's whereabouts returning a_ result number.
-If the result is 0, put "No se pudo consultar los datos disponibles." into o erro de e/s; clear the response; break.
+If the result is 0, put "Não se pode consultar os dados disponíveis." into o erro de e/s; clear the response; break.
 Put the response's length into a_ saved length.
 Reassign the response's first given the saved length plus the buffer size.
 Put the response's first plus the saved length into a_ pointer.
@@ -14757,6 +14765,10 @@ uma coordenada chamada esquerda redefinindo a left coord,
 uma coordenada chamada topo redefinindo a top coord,
 uma coordenada chamada direita redefinindo a right coord,
 uma coordenada chamada base redefinindo a bottom coord,
+uma coordenada esquerda redefinindo a left coord,
+uma coordenada superior redefinindo a top coord,
+uma coordenada direita redefinindo a right coord,
+uma coordenada inferior redefinindo a bottom coord,
 um loco esquerdo-superior redefinindo a left,
 um loco direito-inferior redefinindo a right,
 um raio redefinindo o radius.
@@ -14766,7 +14778,7 @@ a_ row is a_ thing with
 a_ row#
 and a_ string
 \PAL
-e um número chamado posição redefinindo a row#
+e um número redefinindo a row#
 e uma sequência redefinindo o string.
 
 a_ row# is a_ number.
@@ -15079,10 +15091,10 @@ a_ caret at the caret column#,
 \PAL
 Um número chamado coluna âncora redefinindo a anchor column#,
 Um número chamado linha âncora redefinindo a anchor row#,
-Uma âncora redefinindo a anchor column#,
+Uma posição chamada âncora redefinindo a anchor column#,
 Um número chamado coluna marcadora redefinindo a caret column#,
 Um número chamado linha marcadora redefinindo a caret row#,
-Um marcador redefinindo a caret column#.
+Uma posição chamada marcador redefinindo a caret column#.
 
 The semi-colon byte is a_ byte equal to 59.
 
@@ -15329,7 +15341,7 @@ Refresh the screen given the terminal's box.
 Restore the current canvas.
 
 \PAL
-Para reduzir uma caixa em alguns twips;
+Para reduzir uma caixa em alguns tuipes;
 \CAL
 To shrink a_ box by some twips;
 To indent a_ box some twips;
@@ -18325,7 +18337,7 @@ To use a_ letter height:
 Put the letter height into the context's letter height.
 
 \PAL
-Para usar uma altura de letra de alguns twips;
+Para usar uma altura de letra de alguns tuipes;
 \CAL
 To use a_ letter height of some twips:
 Put the twips into the letter height.
@@ -19116,7 +19128,9 @@ A tecla-entrar é uma tecla igual a 13.
 A tecla-maiúsculo é uma tecla igual a 16.            
 A tecla-shift é uma tecla igual a 16.            
 A tecla-ctrl é uma tecla igual a 17.             
+A tecla-controle é uma tecla igual a 17.
 A tecla-alt é uma tecla igual a 18.              
+A tecla-alterar é uma tecla igual a 18.              
 A tecla-pausa é uma tecla igual a 19.            
 A tecla-fixar é uma tecla igual a 20.            
 A tecla-esc é uma tecla igual a 27.              
@@ -19341,7 +19355,7 @@ O byte-circunflexo é um byte igual a 94.
 O byte-_ é um byte igual a 95.
 O byte-sublinhado é um byte igual a 95.
 O byte-` é um byte igual a 96.
-O byte-acento é um byte igual a 96.
+O byte-crase é um byte igual a 96.
 O byte-a é um byte igual a 97.
 O byte-b é um byte igual a 98.
 O byte-c é um byte igual a 99.
@@ -19515,10 +19529,16 @@ O byte-ÿ é um byte igual a 255.
 
 \ unidades de medida em Português
 
-Um cm é 567 twips.
+Um cm é 567 tuipes.
 Um mm é 1/10 cm.
 
 \ tipos de dados em Português
+
+\ alignment
+Um alinhamento é uma sequência [centro, esquerda ou direita].
+
+\ amount
+Uma quantidade é um número.
 
 \ angle 
 Um ângulo é alguns graus precisos [0 a 3599].
@@ -19538,6 +19558,14 @@ Um tom é um cor.
 
 \ coord
 Uma coordenada é a_ coord.
+\ left coord
+Uma coordenada esquerda é uma coordenada.
+\ right coord
+Uma coordenada direita é uma coordenada.
+\ top coord
+Uma coordenada superior é uma coordenada.
+\ bottom coord
+Uma coordenada inferior é uma coordenada.
 
 \ count
 Um contador é um número.
@@ -19553,10 +19581,19 @@ Um grau preciso é um número [0 a 3599].
 \ description
 Uma descrição é uma sequência.
 
+\ designator
+Um designador é uma sequência.
+
+\ difference
+Uma diferença é a_ pair.
+
 \ directory
 Uma pasta é uma rota.
 \ directory name
 Um nome de pasta é uma sequência.
+
+\ distance
+Uma distância é alguns tuipes.
 
 \ dot
 Um ponto é a_ dot.
@@ -19570,11 +19607,14 @@ Um tipo de disco é uma sequência.
 \ drive name
 Um nome de disco é uma sequência.
 
+\ ellipse
+Uma elipse é an ellipse.
+
 \ event
 Um evento é a_ event.
 
-\ ellipse
-Uma elipse é an ellipse.
+\ extension
+Uma extensão é uma sequência.
 
 \ file 
 Um arquivo é a_ handle.
@@ -19595,8 +19635,8 @@ Uma fonte é a_ font.
 Um tipo de letra é uma fonte.
 
 \ font height
-Uma altura de fonte é alguns twips.
-Uma altura de tipo de letra é alguns twips.
+Uma altura de fonte é alguns tuipes.
+Uma altura de tipo de letra é alguns tuipes.
 
 \ fraction
 Uma fração é a_ fraction.
@@ -19605,13 +19645,13 @@ Uma fração é a_ fraction.
 Uma grade é a_ grid.
 
 \ height
-Uma altura é alguns twips.
+Uma altura é alguns tuipes.
 
 \ hue
 Uma matiz é a_ hue.
 
 \ inch
-Uma polegada é 1440 twips.
+Uma polegada é 1440 tuipes.
 
 \ index
 Um índice é an index.
@@ -19624,6 +19664,9 @@ Um recurso é an item.
 
 \ key
 Uma tecla is a_ key.
+
+\ length
+Um tamanho é a_ length.
 
 \ lightness
 Um brilho é a_ lightness.
@@ -19647,6 +19690,12 @@ Um nome é uma sequência.
 
 \ number
 Um número é a_ number.
+\ sinônimos de number
+Um nº é um número.
+
+\ operation
+\ for remembering text for undo and redo so we don't waste saves on every character typed
+Uma operação é uma sequência.                                        
 
 \ pair
 Um par é a_ pair.
@@ -19721,6 +19770,8 @@ Uma folha vertical é a_ portrait sheet.
 
 \ spot 
 Um loco é a_ spot.
+\ sinônimos de spot
+Um lugar é a_ spot.
 
 \ square root
 Uma raiz quadrada é um número.
@@ -19757,6 +19808,9 @@ Um tique é a_ tick.
 \ timer
 Um temporizador é a_ timer.
 
+\ twip
+Um tuipe é a_ twip.
+
 \ vertex
 Um vértice é a_ vertex.
 
@@ -19766,55 +19820,35 @@ Um som é a_ wave.
 Um arquivo de som é a_ wave file.                                       
 
 \ width
-Uma largura é alguns twips.
+Uma largura é alguns tuipes.
 
 \ window
 Uma janela é a_ window.
 
+\ x-coord
+Uma coord-x é uma coordenada.
+Uma coordenada-x é uma coordenada.
 
-Uma âncora é uma posição.
+\ x-twips
+Alguns tuipes-x são alguns tuipes.
+ 
+\ y-coord
+Uma coord-y é uma coordenada.
+Uma coordenada-y é uma coordenada.
 
+\ y-twips
+Alguns tuipes-y são alguns tuipes.
 
 Uma elevação é a_ number.
 Uma subida é a_ number.
-Um designador é uma sequência.
-Um marcador é uma posição.
-Um múltiplo é um número.
-Um número-x é um número.
-Um número-y é um número.
-\Um poco é a_ number.
-Um alcance é um número.
-Uma contagem de elementos é a_ number.
-Um tamanho é a_ size.
-Um tipo é a_ kind.
 Um verso é um elemento com uma sequência.
-Um alinhamento é uma sequência [centro, esquerda ou direita].
-Uma quantidade é um número.
-Uma carta é a_ byte.
 Uma corrida é a_ number.
-\Uma classe é uma sequência.
-Uma bolha de eventos são alguns eventos.
 \Um console é a_ console.
 Uma consulta é uma sequência.
-Uma coord-x é uma coordenada.
-Uma coord-y é uma coordenada.
-Uma coordenada-x é uma coordenada.
-Uma coordenada-y é uma coordenada.
-Uma direita é uma coordenada.
-Uma diferença é a_ pair.
 Uma direção é alguns degraus. \ heading
-Uma distância é alguns twips.
 Uma escolha é um elemento com um nome e uma caixa.
-Uma entrada é an event.
-Uma extensão é uma sequência.
-Uma inferior é uma coordenada.
-Uma esquerda é uma coordenada.
-\Uma letra é um byte.                                               \ do not use -tipo de letra is a font \ use carta
 Uma palavra é uma sequência.
-Uma posição de sequência é a_ number.
-Uma operação é uma sequência.                                        \ for remembering text for undo and redo so we don't waste saves on every character typed
 Uma resposta é uma sequência.
-Uma superior é uma coordenada.
 
 \ variáveis globais em Português
 

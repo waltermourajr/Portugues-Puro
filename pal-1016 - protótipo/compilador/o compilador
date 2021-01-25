@@ -2752,19 +2752,21 @@ If the substring is "como", say yes. \ as
 If the substring is "contra", say yes. \ against
 \ If the substring is "de", say yes. \ reverse-possessive indicator 
 If the substring is "dada", say yes. \ given
+If the substring is "dadas", say yes. \ given
 If the substring is "dado", say yes. \ given
+If the substring is "dados", say yes. \ given
 If the substring is "dando", say yes. \ given
 If the substring is "gerando", say yes. \ giving
 If the substring is "resultando", say yes. \ giving
 If the substring is "retornando", say yes. \ giving
-If the substring is "direita", say yes. \ right
+\ If the substring is "direita", say yes. \ right
 If the substring is "desde", say yes. \ since
 If the substring is "depois", say yes. \ after
 If the substring is "durante", say yes. \ during
 If the substring is "em", say yes. \ in
 If the substring is "entre", say yes. \ between
 If the substring is "até", say yes. \ until
-If the substring is "esquerda", say yes. \ left
+\ If the substring is "esquerda", say yes. \ left
 If the substring is "mediante", say yes. \ through
 If the substring is "para", say yes. \ to
 If the substring is "por", say yes. \ by

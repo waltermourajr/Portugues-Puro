@@ -377,7 +377,7 @@ To append a_ string to a_ pdf object without advancing:
 Append the string to the pdf object's data.
 
 \PAL
-Para pospor alguns elementos a alguns outros elementos;
+Para pospor alguns elementos a alguns diferentes elementos;
 \CAL
 To append some things to some other things:
 Put the things' first into a_ thing.
@@ -2232,8 +2232,8 @@ Put the vertex's x-coord into the other vertex's x-coord.
 Put the vertex's y-coord into the other vertex's y-coord.
 
 \PAL
-Para copiar alguns vértices em alguns outros vértices;
-Para copiar alguns vértices para alguns outros vértices;
+Para copiar alguns vértices em alguns diferentes vértices;
+Para copiar alguns vértices para alguns diferentes vértices;
 \CAL
 To copy some vertices into some other vertices:
 Destroy the other vertices.
@@ -8656,8 +8656,8 @@ The i-key is a_ key equal to 73.
 a_ iid is a_ uuid.
 
 \PAL
-Para imaginar uma caixa alguns tuipes por outros tuipes;
-Para fazer uma caixa alguns tuipes por alguns tuipes;
+Para imaginar uma caixa alguns tuipes por outros diferentes tuipes;
+Para fazer uma caixa alguns tuipes por outros diferentes tuipes;
 \CAL
 To imagine a_ box some twips by some other twips;
 To make a_ box some twips by some other twips:
@@ -9569,15 +9569,15 @@ Put the previous thing's previous into the new thing's previous.
 Put the new thing into the previous thing's previous.
 
 \PAL
-Para inserir alguns elementos em alguns outros elementos depois de um elemento;
-Para inserir alguns elementos em alguns outros elementos após um elemento;
+Para inserir alguns elementos em alguns diferentes elementos depois de um elemento;
+Para inserir alguns elementos em alguns diferentes elementos após um elemento;
 \CAL
 To insert some things into some other things after a_ thing:
 If the thing is nil, prepend the things to the other things; exit.
 Insert the things into the other things before the thing's next.
 
 \PAL
-Para inserir alguns elementos em alguns outros elementos antes de um elemento;
+Para inserir alguns elementos em alguns diferentes elementos antes de um elemento;
 \CAL
 To insert some things into some other things before a_ thing:
 Privatize the thing.
@@ -10847,10 +10847,10 @@ If the finger is nil, exit.
 Add 1 to the finger.
 
 \PAL
-Para mover para a esquerda alguns tuipes e para baixo outros tuipes;
-Para mover para a esquerda alguns tuipes e abaixo outros tuipes;
-Para mover à esquerda alguns tuipes e para baixo outros tuipes;
-Para mover à esquerda alguns tuipes e abaixo outros tuipes;
+Para mover para a esquerda alguns tuipes e para baixo outros diferentes tuipes;
+Para mover para a esquerda alguns tuipes e abaixo outros diferentes tuipes;
+Para mover à esquerda alguns tuipes e para baixo outros diferentes tuipes;
+Para mover à esquerda alguns tuipes e abaixo outros diferentes tuipes;
 \CAL
 To move to the left some twips and down some other twips;
 To move left some twips and down some other twips;
@@ -10860,10 +10860,10 @@ Move the context's spot left the twips.
 Move the context's spot down the other twips.
 
 \PAL
-Para mover para a esquerda alguns tuipes e para cima outros tuipes;
-Para mover para a esquerda alguns tuipes e acima outros tuipes;
-Para mover à esquerda alguns tuipes e para cima outros tuipes;
-Para mover à esquerda alguns tuipes e acima outros tuipes;
+Para mover para a esquerda alguns tuipes e para cima outros diferentes tuipes;
+Para mover para a esquerda alguns tuipes e acima outros diferentes tuipes;
+Para mover à esquerda alguns tuipes e para cima outros diferentes tuipes;
+Para mover à esquerda alguns tuipes e acima outros diferentes tuipes;
 \CAL
 To move to the left some twips and up some other twips;
 To move left some twips and up some other twips;
@@ -11040,14 +11040,14 @@ To move a_ polygon left some twips:
 Move the polygon given - the twips and 0.
 
 \PAL
-Para mover um polígono alguns tuipes à esquerda e outros tuipes abaixo;
+Para mover um polígono alguns tuipes à esquerda e outros diferentes tuipes abaixo;
 \CAL
 To move a_ polygon left some twips and down some other twips:
 Move the polygon left the twips.
 Move the polygon down the other twips.
 
 \PAL
-Para mover um polígono alguns tuipes à esquerda e outros tuipes acima;
+Para mover um polígono alguns tuipes à esquerda e outros diferentes tuipes acima;
 \CAL
 To move a_ polygon left some twips and up some other twips:
 Move the polygon left the twips.
@@ -11060,14 +11060,14 @@ To move a_ polygon right some twips:
 Move the polygon given the twips and 0.
 
 \PAL
-Para mover um polígono alguns tuipes à direita e outros tuipes abaixo;
+Para mover um polígono alguns tuipes à direita e outros diferentes tuipes abaixo;
 \CAL
 To move a_ polygon right some twips and down some other twips:
 Move the polygon right the twips.
 Move the polygon down the other twips.
 
 \PAL
-Para mover um polígono alguns tuipes à direita e outros tuipes acima;
+Para mover um polígono alguns tuipes à direita e outros diferentes tuipes acima;
 \CAL
 To move a_ polygon right some twips and up some other twips:
 Move the polygon right the twips.
@@ -11183,7 +11183,7 @@ Bump the rider.
 Repeat.
 
 \PAL
-Para mover alguns tuipes à direita e outros tuipes abaixo;
+Para mover alguns tuipes à direita e outros diferentes tuipes abaixo;
 \CAL
 To move to the right some twips and down some other twips;
 To move right some twips and down some other twips;
@@ -11193,7 +11193,7 @@ Move the context's spot right the twips.
 Move the context's spot down the other twips.
 
 \PAL
-Para mover alguns tuipes à direita e outros tuipes acima;
+Para mover alguns tuipes à direita e outros diferentes tuipes acima;
 \CAL
 To move to the right some twips and up some other twips;
 To move right some twips and up some other twips;
@@ -11261,7 +11261,7 @@ To move a_ spot right some twips:
 Move the spot given the twips and 0.
 
 \PAL
-Para mover um loco alguns tuipes à direita e outros tuipes abaixo;
+Para mover um loco alguns tuipes à direita e outros diferentes tuipes abaixo;
 \CAL
 To move a_ spot some twips to the right and some other twips down;
 To move a_ spot some twips right and some other twips down:
@@ -11336,7 +11336,7 @@ To move a_ text up some twips:
 Move the text given 0 and - the twips.
 
 \PAL
-Para mover um elemento de alguns elementos para outros elementos;
+Para mover um elemento de alguns elementos para outros diferentes elementos;
 \CAL
 To move a_ thing from some things to some other things:
 If the thing is nil, exit.
@@ -11345,7 +11345,7 @@ Remove the thing from the things.
 Append the thing to the other things.
 
 \PAL
-Para mover alguns elementos para alguns outros elementos;
+Para mover alguns elementos para outros diferentes elementos;
 \CAL
 To move some things to some other things:
 Put the things' first into the other things' first.
@@ -12120,7 +12120,7 @@ Pick the heading between 0 and 3839.
 Put the heading into the context's heading.
 
 \PAL
-Para escolher uma altura de letra entre alguns tuipes e outros tuipes;
+Para escolher uma altura de letra entre alguns tuipes e outros diferentes tuipes;
 \CAL
 To pick a_ letter height between some twips and some other twips:
 Pick a_ random number between the twips and the other twips.
@@ -12492,7 +12492,7 @@ Put the thing into the things' first.
 \Repeat.
 
 \PAL
-Para prepor alguns elementos a alguns outros elementos;
+Para prepor alguns elementos a outros diferentes elementos;
 \CAL
 To prepend some things to some other things:
 Put the things' last into a_ thing.
@@ -12614,7 +12614,7 @@ Round the difference to the nearest multiple of the tpp.
 Move the box given the difference.
 
 \PAL
-Para centralizar uma caixa alguns tuipes por outros tuipes em outra caixa;
+Para centralizar uma caixa alguns tuipes por outros diferentes tuipes em outra caixa;
 \CAL
 To put a_ box some twips by some other twips in the center of another box;
 To center a_ box some twips by some other twips in another box:
@@ -13618,7 +13618,7 @@ If the things are empty, put the thing into the things' first.
 Put the thing into the things' last.
 
 \PAL
-Para pôr alguns elementos em alguns outros elementos;
+Para pôr alguns elementos em outros diferentes elementos;
 \CAL
 To put some things into some other things:
 Put the things' first into the other things' first.
@@ -14765,12 +14765,10 @@ uma coordenada chamada esquerda redefinindo a left coord,
 uma coordenada chamada topo redefinindo a top coord,
 uma coordenada chamada direita redefinindo a right coord,
 uma coordenada chamada base redefinindo a bottom coord,
-uma coordenada esquerda redefinindo a left coord,
-uma coordenada superior redefinindo a top coord,
-uma coordenada direita redefinindo a right coord,
-uma coordenada inferior redefinindo a bottom coord,
-um loco esquerdo-superior redefinindo a left,
-um loco direito-inferior redefinindo a right,
+uma coordenada chamada superior redefinindo a top coord,
+uma coordenada chamada inferior redefinindo a bottom coord,
+um loco chamado esquerdo-superior redefinindo a left,
+um loco chamado direito-inferior redefinindo a right,
 um raio redefinindo o radius.
 
 a_ row is a_ thing with
@@ -17833,8 +17831,8 @@ Put the other number into the number.
 Put the third number into the other number.
 
 \PAL
-Para trocar alguns elementos por alguns outros elementos;
-Para trocar alguns elementos para alguns outros elementos;
+Para trocar alguns elementos por outros diferentes elementos;
+Para trocar alguns elementos para outros diferentes elementos;
 \CAL
 To swap some things with some other things:
 Swap the things' first with the other things' first.
@@ -19554,12 +19552,12 @@ Um depósito é a_ buffer.
 \ color
 Uma cor é a_ color.
 \ sinônimos de color
-Um tom é um cor.
+Um tom é uma cor.
 
 \ coord
-Uma coordenada é a_ coord.
+Uma coordenada é alguns tuipes.
 \ left coord
-Uma coordenada esquerda é uma coordenada.
+Um coordenada esquerda é alguns tuipes.
 \ right coord
 Uma coordenada direita é uma coordenada.
 \ top coord
@@ -19691,7 +19689,7 @@ Um nome é uma sequência.
 \ number
 Um número é a_ number.
 \ sinônimos de number
-Um nº é um número.
+\Um nº é um número.
 
 \ operation
 \ for remembering text for undo and redo so we don't waste saves on every character typed
