@@ -703,6 +703,14 @@ If the string is "dum", append "de um" to the other string; exit.
 If the string is "duma", append "de uma" to the other string; exit.
 If the string is "duns", append "de uns" to the other string; exit.
 If the string is "dumas", append "de umas" to the other string; exit.
+If the string is "doutro", append "de outro" to the other string; exit.
+If the string is "doutros", append "de outros" to the other string; exit.
+If the string is "doutra", append "de outra" to the other string; exit.
+If the string is "doutras", append "de outras" to the other string; exit.
+If the string is "dalgum", append "de algum" to the other string; exit.
+If the string is "dalguma", append "de alguma" to the other string; exit.
+If the string is "dalguns", append "de alguns" to the other string; exit.
+If the string is "dalgumas", append "de algumas" to the other string; exit.
 \# "no" pode ser uma negação em inglês.
 If the string is any contraction giving the third string (portuguese rules - "no"), append "em o" to the other string; exit.
 If the string is "na", append "em a" to the other string; exit.
@@ -746,6 +754,7 @@ If the string is "ampliar", append "aumentar" to the other string; exit.
 If the string is "achar", append "encontrar" to the other string; exit.
 If the string is "descobrir", append "encontrar" to the other string; exit.
 If the string is "buscar", append "encontrar" to the other string; exit.
+If the string is "tratar", append "manejar" to the other string; exit.
 If the string is "manusear", append "manejar" to the other string; exit.
 If the string is "manipular", append "manejar" to the other string; exit.
 If the string is "enumerar", append "listar" to the other string; exit.
@@ -1489,6 +1498,8 @@ Add a_ parameter to the parameters given "parameter" and the rider's token's fir
 \PAL
 If the rider's token is "outra", put "segunda" into the parameter's name.
 If the rider's token is "outro", put "segundo" into the parameter's name.
+If the rider's token is "outras", put "segundas" into the parameter's name.
+If the rider's token is "outros", put "segundos" into the parameter's name.
 \CAL
 If the rider's token is "another", put "other" into the parameter's name.
 Move the rider (compiler rules).
@@ -1859,6 +1870,8 @@ Add a_ local to the current routine's locals given "local" and the rider's token
 \PAL
 If the rider's token is "outra", put "segunda" into the local's name.
 If the rider's token is "outro", put "segundo" into the local's name.
+If the rider's token is "outras", put "segundas" into the local's name.
+If the rider's token is "outros", put "segundos" into the local's name.
 \CAL
 If the rider's token is "another", put "other" into the local's name.
 Move the rider (compiler rules).
@@ -1975,6 +1988,8 @@ Add a_ local to the current routine's locals given "local" and the rider's token
 \PAL
 If the rider's token is "outra", put "segunda" into the local's name.
 If the rider's token is "outro", put "segundo" into the local's name.
+If the rider's token is "outras", put "segundas" into the local's name.
+If the rider's token is "outros", put "segundos" into the local's name.
 \CAL
 If the rider's token is "another", put "other" into the local's name.
 Extend the local's name with the variable name.
@@ -4892,6 +4907,8 @@ If the rider's token is "another", put "other" into the field's name.
 \PAL
 If the rider's token is "outra", put "segunda" into the field's name.
 If the rider's token is "outro", put "segundo" into the field's name.
+If the rider's token is "outras", put "segundas" into the field's name.
+If the rider's token is "outros", put "segundos" into the field's name.
 Move the rider (compiler rules).
 Scan a_ name given the rider.
 Extend the field's name with the name.

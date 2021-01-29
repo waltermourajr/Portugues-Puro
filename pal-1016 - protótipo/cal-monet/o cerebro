@@ -377,7 +377,7 @@ To append a_ string to a_ pdf object without advancing:
 Append the string to the pdf object's data.
 
 \PAL
-Para pospor alguns elementos a alguns diferentes elementos;
+Para pospor alguns elementos a outros elementos;
 \CAL
 To append some things to some other things:
 Put the things' first into a_ thing.
@@ -852,9 +852,13 @@ a_ left-top spot at the left, and a_ right-bottom spot at the right,
 a_ top-left spot at the left, and a_ bottom-right spot at the right,
 \PAL
 uma coordenada chamada esquerda redefinindo a left coord,
-uma coordenada chamada topo redefinindo a top coord,
 uma coordenada chamada direita redefinindo a right coord,
+uma coordenada chamada topo redefinindo a top coord,
 uma coordenada chamada base redefinindo a bottom coord,
+uma coordenada esquerda redefinindo a left coord,
+uma coordenada direita redefinindo a right coord,
+uma coordenada superior redefinindo a top coord,
+uma coordenada inferior redefinindo a bottom coord,
 um loco esquerdo-superior redefinindo a left,
 um loco direito-inferior redefinindo a right.
 
@@ -2232,8 +2236,8 @@ Put the vertex's x-coord into the other vertex's x-coord.
 Put the vertex's y-coord into the other vertex's y-coord.
 
 \PAL
-Para copiar alguns vértices em alguns diferentes vértices;
-Para copiar alguns vértices para alguns diferentes vértices;
+Para copiar alguns vértices em outros vértices;
+Para copiar alguns vértices para outros vértices;
 \CAL
 To copy some vertices into some other vertices:
 Destroy the other vertices.
@@ -3250,8 +3254,8 @@ If the byte is in "aeiou", say yes.
 Say no.
 
 \PAL
-Para decidir se um byte está entre outro bye e um terceiro byte;
-Para decidir se um byte se encontra entre outro bye e um terceiro byte;
+Para decidir se um byte está entre outro byte e um terceiro byte;
+Para decidir se um byte se encontra entre outro byte e um terceiro byte;
 \CAL
 To decide if a_ byte is between another byte and a_ third byte:
 If the byte is less than the other byte, say no.
@@ -8145,7 +8149,7 @@ Put the key into the event's key.
 Enque the event.
 
 \PAL
-Para manejar capitalizar dado um texto;
+Para manejar um texto (capitalizar);
 \CAL
 To handle capitalize given a_ text:
 If the text is nil, exit.
@@ -8156,7 +8160,7 @@ Square up any selection in the text.
 Wrap the text.
 
 \PAL
-Para manejar copiar dado um texto;
+Para manejar um texto (copiar);
 \CAL
 To handle copy given a_ text:
 If the text is nil, exit.
@@ -8165,7 +8169,7 @@ Extract a_ string from the text (selected bytes).
 Put the string on the windows clipboard.
 
 \PAL
-Para manejar cortar dado um texto;
+Para manejar um texto (cortar);
 \CAL
 To handle cut given a_ text:
 If the text is nil, exit.
@@ -8276,7 +8280,8 @@ To handle an event given a_ terminal (set cursor):
 Show the arrow cursor.
 
 \PAL
-Para manejar um evento dado um texto (tecla retroceso);
+Para manejar um evento dado um texto (tecla-retrocesso);
+Para manejar um evento dado um texto (tecla-retornar);
 \CAL
 To handle an event given a_ text (backspace key):
 If the text is nil, exit.
@@ -8288,7 +8293,8 @@ Wrap the text.
 Scroll the text to the caret.
 
 \PAL
-Para manejar um evento dado um texto (tecla suprimir);
+Para manejar um evento dado um texto (tecla-deletar);
+Para manejar um evento dado um texto (tecla-del);
 \CAL
 To handle an event given a_ text (delete key):
 If the text is nil, exit.
@@ -8300,8 +8306,7 @@ Wrap the text.
 Scroll the text to the caret.
 
 \PAL
-Para manejar um evento dado um texto (tecla seta-abaixo);
-Para manejar um evento dado um texto (tecla seta abaixo);
+Para manejar um evento dado um texto (tecla-abaixo);
 \CAL
 To handle an event given a_ text (down-arrow key):
 If the text is nil, exit.
@@ -8313,7 +8318,7 @@ Clear the text's last operation.
 Scroll the text to the caret.
 
 \PAL
-Para manejar um evento dado um texto (tecla fim);
+Para manejar um evento dado um texto (tecla-fim);
 \CAL
 To handle an event given a_ text (end key):
 If the text is nil, exit.
@@ -8324,9 +8329,7 @@ Clear the text's last operation.
 Scroll the text to the caret.
 
 \PAL
-Para manejar um evento dado um texto (tecla entra);
-Para manejar um evento dado um texto (tecla entrar);
-Para manejar um evento dado um texto (tecla enter);
+Para manejar um evento dado um texto (tecla-entrar);
 \CAL
 To handle an event given a_ text (enter key):
 If the text is nil, exit.
@@ -8337,14 +8340,15 @@ Wrap the text.
 Scroll the text to the caret.
 
 \PAL
-Para manejar um evento dado um texto (tecla esc);
+Para manejar um evento dado um texto (tecla-esc);
+Para manejar um evento dado um texto (tecla-escapar);
 \CAL
 To handle an event given a_ text (escape key):
 If the text is nil, exit.
 Deselect the text.
 
 \PAL
-Para manejar um evento dado um texto (tecla início);
+Para manejar um evento dado um texto (tecla-início);
 \CAL
 To handle an event given a_ text (home key):
 If the text is nil, exit.
@@ -8355,7 +8359,7 @@ Clear the text's last operation.
 Scroll the text to the caret.
 
 \PAL
-Para manejar um evento dado um texto (duplo clique esquerdo);
+Para manejar um evento dado um texto (duplo clique);
 \CAL
 To handle an event given a_ text (left double click):
 If the text is nil, exit.
@@ -8364,8 +8368,8 @@ Move the caret right to any non-alphanumeric byte in the text.
 Move the anchor left to any non-alphanumeric byte in the text.
 
 \PAL
-Para manejar um evento dado um texto (tecla seta esquerda);
-Para manejar um evento dado um texto (tecla seta-esquerda);
+Para manejar um evento dado um texto (tecla-esquerda);
+Para manejar um evento dado um texto (tecla-àesquerda);
 \CAL
 To handle an event given a_ text (left-arrow key):
 If the text is nil, exit.
@@ -8376,8 +8380,8 @@ Clear the text's last operation.
 Scroll the text to the caret.
 
 \PAL
-Para manejar um evento dado um texto (tecla avanço de página);
-Para manejar um evento dado um texto (tecla avanço-de-página);
+Para manejar um evento dado um texto (tecla avançar-página);
+Para manejar um evento dado um texto (tecla página-abaixo);
 \CAL
 To handle an event given a_ text (page-down key):
 If the text is nil, exit.
@@ -8387,8 +8391,8 @@ If the event's shift flag is not set, deselect the text.
 Clear the text's last operation.
 
 \PAL
-Para manejar um evento dado um texto (tecla retrocesso de página);
-Para manejar um evento dado um texto (tecla retrocesso-de-página);
+Para manejar um evento dado um texto (tecla voltar-página);
+Para manejar um evento dado um texto (tecla página-acima);
 \CAL
 To handle an event given a_ text (page-up key):
 If the text is nil, exit.
@@ -8398,7 +8402,7 @@ If the event's shift flag is not set, deselect the text.
 Clear the text's last operation.
 
 \PAL
-Para manejar um evento dado um texto (tecla imprimir);
+Para manejar um evento dado um texto (tecla-imprimir);
 \CAL
 To handle an event given a_ text (printable key):
 Remember the text with "insert".
@@ -8408,8 +8412,8 @@ Wrap the text.
 Scroll the text to the caret.
 
 \PAL
-Para manejar um evento dado um texto (tecla seta direita);
-Para manejar um evento dado um texto (tecla seta-direita);
+Para manejar um evento dado um texto (tecla-direita);
+Para manejar um evento dado um texto (tecla-àdireita);
 \CAL
 To handle an event given a_ text (right-arrow key):
 If the text is nil, exit.
@@ -8420,7 +8424,7 @@ Clear the text's last operation.
 Scroll the text to the caret.
 
 \PAL
-Para manejar um evento dado um texto (tecla tab);
+Para manejar um evento dado um texto (tecla-tab);
 \CAL
 To handle an event given a_ text (tab key):
 If the text is nil, exit.
@@ -8432,8 +8436,7 @@ If the remainder is 0, insert the space byte into the text.
 Scroll the text to the caret.
 
 \PAL
-Para manejar um evento dado um texto (tecla seta acima);
-Para manejar um evento dado um texto (tecla seta-acima);
+Para manejar um evento dado um texto (tecla-acima);
 \CAL
 To handle an event given a_ text (up-arrow key):
 If the text is nil, exit.
@@ -8481,8 +8484,7 @@ Remember the text with "font name".
 Change the text given the font name.
 
 \PAL
-Para manejar identação dado um texto;
-Para manejar mais identação dado um texto;
+Para manejar um texto (identação);
 \CAL
 To handle indent given a_ text:
 If the text is nil, exit.
@@ -8495,7 +8497,7 @@ Wrap the text.
 a_ handle is a_ number.
 
 \PAL
-Para manejar minúsculas dado um texto;
+Para manejar um texto (minúsculas);
 \CAL
 To handle lowercase given a_ text:
 If the text is nil, exit.
@@ -8505,8 +8507,7 @@ Lowercase any selected bytes in the text.
 Wrap the text.
 
 \PAL
-Para manejar recuo de identação dado um texto;
-Para manejar menos identação dado um texto;
+Para manejar um texto (recuo de identação);
 \CAL
 To handle outdent given a_ text:
 If the text is nil, exit.
@@ -8517,7 +8518,7 @@ Square up any selection in the text.
 Wrap the text.
 
 \PAL
-Para manejar colar dado um texto;
+Para manejar um texto (colar);
 \CAL
 To handle paste given a_ text:
 If the text is nil, exit.
@@ -8530,7 +8531,7 @@ Wrap the text.
 Scroll the text to the caret.
 
 \PAL
-Para manejar cor dado um texto e uma cor;
+Para manejar um texto dada uma cor;
 \CAL
 To handle pen given a_ text and a_ color:
 If the text is nil, exit.
@@ -8538,7 +8539,7 @@ Remember the text with "pen".
 Put the color into the text's pen.
 
 \PAL
-Para manejar refazer dado um texto;
+Para manejar um texto (refazer);
 \CAL
 To handle redo given a_ text:
 If the text is nil, exit.
@@ -8552,7 +8553,7 @@ Destroy the third text.
 Set the text's modified flag.
 
 \PAL
-Para manejar inverter dado um texto;
+Para manejar um texto (inverter);
 \CAL
 To handle reverse given a_ text:
 If the text is nil, exit.
@@ -8563,7 +8564,7 @@ Square up any selection in the text.
 Wrap the text.
 
 \PAL
-Para manejar selecionar tudo dado um texto;
+Para manejar um texto (selecionar tudo);
 \CAL
 To handle select all given a_ text:
 If the text is nil, exit.
@@ -8578,7 +8579,7 @@ Square up any selection in the text.
 Wrap the text.
 
 \PAL
-Para manejar deafazer dado um texto;
+Para manejar um texto (desfazer);
 \CAL
 To handle undo given a_ text:
 If the text is nil, exit.
@@ -8592,7 +8593,7 @@ Destroy the third text.
 Set the text's modified flag.
 
 \PAL
-Para manejar maiúsculas dado um texto;
+Para manejar um texto (maiúsculas);
 \CAL
 To handle uppercase given a_ text:
 If the text is nil, exit.
@@ -8656,8 +8657,8 @@ The i-key is a_ key equal to 73.
 a_ iid is a_ uuid.
 
 \PAL
-Para imaginar uma caixa alguns tuipes por outros diferentes tuipes;
-Para fazer uma caixa alguns tuipes por outros diferentes tuipes;
+Para imaginar uma caixa alguns tuipes por outros tuipes;
+Para fazer uma caixa alguns tuipes por outros tuipes;
 \CAL
 To imagine a_ box some twips by some other twips;
 To make a_ box some twips by some other twips:
@@ -9569,15 +9570,15 @@ Put the previous thing's previous into the new thing's previous.
 Put the new thing into the previous thing's previous.
 
 \PAL
-Para inserir alguns elementos em alguns diferentes elementos depois de um elemento;
-Para inserir alguns elementos em alguns diferentes elementos após um elemento;
+Para inserir alguns elementos em outros elementos depois de um elemento;
+Para inserir alguns elementos em outros elementos após um elemento;
 \CAL
 To insert some things into some other things after a_ thing:
 If the thing is nil, prepend the things to the other things; exit.
 Insert the things into the other things before the thing's next.
 
 \PAL
-Para inserir alguns elementos em alguns diferentes elementos antes de um elemento;
+Para inserir alguns elementos em outros elementos antes de um elemento;
 \CAL
 To insert some things into some other things before a_ thing:
 Privatize the thing.
@@ -10610,6 +10611,7 @@ Add the x-twips to the box's right.
 Add the y-twips to the box's bottom.
 
 \PAL
+Para mover uma caixa para esquerda de uma coordenada;
 Para mover uma caixa à esquerda de uma coordenada;
 \CAL
 To move a_ box left to a_ coord:
@@ -10624,8 +10626,8 @@ To move a_ box to the left of another box:
 Move the box left the box's left minus the other box's left.
 
 \PAL
-Para mover uma caixa para a esquerda em alguns tuipes;
-Para mover uma caixa para a esquerda alguns tuipes;
+Para mover uma caixa para esquerda em alguns tuipes;
+Para mover uma caixa para esquerda alguns tuipes;
 Para mover uma caixa à esquerda em alguns tuipes;
 Para mover uma caixa à esquerda alguns tuipes;
 \CAL
@@ -10640,8 +10642,8 @@ To move a_ box to the right of another box:
 Move the box right the other box's right minus the box's right.
 
 \PAL
-Para mover uma caixa para a direita em alguns tuipes;
-Para mover uma caixa para a direita alguns tuipes;
+Para mover uma caixa para direita em alguns tuipes;
+Para mover uma caixa para direita alguns tuipes;
 Para mover uma caixa à direita em alguns tuipes;
 Para mover uma caixa à direita alguns tuipes;
 \CAL
@@ -10809,8 +10811,8 @@ To move an ellipse given some x-twips and some y-twips:
 Move the ellipse's box given the x-twips and the y-twips.
 
 \PAL
-Para mover uma elipse para a esquerda em alguns tuipes;
-Para mover uma elipse para a esquerda alguns tuipes;
+Para mover uma elipse para esquerda em alguns tuipes;
+Para mover uma elipse para esquerda alguns tuipes;
 Para mover uma elipse à esquerda em alguns tuipes;
 Para mover uma elipse à esquerda alguns tuipes;
 \CAL
@@ -10818,8 +10820,8 @@ To move an ellipse left some twips:
 Move the ellipse given - the twips and 0.
 
 \PAL
-Para mover uma elipse para a direita em alguns tuipes;
-Para mover uma elipse para a direita alguns tuipes;
+Para mover uma elipse para direita em alguns tuipes;
+Para mover uma elipse para direita alguns tuipes;
 Para mover uma elipse à direita em alguns tuipes;
 Para mover uma elipse à direita alguns tuipes;
 \CAL
@@ -10847,10 +10849,10 @@ If the finger is nil, exit.
 Add 1 to the finger.
 
 \PAL
-Para mover para a esquerda alguns tuipes e para baixo outros diferentes tuipes;
-Para mover para a esquerda alguns tuipes e abaixo outros diferentes tuipes;
-Para mover à esquerda alguns tuipes e para baixo outros diferentes tuipes;
-Para mover à esquerda alguns tuipes e abaixo outros diferentes tuipes;
+Para mover para esquerda alguns tuipes e para baixo outros tuipes;
+Para mover para esquerda alguns tuipes e abaixo outros tuipes;
+Para mover à esquerda alguns tuipes e para baixo outros tuipes;
+Para mover à esquerda alguns tuipes e abaixo outros tuipes;
 \CAL
 To move to the left some twips and down some other twips;
 To move left some twips and down some other twips;
@@ -10860,10 +10862,10 @@ Move the context's spot left the twips.
 Move the context's spot down the other twips.
 
 \PAL
-Para mover para a esquerda alguns tuipes e para cima outros diferentes tuipes;
-Para mover para a esquerda alguns tuipes e acima outros diferentes tuipes;
-Para mover à esquerda alguns tuipes e para cima outros diferentes tuipes;
-Para mover à esquerda alguns tuipes e acima outros diferentes tuipes;
+Para mover para esquerda alguns tuipes e para cima outros tuipes;
+Para mover para esquerda alguns tuipes e acima outros tuipes;
+Para mover à esquerda alguns tuipes e para cima outros tuipes;
+Para mover à esquerda alguns tuipes e acima outros tuipes;
 \CAL
 To move to the left some twips and up some other twips;
 To move left some twips and up some other twips;
@@ -10897,8 +10899,8 @@ Add the x-twips to the line's end's x-coord.
 Add the y-twips to the line's end's y-coord.
 
 \PAL
-Para mover uma reta para a esquerda em alguns tuipes;
-Para mover uma reta para a esquerda alguns tuipes;
+Para mover uma reta para esquerda em alguns tuipes;
+Para mover uma reta para esquerda alguns tuipes;
 Para mover uma reta à esquerda em alguns tuipes;
 Para mover uma reta à esquerda alguns tuipes;
 \CAL
@@ -10913,8 +10915,8 @@ Get a_ difference between the spot and the line's start.
 Move the line given the difference.
 
 \PAL
-Para mover uma reta para a direita em alguns tuipes;
-Para mover uma reta para a direita alguns tuipes;
+Para mover uma reta para direita em alguns tuipes;
+Para mover uma reta para direita alguns tuipes;
 Para mover uma reta à direita em alguns tuipes;
 Para mover uma reta à direita alguns tuipes;
 \CAL
@@ -10973,8 +10975,8 @@ Move the picture's box given the x-twips and the y-twips.
 Move the picture's uncropped box given the x-twips and the y-twips.
 
 \PAL
-Para mover uma imagem para a esquerda em alguns tuipes;
-Para mover uma imagem para a esquerda alguns tuipes;
+Para mover uma imagem para esquerda em alguns tuipes;
+Para mover uma imagem para esquerda alguns tuipes;
 Para mover uma imagem à esquerda em alguns tuipes;
 Para mover uma imagem à esquerda alguns tuipes;
 \CAL
@@ -10982,8 +10984,8 @@ To move a_ picture left some twips:
 Move the picture given - the twips and 0.
 
 \PAL
-Para mover uma imagem para a direita em alguns tuipes;
-Para mover uma imagem para a direita alguns tuipes;
+Para mover uma imagem para direita em alguns tuipes;
+Para mover uma imagem para direita alguns tuipes;
 Para mover uma imagem à direita em alguns tuipes;
 Para mover uma imagem à direita alguns tuipes;
 \CAL
@@ -11034,40 +11036,44 @@ Move the vertex given the x-twips and the y-twips.
 Repeat.
 
 \PAL
+Para mover um polígono alguns tuipes para esquerda;
 Para mover um polígono alguns tuipes à esquerda;
 \CAL
 To move a_ polygon left some twips:
 Move the polygon given - the twips and 0.
 
 \PAL
-Para mover um polígono alguns tuipes à esquerda e outros diferentes tuipes abaixo;
+Para mover um polígono alguns tuipes para esquerda e outros tuipes abaixo;
+Para mover um polígono alguns tuipes à esquerda e outros tuipes abaixo;
 \CAL
 To move a_ polygon left some twips and down some other twips:
 Move the polygon left the twips.
 Move the polygon down the other twips.
 
 \PAL
-Para mover um polígono alguns tuipes à esquerda e outros diferentes tuipes acima;
+Para mover um polígono alguns tuipes para esquerda e outros tuipes acima;
+Para mover um polígono alguns tuipes à esquerda e outros tuipes acima;
 \CAL
 To move a_ polygon left some twips and up some other twips:
 Move the polygon left the twips.
 Move the polygon up the other twips.
 
 \PAL
+Para mover um polígono alguns tuipes para direita;
 Para mover um polígono alguns tuipes à direita;
 \CAL
 To move a_ polygon right some twips:
 Move the polygon given the twips and 0.
 
 \PAL
-Para mover um polígono alguns tuipes à direita e outros diferentes tuipes abaixo;
+Para mover um polígono alguns tuipes à direita e outros tuipes abaixo;
 \CAL
 To move a_ polygon right some twips and down some other twips:
 Move the polygon right the twips.
 Move the polygon down the other twips.
 
 \PAL
-Para mover um polígono alguns tuipes à direita e outros diferentes tuipes acima;
+Para mover um polígono alguns tuipes à direita e outros tuipes acima;
 \CAL
 To move a_ polygon right some twips and up some other twips:
 Move the polygon right the twips.
@@ -11183,7 +11189,7 @@ Bump the rider.
 Repeat.
 
 \PAL
-Para mover alguns tuipes à direita e outros diferentes tuipes abaixo;
+Para mover alguns tuipes à direita e outros tuipes abaixo;
 \CAL
 To move to the right some twips and down some other twips;
 To move right some twips and down some other twips;
@@ -11193,7 +11199,7 @@ Move the context's spot right the twips.
 Move the context's spot down the other twips.
 
 \PAL
-Para mover alguns tuipes à direita e outros diferentes tuipes acima;
+Para mover alguns tuipes à direita e outros tuipes acima;
 \CAL
 To move to the right some twips and up some other twips;
 To move right some twips and up some other twips;
@@ -11261,7 +11267,7 @@ To move a_ spot right some twips:
 Move the spot given the twips and 0.
 
 \PAL
-Para mover um loco alguns tuipes à direita e outros diferentes tuipes abaixo;
+Para mover um loco alguns tuipes à direita e outros tuipes abaixo;
 \CAL
 To move a_ spot some twips to the right and some other twips down;
 To move a_ spot some twips right and some other twips down:
@@ -11336,7 +11342,7 @@ To move a_ text up some twips:
 Move the text given 0 and - the twips.
 
 \PAL
-Para mover um elemento de alguns elementos para outros diferentes elementos;
+Para mover um elemento de alguns elementos para outros elementos;
 \CAL
 To move a_ thing from some things to some other things:
 If the thing is nil, exit.
@@ -11345,7 +11351,7 @@ Remove the thing from the things.
 Append the thing to the other things.
 
 \PAL
-Para mover alguns elementos para outros diferentes elementos;
+Para mover alguns elementos para outros elementos;
 \CAL
 To move some things to some other things:
 Put the things' first into the other things' first.
@@ -12120,7 +12126,7 @@ Pick the heading between 0 and 3839.
 Put the heading into the context's heading.
 
 \PAL
-Para escolher uma altura de letra entre alguns tuipes e outros diferentes tuipes;
+Para escolher uma altura de letra entre alguns tuipes e outros tuipes;
 \CAL
 To pick a_ letter height between some twips and some other twips:
 Pick a_ random number between the twips and the other twips.
@@ -12492,7 +12498,7 @@ Put the thing into the things' first.
 \Repeat.
 
 \PAL
-Para prepor alguns elementos a outros diferentes elementos;
+Para prepor alguns elementos a outros elementos;
 \CAL
 To prepend some things to some other things:
 Put the things' last into a_ thing.
@@ -12614,7 +12620,7 @@ Round the difference to the nearest multiple of the tpp.
 Move the box given the difference.
 
 \PAL
-Para centralizar uma caixa alguns tuipes por outros diferentes tuipes em outra caixa;
+Para centralizar uma caixa alguns tuipes por outros tuipes em outra caixa;
 \CAL
 To put a_ box some twips by some other twips in the center of another box;
 To center a_ box some twips by some other twips in another box:
@@ -13618,7 +13624,7 @@ If the things are empty, put the thing into the things' first.
 Put the thing into the things' last.
 
 \PAL
-Para pôr alguns elementos em outros diferentes elementos;
+Para pôr alguns elementos em outros elementos;
 \CAL
 To put some things into some other things:
 Put the things' first into the other things' first.
@@ -14762,13 +14768,15 @@ a_ right-bottom spot at the right,
 a_ radius,
 \PAL
 uma coordenada chamada esquerda redefinindo a left coord,
-uma coordenada chamada topo redefinindo a top coord,
 uma coordenada chamada direita redefinindo a right coord,
+uma coordenada chamada topo redefinindo a top coord,
 uma coordenada chamada base redefinindo a bottom coord,
-uma coordenada chamada superior redefinindo a top coord,
-uma coordenada chamada inferior redefinindo a bottom coord,
-um loco chamado esquerdo-superior redefinindo a left,
-um loco chamado direito-inferior redefinindo a right,
+uma coordenada esquerda redefinindo a left coord,
+uma coordenada direita redefinindo a right coord,
+uma coordenada superior redefinindo a top coord,
+uma coordenada inferior redefinindo a bottom coord,
+um loco esquerdo-superior redefinindo a left,
+um loco direito-inferior redefinindo a right,
 um raio redefinindo o radius.
 
 a_ row is a_ thing with
@@ -15708,10 +15716,12 @@ and a_ y-coord
 and a_ left at the x-coord
 and a_ top at the y-coord
 \PAL
-e uma coordenada chamada coordenada-x at the x-coord
-e uma coordenada chamada coordenada-y at the y-coord
-e uma coordenada chamada esquerda at the x-coord
-e uma coordenada chamada topo at the y-coord.
+e uma coordenada chamada coordenada-x redefinindo a x-coord
+e uma coordenada chamada coordenada-y redefinindo a y-coord
+e uma coordenada chamada esquerda redefinindo a x-coord
+e uma coordenada chamada topo redefinindo a y-coord
+e uma coordenada esquerda redefinindo a x-coord
+e uma coordenada superior redefinindo a y-coord.
 
 a_ spot pointer is a_ pointer to a_ spot.
 
@@ -17831,8 +17841,8 @@ Put the other number into the number.
 Put the third number into the other number.
 
 \PAL
-Para trocar alguns elementos por outros diferentes elementos;
-Para trocar alguns elementos para outros diferentes elementos;
+Para trocar alguns elementos por outros elementos;
+Para trocar alguns elementos para outros elementos;
 \CAL
 To swap some things with some other things:
 Swap the things' first with the other things' first.
