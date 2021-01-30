@@ -135,6 +135,7 @@ Lista de Verbos em Ordem Alfabética
 |post|divulgar|-|-|-|✔️|
 |prepend|prepor|-|-|-|✔️|
 |print|imprimir|-|-|-|✔️|
+|privatize|derivar|reservar|fazer backup|fazer cópia de segurança|✔️|
 |put|pôr|-|-|-|✔️|
 |quit;|desistir|-|-|-|✔️|
 |quote|aspear|-|-|-|✔️|
