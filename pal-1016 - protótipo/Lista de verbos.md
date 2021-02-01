@@ -114,7 +114,7 @@ Lista de Verbos em Ordem Alfabética
 |move|mover|-|-|-|✔️|
 |multiply|multiplicar|-|-|-|✔️|
 |name|nomear|-|-|-|✔️|
-|negate|nomear|-|-|-|✔️|
+|negate|negar|-|-|-|✔️|
 |non-destructively|**[advérbio]**|-|-|-|✔️|
 |normalize|normalizar|-|-|-|✔️|
 |null terminate|anular|-|-|-|✔️|
@@ -137,7 +137,7 @@ Lista de Verbos em Ordem Alfabética
 |print|imprimir|-|-|-|✔️|
 |privatize|derivar|reservar|fazer backup|fazer cópia de segurança|✔️|
 |put|pôr|-|-|-|✔️|
-|quit;|desistir|-|-|-|✔️|
+|quit|desistir|-|-|-|✔️|
 |quote|aspear|-|-|-|✔️|
 |raise|elevar|-|-|-|✔️|
 |read|ler|-|-|-|✔️|
