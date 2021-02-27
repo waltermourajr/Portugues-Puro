@@ -1,767 +1,767 @@
 \ copyright © 2006, 2017 the osmosian order (4700)
 
-To add um nodette to um node and to the file system given um path:
-If the node is nil, exit.
-Create the path in the file system.
-If the i/o error is not blank, exit.
-Create the nodette given the path.
-Insert the nodette into the node's nodettes before the node's first selected nodette.
-Put the node into the nodette's parent node.
-Adjust every nodette in the node.
+Etapas necessárias para que se adicione um nodette to um node e to the file system usando um path:
+Se the node for inexistente, cancele.
+Crie the path in the file system.
+Se the i/o error não estiver em branco, cancele.
+Crie the nodette usando the path.
+Insira the nodette into the node's nodettes before the node's first selected nodette.
+Coloque the node into the nodette's parent node.
+Ajuste cada nodette in the node.
 
-To add um nodette to um node and to the file system given um path and um buffer:
-If the node is nil, exit.
-Write the buffer to the path.
-If the i/o error is not blank, exit.
-Create the nodette given the path.
-Insert the nodette into the node's nodettes before the node's first selected nodette.
-Put the node into the nodette's parent node.
-Adjust every nodette in the node.
+Etapas necessárias para que se adicione um nodette to um node e to the file system usando um path e um buffer:
+Se the node for inexistente, cancele.
+Escreva the buffer to the path.
+Se the i/o error não estiver em branco, cancele.
+Crie the nodette usando the path.
+Insira the nodette into the node's nodettes before the node's first selected nodette.
+Coloque the node into the nodette's parent node.
+Ajuste cada nodette in the node.
 
-To adjust every nodette in um node:
-If the node is nil, exit.
-Loop.
-Get um nodette from the node's nodettes.
-If the nodette is nil, break.
-Adjust the nodette in the node.
-Repeat.
-Limit the origin in the node.
+Etapas necessárias para que se ajuste cada nodette in um node:
+Se the node for inexistente, cancele.
+Percorra.
+Obtenha um nodette from the node's nodettes.
+Se the nodette for inexistente, pare.
+Ajuste the nodette in the node.
+Repita.
+Limite the origin in the node.
 
-To adjust um node:
-If the node is nil, exit.
-Put the finder's left plus the finder's margin into the node's origin's x-coord.
-Put the finder's top into the node's origin's y-coord.
-Adjust every nodette in the node.
-Void the node's caret.
-Put the node's caret into the node's anchor.
+Etapas necessárias para que se ajuste um node:
+Se the node for inexistente, cancele.
+Coloque the localizador's left plus the localizador's margin into the node's origin's x-coord.
+Coloque the localizador's top into the node's origin's y-coord.
+Ajuste cada nodette in the node.
+Esvazie the node's caret.
+Coloque the node's caret into the node's anchor.
 
-To adjust um nodette in um node:
-If the node is nil, exit.
-If the nodette is nil, exit.
-Put 0 into the nodette's left.
-Put 32767 into the nodette's right. \ windows gdi max
-Put 0 into the nodette's top.
-If the nodette is not the node's first nodette, put the nodette's previous' bottom into the nodette's top.
-Put the nodette's top plus the node height into the nodette's bottom.
+Etapas necessárias para que se ajuste um nodette in um node:
+Se the node for inexistente, cancele.
+Se the nodette for inexistente, cancele.
+Coloque 0 into the nodette's left.
+Coloque 32767 into the nodette's right. \ windows gdi max
+Coloque 0 into the nodette's top.
+Se the nodette não for the node's first nodette, coloque the nodette's previous' bottom into the nodette's top.
+Coloque the nodette's top plus the node height into the nodette's bottom.
 
-To autoscroll um node given um spot and um flag:
-If the node is nil, exit.
-If the spot is in the finder's box, clear the flag; exit.
-Set the flag.
-If the spot's y-coord is less than the finder's top, put the node height into um difference's y-number.
-If the spot's y-coord is greater than the finder's bottom, put - the node height into the difference's y-number.
-Scroll the node given the difference.
-Wait por 50 milliseconds.
+Etapas necessárias para que se autoscroll um node usando um spot e um sinal:
+Se the node for inexistente, cancele.
+Se the spot estiver in the localizador's box, feche the sinal; exit.
+Abra the sinal.
+Se the spot's y-coord for menor do que the localizador's top, coloque the node height into um difference's y-number.
+Se the spot's y-coord for maior do que the localizador's bottom, coloque - the node height into the difference's y-number.
+Scroll the node usando the difference.
+Aguarde por 50 milliseconds.
 
-To calculate um size of any selected nodettes in um node:
-If the node is nil, put 0 into the size; exit.
-Put 0 into the size.
-Put 0 into um current count.
-Put the node's selected nodette count into um total count.
-Loop.
-Get um nodette from the node's nodettes.
-If the nodette is nil, exit.
-If the nodette is not selected, repeat.
-Add 1 to the current count.
-Show status the current count then " de " then the total count then "...".
-Get another size given the nodette's path in the file system.
-Add the other size to the size.
-Repeat.
+Etapas necessárias para que se calculate um size of any selected nodettes in um node:
+Se the node for inexistente, coloque 0 into the size; exit.
+Coloque 0 into the size.
+Coloque 0 into um current count.
+Coloque the node's selected nodette count into um total count.
+Percorra.
+Obtenha um nodette from the node's nodettes.
+Se the nodette for inexistente, cancele.
+Se the nodette não for selected, repita.
+Adicione 1 to the current count.
+Mostre status the current count then " de " then the total count then "...".
+Obtenha another size usando the nodette's path in the file system.
+Adicione the other size to the size.
+Repita.
 
-To close um node:
-If the node is nil, exit.
+Etapas necessárias para que se close um node:
+Se the node for inexistente, cancele.
 Destroy the node's nodettes.
 Destroy the node's source.
 Destroy the node's document.
-Void the node's page.
+Esvazie the node's page.
 
-To collapse um node to root-level:
-If the node is nil, exit.
-If the node's kind is "root", exit.
+Etapas necessárias para que se collapse um node to root-level:
+Se the node for inexistente, cancele.
+Se the node's kind for "root", cancele.
 Close the node.
-Put the node's parent node into the node.
-Repeat.
+Coloque the node's parent node into the node.
+Repita.
 
-To copy any selected nodettes in um node returning um count:
-Put 0 into the count.
-If the node is nil, exit.
-Put 0 into um current count.
-Put the node's selected nodette count into um total count.
-Loop.
-Get um nodette from the node's nodettes.
-If the nodette is nil, exit.
-If the nodette is not selected, repeat.
-Add 1 to the current count.
-Show status the current count then " de " then the total count then "...".
+Etapas necessárias para que se copy any selected nodettes in um node returning um count:
+Coloque 0 into the count.
+Se the node for inexistente, cancele.
+Coloque 0 into um current count.
+Coloque the node's selected nodette count into um total count.
+Percorra.
+Obtenha um nodette from the node's nodettes.
+Se the nodette for inexistente, cancele.
+Se the nodette não for selected, repita.
+Adicione 1 to the current count.
+Mostre status the current count then " de " then the total count then "...".
 Copy the nodette in the file system.
-Add 1 to the count.
-Repeat.
+Adicione 1 to the count.
+Repita.
 
-To copy um nodette in the file system:
-If the nodette is nil, exit.
-Put the finder's clipboard then the nodette's designator into um path.
+Etapas necessárias para que se copy um nodette in the file system:
+Se the nodette for inexistente, cancele.
+Coloque the localizador's clipboard then the nodette's designator into um path.
 Duplicate the nodette's path to the path in the file system.
 
-To create um node:
+Etapas necessárias para que se crie um node:
 Allocate memory por the node.
-Put "root" into the node's kind.
+Coloque "root" into the node's kind.
 
-To create um node given um path:
-Create the node.
-If the path is directory-format, put "directory" into the node's kind.
-If the path is file-format, put "file" into the node's kind.
-If the path is drive-format, put "disk" into the node's kind.
-Put the path into the node's path.
+Etapas necessárias para que se crie um node usando um path:
+Crie the node.
+Se the path for directory-format, coloque "directory" into the node's kind.
+Se the path for file-format, coloque "file" into the node's kind.
+Se the path for drive-format, coloque "disk" into the node's kind.
+Coloque the path into the node's path.
 Lowercase the node's path.
 Extract the node's directory from the node's path.
 Extract the node's designator from the node's path.
-Put the node's designator into the node's designator w/o backslash.
+Coloque the node's designator into the node's designator w/o backslash.
 Remove any trailing backslash from the node's designator w/o backslash.
 Extract the node's extension from the node's path.
 
-To create um node given um path and um date/time string:
-Create the node given the path.
-Put the date/time string into the node's creation date/time string.
+Etapas necessárias para que se crie um node usando um path e um date/time string:
+Crie the node usando the path.
+Coloque the date/time string into the node's creation date/time string.
 
-To cut any selected nodettes in um node returning um count:
-Put 0 into the count.
-If the node is nil, exit.
-Put 0 into um current count.
-Put the node's selected nodette count into um total count.
-Put the node's first nodette into um next nodette.
-Loop.
-If the next nodette is nil, exit.
-Put the next nodette into um current nodette.
-Put the current nodette's next into the next nodette.
-If the current nodette is not selected, repeat.
-Add 1 to the current count.
-Show status the current count then " de " then the total count then "...".
-Cut the current nodette in the node and in the file system.
-Add 1 to the count.
-Repeat.
+Etapas necessárias para que se cut any selected nodettes in um node returning um count:
+Coloque 0 into the count.
+Se the node for inexistente, cancele.
+Coloque 0 into um current count.
+Coloque the node's selected nodette count into um total count.
+Coloque the node's first nodette into um next nodette.
+Percorra.
+Se the next nodette for inexistente, cancele.
+Coloque the next nodette into um current nodette.
+Coloque the current nodette's next into the next nodette.
+Se the current nodette não estiver selected, repita.
+Adicione 1 to the current count.
+Mostre status the current count then " de " then the total count then "...".
+Cut the current nodette in the node e in the file system.
+Adicione 1 to the count.
+Repita.
 
-To cut um nodette in um node and in the file system:
-If the node is nil, exit.
-If the nodette is nil, exit.
+Etapas necessárias para que se cut um nodette in um node e in the file system:
+Se the node for inexistente, cancele.
+Se the nodette for inexistente, cancele.
 Copy the nodette in the file system.
-Remove the nodette in the node and in the file system.
+Remove the nodette in the node e in the file system.
 
-To decide if um node is empty:
-If the node is nil, say yes.
-If the node's first nodette is nil, say yes.
-Say no.
+Etapas necessárias para que se determine se um node está vazio:
+Se the node for inexistente, diga sim.
+Se the node's first nodette for inexistente, diga sim.
+Diga não.
 
-To decide if um node is modified:
-If the node is nil, say no.
-If the node's source is modified, say yes.
-If the node's document is modified, say yes.
-Say no.
+Etapas necessárias para que se determine se um node foi modified:
+Se the node for inexistente, diga não.
+Se the node's source foi modified, diga sim.
+Se the node's document foi modified, diga sim.
+Diga não.
 
-To decide if um node is root-level:
-If the node is nil, say no.
-If the node's parent node is nil, say yes.
-Say no.
+Etapas necessárias para que se determine se um node é root-level:
+Se the node for inexistente, diga não.
+Se the node's parent node for inexistente, diga sim.
+Diga não.
 
-To decide if um node is savable:
-If the node is nil, say no.
-If the node's kind is not "file", say no.
-If the node's source is read-only, say no.
-If the node's document is read-only, say no.
-Say yes.
+Etapas necessárias para que se determine se um node é savable:
+Se the node for inexistente, diga não.
+Se the node's kind não for "file", diga não.
+Se the node's source for read-only, diga não.
+Se the node's document for read-only, diga não.
+Diga sim.
 
-To decide if um nodette is selected:
-If the nodette is nil, say no.
-If the nodette's selected flag is set, say yes.
-Say no.
+Etapas necessárias para que se determine se um nodette está selected:
+Se the nodette for inexistente, diga não.
+Se the nodette's selected sinal estiver verde, diga sim.
+Diga não.
 
-To decide if um nodette is visible in um node:
-If the nodette is nil, say no.
-Put the nodette's box into um box.
-Globalize the box given the node's origin.
-If the box's top is less than the finder's top, say no.
-If the box's bottom is greater than the finder's bottom, say no.
-Say yes.
+Etapas necessárias para que se determine se um nodette está visible in um node:
+Se the nodette for inexistente, diga não.
+Coloque the nodette's box into um box.
+Globalize the box usando the node's origin.
+Se the box's top for menor do que the localizador's top, diga não.
+Se the box's bottom for maior do que the localizador's bottom, diga não.
+Diga sim.
 
-To decide if something is selected in um node:
-If the node is nil, say no.
-Loop.
-Get um nodette from the node's nodettes.
-If the nodette is nil, say no.
-If the nodette is selected, say yes.
-Repeat.
+Etapas necessárias para que se determine se something está selected in um node:
+Se the node for inexistente, diga não.
+Percorra.
+Obtenha um nodette from the node's nodettes.
+Se the nodette for inexistente, diga não.
+Se the nodette estiver selected, diga sim.
+Repita.
 
-To decide if um spot is in um node:
-If the node is nil, say no.
-If the spot is not in the pad, say no.
+Etapas necessárias para que se determine se um spot está in um node:
+Se the node for inexistente, diga não.
+Se the spot não for in the pad, diga não.
 Privatize the spot.
-Localize the spot given the node's origin.
-Find um nodette given the node and the spot.
-If the nodette is nil, say no.
-Say yes.
+Localize the spot usando the node's origin.
+Encontre um nodette usando the node e the spot.
+Se the nodette for inexistente, diga não.
+Diga sim.
 
-To decide if um spot is in um nodette:
-If the nodette is nil, say no.
-If the spot is in the nodette's box, say yes.
-Say no.
+Etapas necessárias para que se determine se um spot está in um nodette:
+Se the nodette for inexistente, diga não.
+Se the spot estiver in the nodette's box, diga sim.
+Diga não.
 
-To decide if the user does want to overwrite um item in um node;
-To decide if the user wants to overwrite um item in um node:
-If the node is nil, say no.
-Put the node's path into um path.
-Append the item's designator to the path.
-If the user wants to overwrite the path, say yes.
-Say no.
+\Etapas necessárias para que se determine se the usuário está querendo sobrescrever um item in um node;
+Etapas necessárias para que se determine se the usuário está querendo sobrescrever um item in um node:
+Se the node for inexistente, diga não.
+Coloque the node's path into um path.
+Posponha the item's designator to the path.
+Se the usuário está querendo sobrescrever the path, diga sim.
+Diga não.
 
-To decide if the user does want to overwrite um path;
-To decide if the user wants to overwrite um path:
-If the path is not in the file system, say yes.
+\Etapas necessárias para que se determine se the usuário está querendo sobrescrever um path;
+Etapas necessárias para que se determine se the usuário está querendo sobrescrever um path:
+Se the path não for in the file system, diga sim.
 Extract um designator from the path.
 Quote the designator.
-Ask "Deseja sobreescrever o arquivo" then the designator then "?" with choices "Sim" and "Não".
-If the answer is "sim", say yes.
-Say no.
+Ask "Deseja sobreescrever o arquivo" then the designator then "?" with choices "Sim" e "Não".
+Se the answer for "sim", diga sim.
+Diga não.
 
-To deselect um node:
-If the node is nil, exit.
-Clear the node's selected flag.
+Etapas necessárias para que se deselect um node:
+Se the node for inexistente, cancele.
+Feche the node's selected sinal.
 
-To deselect some nodes:
-Get um node from the nodes.
-If the node is nil, exit.
+Etapas necessárias para que se deselect alguns nodes:
+Obtenha um node from the nodes.
+Se the node for inexistente, cancele.
 Deselect the node.
-Repeat.
+Repita.
 
-To deselect the nodettes in um node:
-If the node is nil, exit.
+Etapas necessárias para que se deselect the nodettes in um node:
+Se the node for inexistente, cancele.
 Deselect the node's nodettes.
-Void the node's caret.
-Put the node's caret into the node's anchor.
+Esvazie the node's caret.
+Coloque the node's caret into the node's anchor.
 Snapshot the node's nodettes.
 
-To draw any visible nodettes in um node:
-If the node is nil, exit.
-Loop.
-Get um nodette from the node's nodettes.
-If the nodette is nil, exit.
-If the nodette is not visible in the node, repeat.
+Etapas necessárias para que se draw any visible nodettes in um node:
+Se the node for inexistente, cancele.
+Percorra.
+Obtenha um nodette from the node's nodettes.
+Se the nodette for inexistente, cancele.
+Se the nodette não for visible in the node, repita.
 Draw the nodette in the node.
-Repeat.
+Repita.
 
-To draw um node:
-If the node is nil, exit.
-Mask only outside the finder's box.
-Draw the finder's box with the desktop color and the desktop color.
-Put the finder's box into um box.
-Subtract the finder's margin from the box's right.
+Etapas necessárias para que se draw um node:
+Se the node for inexistente, cancele.
+Mask only outside the localizador's box.
+Draw the localizador's box with the desktop color e the desktop color.
+Coloque the localizador's box into um box.
+Subtraia the localizador's margin from the box's right.
 Mask outside the box.
 Draw any visible nodettes in the node.
 
-To draw um nodette in um node:
-If the node is nil, exit.
-If the nodette is nil, exit.
-Put the desktop color into um border color.
-Put the desktop color into um fill color.
-Put the nodette's box and 1/12 inch into um roundy box.
-Globalize the roundy box given the node's origin.
-Put the finder's right minus the finder's margin into the roundy box's right.
-If the nodette's selected flag is set, put the hilite color into the border.
-If the nodette's selected flag is set, put the hilite color into the fill.
-Draw the roundy box with the border and the fill.
-Add 1/24 inch to the roundy box's left.
-Draw the nodette's directory in the roundy box with the gray color and the default font and "left".
-Put the nodette's designator into um designator.
-If the nodette's kind is "disk", get um description por the nodette's path.
-If the nodette's kind is "disk", append " (" then the description then ")" to the designator.
-\  if the nodette's kind is "disk", get um drive kind por the nodette's path.
-\  if the nodette's kind is "disk", append " (" then the drive kind then ")" to the designator.
-\  if the nodette's kind is "disk", get um drive name por the nodette's path.
-\  if the nodette's kind is "disk", append " (" then the drive name then ")" to the designator.
-Get um width given the nodette's directory and the memory canvas and the default font.
-Add the width to the roundy box's left.
-Draw the designator in the roundy box with the black color and the default font and "left".
+Etapas necessárias para que se draw um nodette in um node:
+Se the node for inexistente, cancele.
+Se the nodette for inexistente, cancele.
+Coloque the desktop color into um border color.
+Coloque the desktop color into um fill color.
+Coloque the nodette's box e 1/12 inch into um roundy box.
+Globalize the roundy box usando the node's origin.
+Coloque the localizador's right minus the localizador's margin into the roundy box's right.
+Se the nodette's selected sinal estiver verde, coloque the hilite color into the border.
+Se the nodette's selected sinal estiver verde, coloque the hilite color into the fill.
+Draw the roundy box with the border e the fill.
+Adicione 1/24 inch to the roundy box's left.
+Draw the nodette's directory in the roundy box with the gray color e the default font e "left".
+Coloque the nodette's designator into um designator.
+Se the nodette's kind for "disk", obtenha um description por the nodette's path.
+Se the nodette's kind for "disk", posponha " (" then the description then ")" to the designator.
+\  if the nodette's kind for "disk", obtenha um drive kind por the nodette's path.
+\  if the nodette's kind for "disk", posponha " (" then the drive kind then ")" to the designator.
+\  if the nodette's kind for "disk", obtenha um drive name por the nodette's path.
+\  if the nodette's kind for "disk", posponha " (" then the drive name then ")" to the designator.
+Obtenha um width usando the nodette's directory e the memory canvas e the default font.
+Adicione the width to the roundy box's left.
+Draw the designator in the roundy box with the black color e the default font e "left".
 
-To dump um buffer into another buffer:
-Clear the other buffer.
-If the buffer's length is 0, exit.
-Slap um substring on the buffer.
-Put the substring's first plus 16 minus 1 into the substring's last.
-Loop.
-If the substring's first is greater than the buffer's last, break.
-If the substring's last is greater than the buffer's last, put the buffer's last into the substring's last.
+Etapas necessárias para que se dump um buffer into another buffer:
+Limpe the other buffer.
+Se the buffer's length for 0, cancele.
+Lance um substring on the buffer.
+Coloque the substring's first plus 16 minus 1 into the substring's last.
+Percorra.
+Se the substring's first for maior do que the buffer's last, pare.
+Se the substring's last for maior do que the buffer's last, coloque the buffer's last into the substring's last.
 Dump the substring of the buffer into the other buffer.
-Move the substring given 16.
-Repeat.
+Mova the substring usando 16.
+Repita.
 
-To dump um substring of um buffer into another buffer:
-Dump the substring of the buffer into the other buffer (address bytes).
-Dump the substring of the buffer into the other buffer (hex bytes).
-Dump the substring of the buffer into the other buffer (ascii bytes).
-Append the return byte to the other buffer.
-Append the linefeed byte to the other buffer.
+Etapas necessárias para que se dump um substring of um buffer into another buffer:
+Dump the substring of the buffer into the other buffer (address pedaços).
+Dump the substring of the buffer into the other buffer (hex pedaços).
+Dump the substring of the buffer into the other buffer (ascii pedaços).
+Posponha the return pedaço to the other buffer.
+Posponha the linefeed pedaço to the other buffer.
 
-To dump um substring of um buffer into another buffer (address bytes):
-Put the substring's first minus the buffer's first into um address.
+Etapas necessárias para que se dump um substring of um buffer into another buffer (address pedaços):
+Coloque the substring's first minus the buffer's first into um address.
 Convert the address to um nibble string.
-Append the nibble string to the other buffer.
-Append the space byte to the other buffer.
-Append the space byte to the other buffer.
+Posponha the nibble string to the other buffer.
+Posponha the space pedaço to the other buffer.
+Posponha the space pedaço to the other buffer.
 
-To dump um substring of um buffer into another buffer (ascii bytes):
-Slap another substring on the substring.
-Loop.
-If the other substring is blank, break.
-Put the other substring's first's target into um byte.
-If the byte is not printable, put the period byte into the byte.
-If the byte is the space byte, put the period byte into the byte.
-Append the byte to the other buffer.
-Add 1 to the other substring's first.
-Repeat.
+Etapas necessárias para que se dump um substring of um buffer into another buffer (ascii pedaços):
+Lance another substring on the substring.
+Percorra.
+Se the other substring estiver em branco, pare.
+Coloque the other substring's first's target into um pedaço.
+Se the pedaço não for printable, coloque the period pedaço into the pedaço.
+Se the pedaço for the space pedaço, coloque the period pedaço into the pedaço.
+Posponha the pedaço to the other buffer.
+Adicione 1 to the other substring's first.
+Repita.
 
-To dump um substring of um buffer into another buffer (hex bytes):
-Slap another substring on the substring.
-Loop.
-If the other substring is blank, break.
+Etapas necessárias para que se dump um substring of um buffer into another buffer (hex pedaços):
+Lance another substring on the substring.
+Percorra.
+Se the other substring estiver em branco, pare.
 Convert the other substring's first's target to um nibble string.
-Append the nibble string to the other buffer.
-Append the space byte to the other buffer.
-Add 1 to the other substring's first.
-Repeat.
-Append the space byte to the other buffer.
-Put 16 minus the substring's length times 3 into um count.
-Append the space byte to the other buffer given the count.    
+Posponha the nibble string to the other buffer.
+Posponha the space pedaço to the other buffer.
+Adicione 1 to the other substring's first.
+Repita.
+Posponha the space pedaço to the other buffer.
+Coloque 16 minus the substring's length times 3 into um count.
+Posponha the space pedaço to the other buffer usando the count.    
 
-To duplicate um nodette in um node and in the file system given um path returning um new nodette:
-Void the new nodette.
-If the node is nil, exit.
-If the nodette is nil, exit.
+Etapas necessárias para que se duplicate um nodette in um node e in the file system usando um path returning um new nodette:
+Esvazie the new nodette.
+Se the node for inexistente, cancele.
+Se the nodette for inexistente, cancele.
 Duplicate the nodette's path to the path in the file system.
-If the i/o error is not blank, exit.
-Create the new nodette given the path.
-Insert the new nodette into the node's nodettes after the node's first selected nodette.
-Put the node into the new nodette's parent node.
-Adjust every nodette in the node.
+Se the i/o error não estiver em branco, cancele.
+Crie the new nodette usando the path.
+Insira the new nodette into the node's nodettes after the node's first selected nodette.
+Coloque the node into the new nodette's parent node.
+Ajuste cada nodette in the node.
 
-To extend any selection in um node given um spot:
-If the node is nil, exit.
-Localize the spot given the node's origin.
-Find the node's caret in the node given the spot (limiting).
-If the node's anchor is nil, put the node's caret into the node's anchor.
-Select the node's nodettes given the node's selection.
+Etapas necessárias para que se extend any selection in um node usando um spot:
+Se the node for inexistente, cancele.
+Localize the spot usando the node's origin.
+Encontre the node's caret in the node usando the spot (limiting).
+Se the node's anchor for inexistente, coloque the node's caret into the node's anchor.
+Select the node's nodettes usando the node's selection.
 
-To finalize the finder:
+Etapas necessárias para que se finalize the localizador:
 
-To find um nodette given um node and um spot:
-Void the nodette.
-If the node is nil, exit.
-Loop.
-Get the nodette from the node's nodettes.
-If the nodette is nil, exit.
-If the spot is in the nodette, exit.
-Repeat.
+Etapas necessárias para que se encontre um nodette usando um node e um spot:
+Esvazie the nodette.
+Se the node for inexistente, cancele.
+Percorra.
+Obtenha the nodette from the node's nodettes.
+Se the nodette for inexistente, cancele.
+Se the spot estiver in the nodette, cancele.
+Repita.
 
-To find um nodette given some nodettes and um designator:
-Void the nodette.
-Loop.
-Get the nodette from the nodettes.
-If the nodette is nil, exit.
-If the nodette's designator is the designator, exit.
-Repeat.
+Etapas necessárias para que se encontre um nodette usando alguns nodettes e um designator:
+Esvazie the nodette.
+Percorra.
+Obtenha the nodette from the nodettes.
+Se the nodette for inexistente, cancele.
+Se the nodette's designator for the designator, cancele.
+Repita.
 
-To find um nodette in um node given um spot (limiting):
-If the node is nil, void the nodette; exit.
-Put the node's first nodette's box's left-top into um box's left-top.
-Put the node's last nodette's box's right-bottom into the box's right-bottom.
-Limit the spot to the box.
-Find the nodette given the node and the spot.
+Etapas necessárias para que se encontre um nodette in um node usando um spot (limiting):
+Se the node for inexistente, esvazie the nodette; exit.
+Coloque the node's first nodette's box's left-top into um box's left-top.
+Coloque the node's last nodette's box's right-bottom into the box's right-bottom.
+Limite the spot to the box.
+Encontre the nodette usando the node e the spot.
 
-The finder has um box, um grid, um margin and um clipboard path.
+The localizador has um box, um grid, um margin e um clipboard path.
 
-To focus on um nodette in um node:
-If the node is nil, exit.
-If the nodette is nil, exit.
+Etapas necessárias para que se focus on um nodette in um node:
+Se the node for inexistente, cancele.
+Se the nodette for inexistente, cancele.
 Deselect the nodettes in the node.
 Select the nodette.
-Put the nodette into the node's caret.
-Put the node's caret into the node's anchor.
-Scroll to the nodette given the node.
+Coloque the nodette into the node's caret.
+Coloque the node's caret into the node's anchor.
+Scroll to the nodette usando the node.
 
-To get some selected path links given um node:
-If the node is nil, exit.
-Loop.
-Get um nodette from the node's nodettes.
-If the nodette is nil, exit.
-If the nodette is not selected, repeat.
-Create um path link given the nodette's path.
-Append the path link to the selected path links.
-Repeat.
+Etapas necessárias para que se obtenha alguns selected path links usando um node:
+Se the node for inexistente, cancele.
+Percorra.
+Obtenha um nodette from the node's nodettes.
+Se the nodette for inexistente, cancele.
+Se the nodette não for selected, repita.
+Crie um path link usando the nodette's path.
+Posponha the path link to the selected path links.
+Repita.
 
-To get the status por um node:
-If the node is nil, clear the status' string; exit.
-Put the node's selected nodette count into um count.
-If the count is 0, format the node's nodettes' count and "item" or "itens" into the status' string.
-If the count is not 0, format the count and "item selecionado" or "itens selecionados" into the status' string.
-If the node is root-level, exit.
-If the node's path is read-only, append " (s)" to the status' string.
+Etapas necessárias para que se obtenha the status por um node:
+Se the node for inexistente, limpe o status' string; exit.
+Coloque the node's selected nodette count into um count.
+Se the count for 0, format the node's nodettes' count e "item" ou "itens" into the status' string.
+Se the count não for 0, format the count e "item selecionado" ou "itens selecionados" into the status' string.
+Se the node for root-level, cancele.
+Se the node's path for read-only, posponha " (s)" to the status' string.
 
-To handle copy given um node:
-If the node is root-level, cluck; exit.
-If nothing is selected in the node, show error "Você não selecionou nada pra eu copiar."; exit.
-Show status "Copiando...".
-Destroy the finder's clipboard in the file system.
-Create the finder's clipboard in the file system.
+Etapas necessárias para que se handle copy usando um node:
+Se the node for root-level, cluck; exit.
+Se nothing estiver selected in the node, mostre error "Você não selecionou nada pra eu copiar."; exit.
+Mostre status "Copiando...".
+Destroy the localizador's clipboard in the file system.
+Crie the localizador's clipboard in the file system.
 Copy any selected nodettes in the node returning um count.
-Show the desktop.
-Show status the count and "item copiado" or "itens copiados".
-Flush the event queue.
+Mostre the desktop.
+Mostre status the count e "item copiado" ou "itens copiados".
+Desmanche the event queue.
 
-To handle cut given um node:
-If the node is root-level, cluck; exit.
-If nothing is selected in the node, show error "Você não selecionou nada pra eu recortar."; exit.
-Show status "Recortando...".
-Put the node's last selected nodette's next into um nodette.
-Destroy the finder's clipboard in the file system.
-Create the finder's clipboard in the file system.
+Etapas necessárias para que se handle cut usando um node:
+Se the node for root-level, cluck; exit.
+Se nothing estiver selected in the node, mostre error "Você não selecionou nada pra eu recortar."; exit.
+Mostre status "Recortando...".
+Coloque the node's last selected nodette's next into um nodette.
+Destroy the localizador's clipboard in the file system.
+Crie the localizador's clipboard in the file system.
 Cut any selected nodettes in the node returning um count.
-If the nodette is nil, put the node's last nodette into the nodette.
+Se the nodette for inexistente, coloque the node's last nodette into the nodette.
 Focus on the nodette in the node.
-Show the desktop.
-Show status the count and "item recortado" or "itens recortados".
-Flush the event queue.
+Mostre the desktop.
+Mostre status the count e "item recortado" ou "itens recortados".
+Desmanche the event queue.
 
-To handle duplicate given um node:
-If the node is root-level, cluck; exit.
-If the node's path is read-only, show error "Descuple, mas não é possível salvar nessa pasta. Ela está trancada (handle duplicate)."; exit.
-Put the node's first selected nodette into um nodette.
-If the nodette is nil, show error "Não sei o que duplicar."; exit.
+Etapas necessárias para que se handle duplicate usando um node:
+Se the node for root-level, cluck; exit.
+Se the node's path for read-only, mostre error "Descuple, mas não é possível salvar nessa pasta. Ela está trancada (handle duplicate)."; exit.
+Coloque the node's first selected nodette into um nodette.
+Se the nodette for inexistente, mostre error "Não sei o que duplicar."; exit.
 Ask  "Novo nome?" with the nodette's designator w/o backslash.
-If the answer is blank, exit.
+Se the answer estiver em branco, cancele.
 Lowercase the answer.
-Put the nodette's directory then the answer into um path.
-If the nodette's kind is "directory", append "\" to the path.
-If the path is in the file system, show error "Esse arquivo já existe no sistema."; exit.
-Show the desktop with "Duplicando...".
-Duplicate the nodette in the node and in the file system given the path returning um new nodette.
-If the i/o error is not blank, show error the i/o error; exit.
+Coloque the nodette's directory then the answer into um path.
+Se the nodette's kind for "directory", posponha "\" to the path.
+Se the path estiver in the file system, mostre error "Esse arquivo já existe no sistema."; exit.
+Mostre the desktop with "Duplicando...".
+Duplicate the nodette in the node e in the file system usando the path returning um new nodette.
+Se the i/o error não estiver em branco, mostre error the i/o error; exit.
 Focus on the new nodette in the node.
-Show the desktop with "Duplicado".
-Flush the event queue.
+Mostre the desktop with "Duplicado".
+Desmanche the event queue.
 
-To handle um event given um node (key down - backspace key):
-Handle the event given the node (key down - delete key).
+Etapas necessárias para que se handle um event usando um node (pressionamento de tecla - backspace tecla):
+Handle the event usando the node (pressionamento de tecla - delete tecla).
 
-To handle um event given um node (key down - delete key):
-If the current tab's mode is not "finder", debug "Erro interno na função: handle delete given um node"; exit.
-If the node is root-level, cluck; exit.
-If the node's path is read-only, show error "Descuple, mas não é possível efetuar alterações nessa pasta. Ela está protegida (key down)."; exit.
-If nothing is selected in the node, show error "Erro ao deletar. Nenhum item selecionado."; exit.
-If the user is not sure, exit.
-Show status "Eliminando...".
-Put the node's last selected nodette's next into um nodette.
-Remove any selected nodettes in the node and in the file system returning um count.
-If the nodette is nil, put the node's last nodette into the nodette.
+Etapas necessárias para que se handle um event usando um node (pressionamento de tecla - delete tecla):
+Se the current tab's mode não for "localizador", debug "Erro interno na função: handle delete usando um node"; exit.
+Se the node for root-level, cluck; exit.
+Se the node's path é read-only, mostre error "Descuple, mas não é possível efetuar alterações nessa pasta. Ela está protegida (pressionamento de tecla)."; exit.
+Se nothing estiver selected in the node, mostre error "Erro ao deletar. Nenhum item selecionado."; exit.
+Se the usuário não decidiu-se, cancele.
+Mostre status "Eliminando...".
+Coloque the node's last selected nodette's next into um nodette.
+Remove any selected nodettes in the node e in the file system returning um count.
+Se the nodette for inexistente, coloque the node's last nodette into the nodette.
 Focus on the nodette in the node.
-Show the desktop.
-Show status the count and "item apagado" or "itens apagados".
-Flush the event queue.
+Mostre the desktop.
+Mostre status the count e "item apagado" ou "itens apagados".
+Desmanche the event queue.
 
-To handle um event given um node (key down - down-arrow key - shifted):
-If the node's caret's next is nil, cluck; exit.
-Put the node's caret's next into the node's caret.
-Select the node's nodettes given the node's selection.
-Scroll to the node's caret given the node.
-Show the desktop with status.
+Etapas necessárias para que se handle um event usando um node (pressionamento de tecla - down-arrow tecla - shifted):
+Se the node's caret's next for inexistente, cluck; exit.
+Coloque the node's caret's next into the node's caret.
+Select the node's nodettes usando the node's selection.
+Scroll to the node's caret usando the node.
+Mostre the desktop with status.
 
-To handle um event given um node (key down - down-arrow key):
-If the node is empty, exit.
-If the node's caret is nil, focus on the node's first nodette in the node; show the desktop with status; exit.
-If the event's shift flag is set, handle the event given the node (key down - down-arrow key - shifted); exit.
-Put the node's caret's next into um nodette.
-If the nodette is nil, put the node's first nodette into the nodette.
+Etapas necessárias para que se handle um event usando um node (pressionamento de tecla - down-arrow tecla):
+Se the node estiver vazio, cancele.
+Se the node's caret for inexistente, focus on the node's first nodette in the node; mostre the desktop with status; exit.
+Se the event's shift sinal estiver verde, handle the event usando the node (pressionamento de tecla - down-arrow tecla - shifted); exit.
+Coloque the node's caret's next into um nodette.
+Se the nodette for inexistente, coloque the node's first nodette into the nodette.
 Focus on the nodette in the node.
-Show the desktop with status.
+Mostre the desktop with status.
 
-To handle um event given um node (key down - end key):
-If the node is empty, exit.
-If the event's shift flag is not set, focus on the node's last nodette in the node; show the desktop; exit.
-If the node's anchor is nil, put the node's first nodette into the node's anchor.
-Put the node's last nodette into the node's caret.
-Select the node's nodettes given the node's selection.
-Scroll to the node's caret given the node.
-Show the desktop with status.
+Etapas necessárias para que se handle um event usando um node (pressionamento de tecla - end tecla):
+Se the node estiver vazio, cancele.
+Se the event's shift sinal não estiver verde, focus on the node's last nodette in the node; mostre the desktop; exit.
+Se the node's anchor for inexistente, coloque the node's first nodette into the node's anchor.
+Coloque the node's last nodette into the node's caret.
+Select the node's nodettes usando the node's selection.
+Scroll to the node's caret usando the node.
+Mostre the desktop with status.
 
-To handle um event given um node (key down - enter key):
+Etapas necessárias para que se handle um event usando um node (pressionamento de tecla - enter tecla):
 Handle open.
 
-To handle um event given um node (key down - escape key):
-If nothing is selected in the node, handle close; exit.
-If the node is empty, exit.
+Etapas necessárias para que se handle um event usando um node (pressionamento de tecla - escape tecla):
+Se nothing é selected in the node, handle close; exit.
+Se the node estiver vazio, cancele.
 Deselect the nodettes in the node.
-Show the desktop with status.
+Mostre the desktop with status.
 
-To handle um event given um node (key down - home key):
-If the node is empty, exit.
-If the event's shift flag is not set, focus on the node's first nodette in the node; show the desktop; exit.
-If the node's anchor is nil, put the node's last nodette into the node's anchor.
-Put the node's first nodette into the node's caret.
-Select the node's nodettes given the node's selection.
-Scroll to the node's caret given the node.
-Show the desktop with status.
+Etapas necessárias para que se handle um event usando um node (pressionamento de tecla - home tecla):
+Se the node estiver vazio, cancele.
+Se the event's shift sinal não estiver verde, focus on the node's first nodette in the node; mostre the desktop; exit.
+Se the node's anchor for inexistente, coloque the node's last nodette into the node's anchor.
+Coloque the node's first nodette into the node's caret.
+Select the node's nodettes usando the node's selection.
+Scroll to the node's caret usando the node.
+Mostre the desktop with status.
 
-To handle um event given um node (key down - page-down key):
-If the node is empty, exit.
+Etapas necessárias para que se handle um event usando um node (pressionamento de tecla - page-down tecla):
+Se the node estiver vazio, cancele.
 Scroll the node down one page.
-If the event's shift flag is not set, focus on the node's first visible nodette in the node; show the desktop with status; exit.
-If the node's anchor is nil, put the node's first nodette into the node's anchor.
-Put the node's first visible nodette into the node's caret.
-Select the node's nodettes given the node's selection.
-Scroll to the node's caret given the node.
-Show the desktop with status.
+Se the event's shift sinal não estiver verde, focus on the node's first visible nodette in the node; mostre the desktop with status; exit.
+Se the node's anchor for inexistente, coloque the node's first nodette into the node's anchor.
+Coloque the node's first visible nodette into the node's caret.
+Select the node's nodettes usando the node's selection.
+Scroll to the node's caret usando the node.
+Mostre the desktop with status.
 
-To handle um event given um node (key down - page-up key):
-If the node is empty, exit.
+Etapas necessárias para que se handle um event usando um node (pressionamento de tecla - page-up tecla):
+Se the node estiver vazio, cancele.
 Scroll the node up one page.
-If the event's shift flag is not set, focus on the node's first visible nodette in the node; show the desktop with status; exit.
-If the node's anchor is nil, put the node's last nodette into the node's anchor.
-Put the node's first visible nodette into the node's caret.
-Select the node's nodettes given the node's selection.
-Scroll to the node's caret given the node.
-Show the desktop with status.
+Se the event's shift sinal não estiver verde, focus on the node's first visible nodette in the node; mostre the desktop with status; exit.
+Se the node's anchor for inexistente, coloque the node's last nodette into the node's anchor.
+Coloque the node's first visible nodette into the node's caret.
+Select the node's nodettes usando the node's selection.
+Scroll to the node's caret usando the node.
+Mostre the desktop with status.
 
-To handle um event given um node (key down - up-arrow key - shifted):
-If the node's caret's previous is nil, cluck; exit.
-Put the node's caret's previous into the node's caret.
-Select the node's nodettes given the node's selection.
-Scroll to the node's caret given the node.
-Show the desktop with status.
+Etapas necessárias para que se handle um event usando um node (pressionamento de tecla - up-arrow tecla - shifted):
+Se the node's caret's previous for inexistente, cluck; exit.
+Coloque the node's caret's previous into the node's caret.
+Select the node's nodettes usando the node's selection.
+Scroll to the node's caret usando the node.
+Mostre the desktop with status.
 
-To handle um event given um node (key down - up-arrow key):
-If the node is empty, exit.
-If the node's caret is nil, focus on the node's last nodette in the node; show the desktop with status; exit.
-If the event's shift flag is set, handle the event given the node (key down - up-arrow key - shifted); exit.
-Put the node's caret's previous into um nodette.
-If the nodette is nil, put the node's last nodette into the nodette.
+Etapas necessárias para que se handle um event usando um node (pressionamento de tecla - up-arrow tecla):
+Se the node estiver vazio, cancele.
+Se the node's caret for inexistente, focus on the node's last nodette in the node; mostre the desktop with status; exit.
+Se the event's shift sinal estiver verde, handle the event usando the node (pressionamento de tecla - up-arrow tecla - shifted); exit.
+Coloque the node's caret's previous into um nodette.
+Se the nodette for inexistente, coloque the node's last nodette into the nodette.
 Focus on the nodette in the node.
-Show the desktop with status.
+Mostre the desktop with status.
 
-To handle um event given um node (key down):
-If the event's key is the backspace key, handle the event given the node (key down - backspace key); exit.
-If the event's key is the delete key, handle the event given the node (key down - delete key); exit.
-If the event's key is the enter key, handle the event given the node (key down - enter key); exit.
-If the event's key is the down-arrow key, handle the event given the node (key down - down-arrow key); exit.
-If the event's key is the end key, handle the event given the node (key down - end key); exit.
-If the event's key is the escape key, handle the event given the node (key down - escape key); exit.
-If the event's key is the home key, handle the event given the node (key down - home key); exit.
-If the event's key is the page-down key, handle the event given the node (key down - page-down key); exit.
-If the event's key is the page-up key, handle the event given the node (key down - page-up key); exit.
-If the event's key is the up-arrow key, handle the event given the node (key down - up-arrow key); exit.
+Etapas necessárias para que se handle um event usando um node (pressionamento de tecla):
+Se the event's tecla é the backspace tecla, handle the event usando the node (pressionamento de tecla - backspace tecla); exit.
+Se the event's tecla é the delete tecla, handle the event usando the node (pressionamento de tecla - delete tecla); exit.
+Se the event's tecla é the enter tecla, handle the event usando the node (pressionamento de tecla - enter tecla); exit.
+Se the event's tecla é the down-arrow tecla, handle the event usando the node (pressionamento de tecla - down-arrow tecla); exit.
+Se the event's tecla é the end tecla, handle the event usando the node (pressionamento de tecla - end tecla); exit.
+Se the event's tecla é the escape tecla, handle the event usando the node (pressionamento de tecla - escape tecla); exit.
+Se the event's tecla é the home tecla, handle the event usando the node (pressionamento de tecla - home tecla); exit.
+Se the event's tecla é the page-down tecla, handle the event usando the node (pressionamento de tecla - page-down tecla); exit.
+Se the event's tecla é the page-up tecla, handle the event usando the node (pressionamento de tecla - page-up tecla); exit.
+Se the event's tecla é the up-arrow tecla, handle the event usando the node (pressionamento de tecla - up-arrow tecla); exit.
 
-To handle um event given um node (left click - modified):
+Etapas necessárias para que se handle um event usando um node (clique - modified):
 Snapshot the node's nodettes.
-Position the selection in the node given the event's spot.
-Track the node given the event.
+Position the selection in the node usando the event's spot.
+Track the node usando the event.
 
-To handle um event given um node (left click - not in node):
+Etapas necessárias para que se handle um event usando um node (clique - not in node):
 Deselect the nodettes in the node.
-Show the desktop with status.
+Mostre the desktop with status.
 
-To handle um event given um node (left click - not modified, not shifted):
+Etapas necessárias para que se handle um event usando um node (clique - not modified, not shifted):
 Deselect the node's nodettes.
 Snapshot the node's nodettes.
-Position the selection in the node given the event's spot.
-Track the node given the event.
+Position the selection in the node usando the event's spot.
+Track the node usando the event.
 
-To handle um event given um node (left click - shifted):
-Track the node given the event.
+Etapas necessárias para que se handle um event usando um node (clique - shifted):
+Track the node usando the event.
 
-To handle um event given um node (left click):
-If the event's spot is not in the node, handle the event given the node (left click - not in node); exit.
-If the event is modified, handle the event given the node (left click - modified); exit.
-If the event's shift flag is set, handle the event given the node (left click - shifted); exit.
-Handle the event given the node (left click - not modified, not shifted).
+Etapas necessárias para que se handle um event usando um node (clique):
+Se the event's spot não for in the node, handle the event usando the node (clique - not in node); exit.
+Se the event é modified, handle the event usando the node (clique - modified); exit.
+Se the event's shift sinal estiver verde, handle the event usando the node (clique - shifted); exit.
+Handle the event usando the node (clique - not modified, not shifted).
 
-To handle um event given um node (left double click):
-If something is selected in the node, handle open; exit.
-If the event's spot is not in the node, handle open; exit.
-Extend any selection in the node given the event's spot.
-Show the desktop with status.
+Etapas necessárias para que se handle um event usando um node (left double click):
+Se something é selected in the node, handle open; exit.
+Se the event's spot não for in the node, handle open; exit.
+Extend any selection in the node usando the event's spot.
+Mostre the desktop with status.
 Handle open.
 
-To handle um event given um node (right click):
-If the event's spot is not in the pad, exit.
-If the node is empty, exit.
-Show the hand cursor.
-Scroll the node given the event.
-Refresh the cursor.
+Etapas necessárias para que se handle um event usando um node (clique direito):
+Se the event's spot não for in the pad, cancele.
+Se the node estiver vazio, cancele.
+Mostre the hand cursor.
+Scroll the node usando the event.
+Atualize the cursor.
 
-To handle um event given um node (set cursor):
-Show the arrow cursor.
+Etapas necessárias para que se handle um event usando um node (mostrar seta):
+Mostre the arrow cursor.
 
-To handle extract nibble literal given um node:
-If the node is root-level, cluck; exit.
-If the node's selected nodette count is not 1, show error "Select only one file item to extract."; exit.
-Show status "Copiando...".
-Put the node's first selected nodette into um nodette.
-If the nodette's kind is not "file", show error "I can only extract files into nibble literals."; exit.
+Etapas necessárias para que se handle extract nibble literal usando um node:
+Se the node é root-level, cluck; exit.
+Se the node's selected nodette count não for 1, mostre error "Selecione ao menos um file item para extrair."; exit.
+Mostre status "Copiando...".
+Coloque the node's first selected nodette into um nodette.
+Se the nodette's kind não for "file", mostre error "Só é possível extrair files into nibble literals."; exit.
 Read the nodette's path into um buffer.
-If  the i/o error is not blank, show error the i/o error; exit.
+Se  the i/o error não estiver em branco, mostre error the i/o error; exit.
 Convert the buffer to um nibble string.
-Prepend "$" to the nibble string.
-Put the nibble string on the windows clipboard.
-Show status "Copiado".  
+Anteponha "$" to the nibble string.
+Coloque the nibble string on the windows clipboard.
+Mostre status "Copiado".  
 
-To handle get size given um node:
-If the node is root-level, cluck; exit.
-If nothing is selected in the node, show error "I'm not sure what you want me to get the size of."; exit.
-Show status "Obtendo...".
+Etapas necessárias para que se handle obtenha size usando um node:
+Se the node é root-level, cluck; exit.
+Se nothing é selected in the node, mostre error "Não sei bem oo que é pra fazer aqui."; exit.
+Mostre status "Obtendo...".
 Calculate um size of any selected nodettes in the node.
-Format the size and "byte" or "bytes" into um string.
-Show the desktop with the string.
-Flush the event queue.
+Format the size e "pedaço" ou "pedaços" into um string.
+Mostre the desktop with the string.
+Desmanche the event queue.
 
-To handle new directory given um node:
-If the node is root-level, cluck; exit.
-If the node's path is read-only, show error "Essa pasta está bloqueada."; exit.
-Ask "Directory name?".
-If the answer is blank, exit.
-If the answer is not dos-compatible, show error "Nome inválido"; exit.
-Put the node's path then the answer then "\" into um path.
-If the path is in the file system, show error "Esse nome já existe. Use outro nome."; exit.
-Show the desktop with "Criando...".
-Add um nodette to the node and to the file system given the path.
-If the i/o error is not blank, show error the i/o error; exit.
+Etapas necessárias para que se handle new directory usando um node:
+Se the node é root-level, cluck; exit.
+Se the node's path é read-only, mostre error "Essa pasta está bloqueada."; exit.
+Ask "Nome da pasta?".
+Se the answer estiver em branco, cancele.
+Se the answer não for dos-compatible, mostre error "Nome inválido"; exit.
+Coloque the node's path then the answer then "\" into um path.
+Se the path estiver in the file system, mostre error "Esse nome já existe. Use outro nome."; exit.
+Mostre the desktop with "Criando...".
+Adicione um nodette to the node e to the file system usando the path.
+Se the i/o error não estiver em branco, mostre error the i/o error; exit.
 Focus on the nodette in the node.
-Show the desktop with "Pasta criada com sucesso".
-Flush the event queue.
+Mostre the desktop with "Pasta criada com sucesso".
+Desmanche the event queue.
 
-To handle new document given um node:
-If the node is root-level, cluck; exit.
-If the node's path is read-only, show error "Essa pasta está bloqueada."; exit.
+Etapas necessárias para que se handle new document usando um node:
+Se the node é root-level, cluck; exit.
+Se the node's path é read-only, mostre error "Essa pasta está bloqueada."; exit.
 Ask "Document name?".
-If the answer is blank, exit.
-If the answer is not dos-compatible, show error "Nome inválido"; exit.
-Put the node's path then the answer into um path.
-If the path is in the file system, show error "Esse nome já existe. Use outro nome."; exit.
-Show the desktop with "Criando...".
-Put "ream " then the document version into um buffer.
-Append the return byte to the buffer.
-Append the linefeed byte to the buffer.
-Append "end" to the buffer.
-Add um nodette to the node and to the file system given the path and the buffer.
-If the i/o error is not blank, show error the i/o error; exit.
+Se the answer estiver em branco, cancele.
+Se the answer não for dos-compatible, mostre error "Nome inválido"; exit.
+Coloque the node's path then the answer into um path.
+Se the path estiver in the file system, mostre error "Esse nome já existe. Use outro nome."; exit.
+Mostre the desktop with "Criando...".
+Coloque "ream " then the document version into um buffer.
+Posponha the return pedaço to the buffer.
+Posponha the linefeed pedaço to the buffer.
+Posponha "end" to the buffer.
+Adicione um nodette to the node e to the file system usando the path e the buffer.
+Se the i/o error não estiver em branco, mostre error the i/o error; exit.
 Focus on the nodette in the node.
-Show the desktop with "Document created".
-Flush the event queue.
+Mostre the desktop with "Documento criado".
+Desmanche the event queue.
 
-To handle new text file given um node:
-If the node is root-level, cluck; exit.
-If the node's path is read-only, show error "Essa pasta está bloqueada."; exit.
+Etapas necessárias para que se handle new text file usando um node:
+Se the node é root-level, cluck; exit.
+Se the node's path é read-only, mostre error "Essa pasta está bloqueada."; exit.
 Ask "File name?".
-If the answer is blank, exit.
-If the answer is not dos-compatible, show error "Nome inválido"; exit.
-Put the node's path then the answer into um path.
-If the path is in the file system, show error "Esse nome já existe. Use outro nome."; exit.
-Show the desktop with "Criando...".
-Add um nodette to the node and to the file system given the path.
-If the i/o error is not blank, show error the i/o error; exit.
+Se the answer estiver em branco, cancele.
+Se the answer não for dos-compatible, mostre error "Nome inválido"; exit.
+Coloque the node's path then the answer into um path.
+Se the path estiver in the file system, mostre error "Esse nome já existe. Use outro nome."; exit.
+Mostre the desktop with "Criando...".
+Adicione um nodette to the node e to the file system usando the path.
+Se the i/o error não estiver em branco, mostre error the i/o error; exit.
 Focus on the nodette in the node.
-Show the desktop with "File created".
-Flush the event queue.
+Mostre the desktop with "Arquivo criado".
+Desmanche the event queue.
 
-To handle paste given um node:
-If the node is root-level, cluck; exit.
-If the finder's clipboard is empty in the file system, cluck; exit.
-If the node's path is read-only, show error "Essa pasta está bloqueada."; exit.
-Show status "Colando...".
-Paste any copied items into the node and into the file system returning um count.
-Set the caret and anchor in the node using the selected nodettes.
-Scroll to the node's caret given the node.
-Show the desktop.
-Show status the count and "item pasted" or "items pasted".
-Flush the event queue.
+Etapas necessárias para que se handle paste usando um node:
+Se the node é root-level, cluck; exit.
+Se the localizador's clipboard é vazio in the file system, cluck; exit.
+Se the node's path é read-only, mostre error "Essa pasta está bloqueada."; exit.
+Mostre status "Colando...".
+Paste any copied items into the node e into the file system returning um count.
+Abra the caret e anchor in the node using the selected nodettes.
+Scroll to the node's caret usando the node.
+Mostre the desktop.
+Mostre status the count e "item colado" ou "itens colados".
+Desmanche the event queue.
 
-To handle rename given um node:
-If the node is root-level, cluck; exit.
-If the node's path is read-only, show error "Essa pasta está bloqueada."; exit.
-Put the node's first selected nodette into um nodette.
-If the nodette is nil, show error "Não tem nada selecionado pra renomear"; exit.
+Etapas necessárias para que se handle rename usando um node:
+Se the node é root-level, cluck; exit.
+Se the node's path é read-only, mostre error "Essa pasta está bloqueada."; exit.
+Coloque the node's first selected nodette into um nodette.
+Se the nodette for inexistente, mostre error "Não tem nada selecionado pra renomear"; exit.
 Ask "Nome novo?" with the nodette's designator w/o backslash.
-If the answer is blank, exit.
+Se the answer estiver em branco, cancele.
 Lowercase the answer.
-Put the nodette's directory then the answer into um path.
-If the nodette's kind is "directory", append "\" to the path.
-If the path is in the file system, show error "Esse nome já existe. Use outro nome."; exit.
-Show the desktop with "Renomeando...".
-Rename the nodette in the node and in the file system given the path.
-If the i/o error is not blank, show error the i/o error; exit.
+Coloque the nodette's directory then the answer into um path.
+Se the nodette's kind for "directory", posponha "\" to the path.
+Se the path estiver in the file system, mostre error "Esse nome já existe. Use outro nome."; exit.
+Mostre the desktop with "Renomeando...".
+Rename the nodette in the node e in the file system usando the path.
+Se the i/o error não estiver em branco, mostre error the i/o error; exit.
 Focus on the nodette in the node.
-Show the desktop with "Renomeado".
-Flush the event queue.
+Mostre the desktop with "Renomeado".
+Desmanche the event queue.
 
-To handle reverse given um node:
-If the node is root-level, cluck; exit.
+Etapas necessárias para que se handle reverse usando um node:
+Se the node é root-level, cluck; exit.
 Reverse the node.
-Show the desktop with status.
-Flush the event queue.
+Mostre the desktop with status.
+Desmanche the event queue.
 
-To handle run given um node:
-If the node is root-level, cluck; exit.
-Put the node's first selected nodette into um nodette.
-If the nodette is nil, show error "I'm not sure what you want me to run."; exit.
-If the nodette's extension is not ".exe", show error "I don't know how to run that kind of file from here."; exit.
-Show status "Executando...".
-Start the current process given the nodette's path.
-If the i/o error is not blank, show error the i/o error; exit.
-Flush the event queue.
+Etapas necessárias para que se handle run usando um node:
+Se the node é root-level, cluck; exit.
+Coloque the node's first selected nodette into um nodette.
+Se the nodette for inexistente, mostre error "Não há nada para executar aqui."; exit.
+Se the nodette's extension não for ".exe", mostre error "Não é possível executar esse tipo de arquivo dessa forma."; exit.
+Mostre status "Executando...".
+Start the current process usando the nodette's path.
+Se the i/o error não estiver em branco, mostre error the i/o error; exit.
+Desmanche the event queue.
 
-To handle select all given um node:
-If the node is root-level, cluck; exit.
+Etapas necessárias para que se handle select all usando um node:
+Se the node é root-level, cluck; exit.
 Deselect the nodettes in the node.
 Select the node's nodettes.
-Put the node's first nodette into the node's anchor.
-Put the node's last nodette into the node's caret.
-Show the desktop with status.
+Coloque the node's first nodette into the node's anchor.
+Coloque the node's last nodette into the node's caret.
+Mostre the desktop with status.
 
-To handle sort nodettes given um node and um string:
-If the node is root-level, cluck; exit.
-If the string is "date", sort the node by date.
-If the string is "kind", sort the node by kind.
-If the string is "name", sort the node by designator.
-If the string is "extension", sort the node by extension.
-Show the desktop.
-Show status the node's nodettes' count and "item ordenado" or "itens ordenados".
-Flush the event queue.
+Etapas necessárias para que se handle classifique  nodettes usando um node e um string:
+Se the node é root-level, cluck; exit.
+Se the string for "date", classifique  the node por date.
+Se the string for "kind", classifique  the node por kind.
+Se the string for "name", classifique  the node por designator.
+Se the string for "extension", classifique  the node por extension.
+Mostre the desktop.
+Mostre status the node's nodettes' count e "item ordenado" ou "itens ordenados".
+Desmanche the event queue.
 
-To initialize the finder:
-Put the temp path then "the " then the module's name then " clipboard\" into the finder's clipboard.
-Put the node height and the node height into the finder's grid.
-Put 1/4 inch into the finder's margin.
-Put the pad's box into um box.
-Put the box's height divided by the node height times the node height into um height.
-Put the box's top plus the height into the box's bottom.
-Put the box into the finder's box.
+Etapas necessárias para que se initialize the localizador:
+Coloque the temp path then "the " then the module's name then " clipboard\" into the localizador's clipboard.
+Coloque the node height e the node height into the localizador's grid.
+Coloque 1/4 inch into the localizador's margin.
+Coloque the pad's box into um box.
+Coloque the box's height dividido por the node height times the node height into um height.
+Coloque the box's top plus the height into the box's bottom.
+Coloque the box into the localizador's box.
 
-To limit the origin in um node:
-If the node is nil, exit.
-If the node is empty, exit.
-Limit the node's origin's x-coord to -32767 and the finder's left plus the finder's margin.
-Put the finder's top minus the node's last nodette's top into um number.
-Limit the node's origin's y-coord to the number and the finder's top.
+Etapas necessárias para que se limite the origin in um node:
+Se the node for inexistente, cancele.
+Se the node estiver vazio, cancele.
+Limite the node's origin's x-coord to -32767 e the localizador's left plus the localizador's margin.
+Coloque the localizador's top minus the node's last nodette's top into um número.
+Limite the node's origin's y-coord to the número e the localizador's top.
 
-The node height is 360.
+The node height é 360.
 
-\An node is um thing with
+\An node é uma coisa with
 \an parent node (reference),
 \an box,
 \an origin,
 \an node selection called selection,
 \an kind,
 \an path, um directory, um designator, um designator called designator w/o backslash, um extension,
-\an selected flag, um previously selected flag,
+\an selected sinal, um previously selected sinal,
 \some nodettes,
-\an source, or 
-\an document and um page (reference).
+\an source, ou 
+\an document e uma page (reference).
 
-An node is um thing with
+An node é uma coisa with
 an parent node (reference),
 an box,
 an origin,
@@ -769,437 +769,437 @@ an node selection called selection,
 an kind,
 an path, um directory, um designator, um designator called designator w/o backslash, um extension,
 an creation date/time string,
-an selected flag, um previously selected flag,
+an selected sinal, um previously selected sinal,
 some nodettes,
-an source, or 
-an document and um page (reference).
+an source, ou 
+an document e uma page (reference).
 
-An node selection is um pair with um anchor nodette, um caret nodette.
+An node selection é um pair with um anchor nodette, um caret nodette.
 
-An nodette is um node.
+An nodette é um node.
 
-To open um node:
-If the node is nil, exit.
-If the node's kind is "root", open the node (root); exit.
-If the node's kind is "disk", open the node (disk or directory); exit.
-If the node's kind is "directory", open the node (disk or directory); exit.
-If the node's kind is "file", open the node (file); exit.
+Etapas necessárias para que se open um node:
+Se the node for inexistente, cancele.
+Se the node's kind for "root", open the node (root); exit.
+Se the node's kind for "disk", open the node (disk ou directory); exit.
+Se the node's kind for "directory", open the node (disk ou directory); exit.
+Se the node's kind for "file", open the node (file); exit.
 
-\To open um node (disk or directory):
-\Get um item from the node's path.
-\If the item is not found, break.
-\Put the node's path then the item's designator into um path.
-\Create um nodette given the path.
-\Append the nodette to the node's nodettes.
-\Put the node into the nodette's parent node.
-\Repeat.
-\Adjust the node.
-\Sort the node.
+\Etapas necessárias para que se open um node (disk ou directory):
+\Obtenha um item from the node's path.
+\Se the item não for found, pare.
+\Coloque the node's path then the item's designator into um path.
+\Crie um nodette usando the path.
+\Posponha the nodette to the node's nodettes.
+\Coloque the node into the nodette's parent node.
+\Repita.
+\Ajuste the node.
+\Classifique the node.
 
-To open um node (disk or directory):
-Get um item from the node's path.
-If the item is not found, break.
-Put the node's path then the item's designator into um path.
-Create um nodette given the path and the item's creation date/time string.
-Append the nodette to the node's nodettes.
-Put the node into the nodette's parent node.
-Repeat.
-Adjust the node.
-Sort the node.
+Etapas necessárias para que se open um node (disk ou directory):
+Obtenha um item from the node's path.
+Se the item não for found, pare.
+Coloque the node's path then the item's designator into um path.
+Crie um nodette usando the path e the item's creation date/time string.
+Posponha the nodette to the node's nodettes.
+Coloque the node into the nodette's parent node.
+Repita.
+Ajuste the node.
+Classifique the node.
 
-To open um node (file como dump):
+Etapas necessárias para que se open um node (file como dump):
 Read the node's path into um buffer.
-If the i/o error is not blank, exit.
-Open the node given the buffer (file como dump).
+Se the i/o error não estiver em branco, cancele.
+Open the node usando the buffer (file como dump).
 
-To open um node (file como text):
+Etapas necessárias para que se open um node (file como text):
 Read the node's path into um buffer.
-If the i/o error is not blank, exit.
-Open the node given the buffer (file como text).
+Se the i/o error não estiver em branco, cancele.
+Open the node usando the buffer (file como text).
 
-To open um node (file):
+Etapas necessárias para que se open um node (file):
 Read the node's path into um buffer.
-If the i/o error is not blank, exit.
-If the buffer is document-format, open the node given the buffer (file como document); exit.
-If the buffer is text-format, open the node given the buffer (file como text); exit.
-Open the node given the buffer (file como dump).
+Se the i/o error não estiver em branco, cancele.
+Se the buffer é document-format, open the node usando the buffer (file como document); exit.
+Se the buffer é text-format, open the node usando the buffer (file como text); exit.
+Open the node usando the buffer (file como dump).
 
-To open um node (root):
-Put the accent byte into um byte.
-Loop.
-Add 1 to the byte.
-If the byte is greater than the little-z byte, break.
-If the byte is not any valid drive, repeat.
-Put the byte then ":\" into um path.
-Create um nodette given the path.
-Append the nodette to the node's nodettes.
-Put the node into the nodette's parent node.
-Repeat.
-Adjust the node.
+Etapas necessárias para que se open um node (root):
+Coloque the accent pedaço into um pedaço.
+Percorra.
+Adicione 1 to the pedaço.
+Se the pedaço for maior do que the little-z pedaço, pare.
+Se the pedaço não for any valid drive, repita.
+Coloque the pedaço then ":\" into um path.
+Crie um nodette usando the path.
+Posponha the nodette to the node's nodettes.
+Coloque the node into the nodette's parent node.
+Repita.
+Ajuste the node.
 
-To open um node given um buffer (file como document):
-Create the node's document given the buffer.
+Etapas necessárias para que se open um node usando um buffer (file como document):
+Crie the node's document usando the buffer.
 
-To open um node given um buffer (file como dump):
+Etapas necessárias para que se open um node usando um buffer (file como dump):
 Dump the buffer into another buffer.
-Create the node's source given the other buffer.
-Put "courier new" into um font name.
-Change the node's source's text given the font name.
-Set the node's source's read-only flag.
-Clear the node's source's colorized flag.
+Crie the node's source usando the other buffer.
+Coloque "courier new" into uma font name.
+Mude the node's source's text usando the font name.
+Abra the node's source's read-only sinal.
+Feche the node's source's colorized sinal.
 
-To open um node given um buffer (file como text):
-Create the node's source given the buffer.
-Clear the node's source's colorized flag.
-If the node's extension is blank, set the node's source's colorized flag.
+Etapas necessárias para que se open um node usando um buffer (file como text):
+Crie the node's source usando the buffer.
+Feche the node's source's colorized sinal.
+Se the node's extension estiver em branco, abra the node's source's colorized sinal.
 
-To open um node given um path:
-If the node is nil, exit.
+Etapas necessárias para que se open um node usando um path:
+Se the node for inexistente, cancele.
 Extract um directory from the path.
-If the directory is not blank, open the node given the directory.
+Se the directory não estiver em branco, open the node usando the directory.
 Extract um designator from the path.
-Find um nodette given the node's nodettes and the designator.
-If the nodette is nil, put "arquivo ou pasta inexistente" into the i/o error; exit.
+Encontre um nodette usando the node's nodettes e the designator.
+Se the nodette for inexistente, coloque "arquivo ou pasta inexistente" into the i/o error; exit.
 Open the nodette.
 Focus on the nodette in the node.
-If the i/o error is blank, put the nodette into the node.
+Se the i/o error estiver em branco, coloque the nodette into the node.
 
-To paste any copied items into um node and into the file system returning um count:
-Put 0 into the count.
-If the node is nil, exit.
-Put 0 into um current count.
-Get um total count of items in the finder's clipboard in the file system.
-Put the node's first selected nodette into um first selected nodette.
+Etapas necessárias para que se paste any copied items into um node e into the file system returning um count:
+Coloque 0 into the count.
+Se the node for inexistente, cancele.
+Coloque 0 into um current count.
+Obtenha um total count of items in the localizador's clipboard in the file system.
+Coloque the node's first selected nodette into um first selected nodette.
 Deselect the nodettes in the node.
-Loop.
-Get um item from the finder's clipboard.
-If the item is not found, exit.
-Add 1 to the current count.
-If the user does not want to overwrite the item in the node, repeat.
-Show status the current count then " de " then the total count then "...".
-Paste the item into the node and into the file system before the first selected nodette.
-If the i/o error is not blank, repeat.
-Add 1 to the count.
-Repeat.
+Percorra.
+Obtenha um item from the localizador's clipboard.
+Se the item não for found, cancele.
+Adicione 1 to the current count.
+Se the usuário não está querendo sobrescrever the item in the node, repita.
+Mostre status the current count then " de " then the total count then "...".
+Paste the item into the node e into the file system before the first selected nodette.
+Se the i/o error não estiver em branco, repita.
+Adicione 1 to the count.
+Repita.
 
-To paste um item into um node and into the file system before um nodette:
-If the node is nil, exit.
-Put the node's path into um path.
-Append the item's designator to the path.
+Etapas necessárias para que se paste um item into um node e into the file system before um nodette:
+Se the node for inexistente, cancele.
+Coloque the node's path into um path.
+Posponha the item's designator to the path.
 Duplicate the item's path to the path in the file system.
-If the i/o error is not blank, exit.
-Find another nodette given the node's nodettes and the item's designator.
-If the other nodette is not nil, select the other nodette; exit.
-Create um third nodette given the path.
-Insert the third nodette into the node's nodettes before the nodette.
-Put the node into the third nodette's parent node.
+Se the i/o error não estiver em branco, cancele.
+Encontre another nodette usando the node's nodettes e the item's designator.
+Se the other nodette não for inexistente, select the other nodette; exit.
+Crie um third nodette usando the path.
+Insira the third nodette into the node's nodettes before the nodette.
+Coloque the node into the third nodette's parent node.
 Select the third nodette.
-Adjust every nodette in the node.
+Ajuste cada nodette in the node.
 
-An path link is um string thing.
+An path link é um string coisa.
 
-To position the selection in um node given um spot:
-If the node is nil, exit.
-Localize the spot given the node's origin.
-Find the node's caret in the node given the spot (limiting).
-Put the node's caret into the node's anchor.
+Etapas necessárias para que se position the selection in um node usando um spot:
+Se the node for inexistente, cancele.
+Localize the spot usando the node's origin.
+Encontre the node's caret in the node usando the spot (limiting).
+Coloque the node's caret into the node's anchor.
 
-To put the finder's y-extent into um height:
-Put the finder's box's y-extent into the height.
+Etapas necessárias para que se coloque the localizador's y-extent into um height:
+Coloque the localizador's box's y-extent into the height.
 
-To put um node's first selected nodette into um nodette:
-Void the nodette.
-If the node is nil, exit.
-Loop.
-Get the nodette from the node's nodettes.
-If the nodette is nil, break.
-If the nodette is selected, exit.
-Repeat.
+Etapas necessárias para que se coloque um node's first selected nodette into um nodette:
+Esvazie the nodette.
+Se the node for inexistente, cancele.
+Percorra.
+Obtenha the nodette from the node's nodettes.
+Se the nodette for inexistente, pare.
+Se the nodette é selected, cancele.
+Repita.
 
-To put um node's first visible nodette into um nodette:
-Void the nodette.
-If the node is nil, exit.
-Loop.
-Get the nodette from the node's nodettes.
-If the nodette is nil, break.
-If the nodette is visible in the node, exit.
-Repeat.
+Etapas necessárias para que se coloque um node's first visible nodette into um nodette:
+Esvazie the nodette.
+Se the node for inexistente, cancele.
+Percorra.
+Obtenha the nodette from the node's nodettes.
+Se the nodette for inexistente, pare.
+Se the nodette é visible in the node, cancele.
+Repita.
 
-To put um node's last selected nodette into um nodette:
-Void the nodette.
-If the node is nil, exit.
-Loop.
-Get the nodette from the node's nodettes (backwards).
-If the nodette is nil, break.
-If the nodette is selected, exit.
-Repeat.
+Etapas necessárias para que se coloque um node's last selected nodette into um nodette:
+Esvazie the nodette.
+Se the node for inexistente, cancele.
+Percorra.
+Obtenha the nodette from the node's nodettes (backwards).
+Se the nodette for inexistente, pare.
+Se the nodette é selected, cancele.
+Repita.
 
-To put um node's root node into another node:
+Etapas necessárias para que se coloque um node's root node into another node:
 Privatize the node.
-Loop.
-If the node is nil, break.
-If the node's parent node is nil, break.
-Put the node's parent node into the node.
-Repeat.
-Put the node into the other node.
+Percorra.
+Se the node for inexistente, pare.
+Se the node's parent node for inexistente, pare.
+Coloque the node's parent node into the node.
+Repita.
+Coloque the node into the other node.
 
-To put um node's selected nodette count into um count:
-Put 0 into the count.
-If the node is nil, exit.
-Loop.
-Get um nodette from the node's nodettes.
-If the nodette is nil, exit.
-If the nodette is selected, add 1 to the count.
-Repeat.
+Etapas necessárias para que se coloque um node's selected nodette count into um count:
+Coloque 0 into the count.
+Se the node for inexistente, cancele.
+Percorra.
+Obtenha um nodette from the node's nodettes.
+Se the nodette for inexistente, cancele.
+Se the nodette é selected, adicione 1 to the count.
+Repita.
 
-To remove any selected nodettes in um node and in the file system returning um count:
-Put 0 into the count.
-If the node is nil, exit.
-Put 0 into um current count.
-Put the node's selected nodette count into um total count.
-Put the node's first nodette into um next nodette.
-Loop.
-If the next nodette is nil, exit.
-Put the next nodette into um current nodette.
-Put the current nodette's next into the next nodette.
-If the current nodette is not selected, repeat.
-Add 1 to the current count.
-Show status the current count then " de " then the total count then "...".
-Remove the current nodette in the node and in the file system.
-If the i/o error is not blank, repeat.
-Add 1 to the count.
-Repeat.
+Etapas necessárias para que se remove any selected nodettes in um node e in the file system returning um count:
+Coloque 0 into the count.
+Se the node for inexistente, cancele.
+Coloque 0 into um current count.
+Coloque the node's selected nodette count into um total count.
+Coloque the node's first nodette into um next nodette.
+Percorra.
+Se the next nodette for inexistente, cancele.
+Coloque the next nodette into um current nodette.
+Coloque the current nodette's next into the next nodette.
+Se the current nodette não for selected, repita.
+Adicione 1 to the current count.
+Mostre status the current count then " de " then the total count then "...".
+Remove the current nodette in the node e in the file system.
+Se the i/o error não estiver em branco, repita.
+Adicione 1 to the count.
+Repita.
 
-To remove um nodette in um node and in the file system:
-If the node is nil, exit.
-If the nodette is nil, exit.
+Etapas necessárias para que se remove um nodette in um node e in the file system:
+Se the node for inexistente, cancele.
+Se the nodette for inexistente, cancele.
 Destroy the nodette's path in the file system.
-If the i/o error is not blank, exit.
+Se the i/o error não estiver em branco, cancele.
 Remove the nodette from the node's nodettes.
 Destroy the nodette.
-Adjust every nodette in the node.
+Ajuste cada nodette in the node.
 
-To rename um nodette in um node and in the file system given um path:
-If the node is nil, exit.
-If the nodette is nil, exit.
+Etapas necessárias para que se rename um nodette in um node e in the file system usando um path:
+Se the node for inexistente, cancele.
+Se the nodette for inexistente, cancele.
 Rename the nodette's path to the path in the file system.
-If the i/o error is not blank, exit.
-Put the path into the nodette's path.
+Se the i/o error não estiver em branco, cancele.
+Coloque the path into the nodette's path.
 Lowercase the nodette's path.
 Extract the nodette's directory from the path.
 Extract the nodette's designator from the path.
-Put the nodette's designator into the nodette's designator w/o backslash.
+Coloque the nodette's designator into the nodette's designator w/o backslash.
 Remove any trailing backslash from the nodette's designator w/o backslash.
 Extract the nodette's extension from the path.
 
-To reverse um node:
-If the node is nil, exit.
+Etapas necessárias para que se reverse um node:
+Se the node for inexistente, cancele.
 Reverse the node's nodettes.
-Adjust every nodette in the node.
+Ajuste cada nodette in the node.
 
-To save um node:
-If the node is nil, exit.
-If the node's source is not nil, save the node (source).
-If the node's document is not nil, save the node (document).
+Etapas necessárias para que se save um node:
+Se the node for inexistente, cancele.
+Se the node's source não for inexistente, save the node (source).
+Se the node's document não for inexistente, save the node (document).
 
-To save um node (document):
-Clear the i/o error.
-If the node's document is not modified, exit.
+Etapas necessárias para que se save um node (document):
+Limpe the i/o error.
+Se the node's document não for modified, cancele.
 Externalize the node's document into um buffer.
-Write the buffer to the node's path.
-If the i/o error is blank, clear the node's document's modified flag.
+Escreva the buffer to the node's path.
+Se the i/o error estiver em branco, feche the node's document's modified sinal.
 
-To save um node (source):
-Clear the i/o error.
-If the node's source is not modified, exit.
-Remember the node's source's text with "save".
+Etapas necessárias para que se save um node (source):
+Limpe the i/o error.
+Se the node's source não for modified, cancele.
+Relembre the node's source's text with "save".
 Convert the node's source to um buffer.
-Write the buffer to the node's path.
-If the i/o error is blank, clear the node's source's text's modified flag.
+Escreva the buffer to the node's path.
+Se the i/o error estiver em branco, feche the node's source's text's modified sinal.
 
-To scroll um node down one page:
-If the node is nil, exit.
-Put the finder's y-extent minus the node height into um difference's y-number.
+Etapas necessárias para que se scroll um node down one page:
+Se the node for inexistente, cancele.
+Coloque the localizador's y-extent minus the node height into um difference's y-number.
 Negate the difference's y-number.
-Scroll the node given the difference.
+Scroll the node usando the difference.
 
-To scroll um node given um difference:
-If the node is nil, exit.
-Add the difference to the node's origin.
-Limit the origin in the node.
+Etapas necessárias para que se scroll um node usando um difference:
+Se the node for inexistente, cancele.
+Adicione the difference to the node's origin.
+Limite the origin in the node.
 
-To scroll um node given um event:
-If the node is nil, exit.
-Find um sector given the finder's grid and the event's spot.
-Loop.
-If the mouse's right button is up, exit.
-Find another sector given the finder's grid and the mouse's spot.
-Get um difference between the other sector and the sector.
-If the difference is 0, repeat.
-Scroll the node given the difference.
-Show the desktop.
-Add the difference to the sector.
-Repeat.
+Etapas necessárias para que se scroll um node usando um event:
+Se the node for inexistente, cancele.
+Encontre um sector usando the localizador's grid e the event's spot.
+Percorra.
+Se the mouse's right button é up, cancele.
+Encontre another sector usando the localizador's grid e the mouse's spot.
+Obtenha um difference between the other sector e the sector.
+Se the difference for 0, repita.
+Scroll the node usando the difference.
+Mostre the desktop.
+Adicione the difference to the sector.
+Repita.
 
-To scroll um node up one page:
-If the node is nil, exit.
-Put the finder's y-extent minus the node height into um difference's y-number.
-Scroll the node given the difference.
+Etapas necessárias para que se scroll um node up one page:
+Se the node for inexistente, cancele.
+Coloque the localizador's y-extent minus the node height into um difference's y-number.
+Scroll the node usando the difference.
 
-To scroll to um nodette given um node:
-If the node is nil, exit.
-If the nodette is nil, exit.
-If the nodette is visible in the node, exit.
-Put the nodette's box into um box.
-Globalize the box given the node's origin.
-If the box's bottom is less than or equal to the finder's top, put the finder's top minus the box's top into um difference's y-number.
-If the box's top is greater than or equal to the finder's bottom, put the finder's bottom minus the box's top minus the edge height into the difference's y-number.
-Scroll the node given the difference.
+Etapas necessárias para que se scroll to um nodette usando um node:
+Se the node for inexistente, cancele.
+Se the nodette for inexistente, cancele.
+Se the nodette é visible in the node, cancele.
+Coloque the nodette's box into um box.
+Globalize the box usando the node's origin.
+Se the box's bottom for menor [do que] ou igual a the localizador's top, coloque the localizador's top minus the box's top into um difference's y-number.
+Se the box's top for maior [do que] ou igual a the localizador's bottom, coloque the localizador's bottom minus the box's top minus the edge height into the difference's y-number.
+Scroll the node usando the difference.
 
-To select um nodette:
-If the nodette is nil, exit.
-Set the nodette's selected flag.
+Etapas necessárias para que se select um nodette:
+Se the nodette for inexistente, cancele.
+Abra the nodette's selected sinal.
 
-To select some nodettes:
-Get um nodette from the nodettes.
-If the nodette is nil, exit.
+Etapas necessárias para que se select alguns nodettes:
+Obtenha um nodette from the nodettes.
+Se the nodette for inexistente, cancele.
 Select the nodette.
-Repeat.
+Repita.
 
-To select some nodettes given um node selection:
-If the node selection's anchor is nil, exit.
-If the node selection's caret is nil, exit.
-Put the node selection's anchor's box's left-top and the node selection's caret's box's right-bottom into um box.
-Add the tpp to the box's top.
-Subtract the tpp from the box's bottom.
+Etapas necessárias para que se select alguns nodettes usando um node selection:
+Se the node selection's anchor for inexistente, cancele.
+Se the node selection's caret for inexistente, cancele.
+Coloque the node selection's anchor's box's left-top e the node selection's caret's box's right-bottom into um box.
+Adicione the tpp to the box's top.
+Subtraia the tpp from the box's bottom.
 Normalize the box.
-Loop.
-Get um nodette from the nodettes.
-If the nodette is nil, exit.
-Put the nodette's previously selected flag into the nodette's selected flag.
-If the nodette's box is not touching the box, repeat.
-Reverse the nodette's selected flag.
-Repeat.
+Percorra.
+Obtenha um nodette from the nodettes.
+Se the nodette for inexistente, cancele.
+Coloque the nodette's previously selected sinal into the nodette's selected sinal.
+Se the nodette's box não for touching the box, repita.
+Reverse the nodette's selected sinal.
+Repita.
 
-Some selected path links are some path links.
+Some selected path links are alguns path links.
 
-To set the caret and anchor in um node using the selected nodettes:
-If the node is nil, exit.
-Put the node's last selected nodette into the node's caret.
-Put the node's caret into um nodette.
-Loop.
-If the nodette is nil, exit.
-If the nodette is not selected, exit.
-Put the nodette into the node's anchor.
-Put the nodette's previous into the nodette.
-Repeat.
+Etapas necessárias para que se abra the caret e anchor in um node using the selected nodettes:
+Se the node for inexistente, cancele.
+Coloque the node's last selected nodette into the node's caret.
+Coloque the node's caret into um nodette.
+Percorra.
+Se the nodette for inexistente, cancele.
+Se the nodette não for selected, cancele.
+Coloque the nodette into the node's anchor.
+Coloque the nodette's previous into the nodette.
+Repita.
 
-To set um node to read-only mode:
-If the node is nil, exit.
-If the node's source is not nil, set the node's source's read-only flag.
-If the node's document is not nil, set the node's document's read-only flag.
+Etapas necessárias para que se abra um node to read-only mode:
+Se the node for inexistente, cancele.
+Se the node's source não for inexistente, abra the node's source's read-only sinal.
+Se the node's document não for inexistente, abra the node's document's read-only sinal.
 
-To snapshot some nodettes:
-Get um nodette from the nodettes.
-If the nodette is nil, exit.
-Put the nodette's selected flag into the nodette's previously selected flag.
-Repeat.
+Etapas necessárias para que se snapshot alguns nodettes:
+Obtenha um nodette from the nodettes.
+Se the nodette for inexistente, cancele.
+Coloque the nodette's selected sinal into the nodette's previously selected sinal.
+Repita.
 
-To sort um node:
-If the node is nil, exit.
-Sort the node by extension.
-Sort the node by designator.
-Sort the node by kind.
+Etapas necessárias para que se classifique  um node:
+Se the node for inexistente, cancele.
+Classifique the node por extension.
+Classifique the node por designator.
+Classifique the node por kind.
 
-To sort um node by designator:
-If the node is nil, exit.
-Sort the node's nodettes by designator.
-Adjust every nodette in the node.
+Etapas necessárias para que se classifique  um node por designator:
+Se the node for inexistente, cancele.
+Classifique the node's nodettes por designator.
+Ajuste cada nodette in the node.
 
-To sort um node by extension:
-If the node is nil, exit.
-Sort the node's nodettes by extension.
-Adjust every nodette in the node.
+Etapas necessárias para que se classifique  um node por extension:
+Se the node for inexistente, cancele.
+Classifique the node's nodettes por extension.
+Ajuste cada nodette in the node.
 
-To sort um node by date:
-If the node is nil, exit.
-Sort the node's nodettes by date.
-Adjust every nodette in the node.
+Etapas necessárias para que se classifique  um node por date:
+Se the node for inexistente, cancele.
+Classifique the node's nodettes por date.
+Ajuste cada nodette in the node.
 
-To sort um node by kind:
-If the node is nil, exit.
-Sort the node's nodettes by kind.
-Adjust every nodette in the node.
+Etapas necessárias para que se classifique  um node por kind:
+Se the node for inexistente, cancele.
+Classifique the node's nodettes por kind.
+Ajuste cada nodette in the node.
 
-To sort some nodettes by designator:
-If the nodettes' first is the nodettes' last, exit.
-Split the nodettes into some left nodettes and some right nodettes.
-Sort the left nodettes by designator.
-Sort the right nodettes by designator.
-Loop.
-Put the left nodettes' first into um left nodette.
-Put the right nodettes' first into um right nodette.
-If the left nodette is nil, append the right nodettes to the nodettes; exit.
-If the right nodette is nil, append the left nodettes to the nodettes; exit.
-If the left nodette's designator w/o backslash is greater than the right nodette's designator w/o backslash, move the right nodette from the right nodettes to the nodettes; repeat.
-Move the left nodette from the left nodettes to the nodettes.
-Repeat.
+Etapas necessárias para que se classifique  alguns nodettes por designator:
+Se the nodettes' first é the nodettes' last, cancele.
+Split the nodettes into alguns left nodettes e alguns right nodettes.
+Classifique the left nodettes por designator.
+Classifique the right nodettes por designator.
+Percorra.
+Coloque the left nodettes' first into um left nodette.
+Coloque the right nodettes' first into um right nodette.
+Se the left nodette for inexistente, posponha the right nodettes to the nodettes; exit.
+Se the right nodette for inexistente, posponha the left nodettes to the nodettes; exit.
+Se the left nodette's designator w/o backslash for maior do que the right nodette's designator w/o backslash, mova the right nodette from the right nodettes to the nodettes; repeat.
+Mova the left nodette from the left nodettes to the nodettes.
+Repita.
 
-To sort some nodettes by extension:
-If the nodettes' first is the nodettes' last, exit.
-Split the nodettes into some left nodettes and some right nodettes.
-Sort the left nodettes by extension.
-Sort the right nodettes by extension.
-Loop.
-Put the left nodettes' first into um left nodette.
-Put the right nodettes' first into um right nodette.
-If the left nodette is nil, append the right nodettes to the nodettes; exit.
-If the right nodette is nil, append the left nodettes to the nodettes; exit.
-If the left nodette's extension is greater than the right nodette's extension, move the right nodette from the right nodettes to the nodettes; repeat.
-Move the left nodette from the left nodettes to the nodettes.
-Repeat.
+Etapas necessárias para que se classifique  alguns nodettes por extension:
+Se the nodettes' first é the nodettes' last, cancele.
+Split the nodettes into alguns left nodettes e alguns right nodettes.
+Classifique the left nodettes por extension.
+Classifique the right nodettes por extension.
+Percorra.
+Coloque the left nodettes' first into um left nodette.
+Coloque the right nodettes' first into um right nodette.
+Se the left nodette for inexistente, posponha the right nodettes to the nodettes; exit.
+Se the right nodette for inexistente, posponha the left nodettes to the nodettes; exit.
+Se the left nodette's extension for maior do que the right nodette's extension, mova the right nodette from the right nodettes to the nodettes; repeat.
+Mova the left nodette from the left nodettes to the nodettes.
+Repita.
 
-To sort some nodettes by date:
-If the nodettes' first is the nodettes' last, exit.
-Split the nodettes into some left nodettes and some right nodettes.
-Sort the left nodettes by date.
-Sort the right nodettes by date.
-Loop.
-Put the left nodettes' first into um left nodette.
-Put the right nodettes' first into um right nodette.
-If the left nodette is nil, append the right nodettes to the nodettes; exit.
-If the right nodette is nil, append the left nodettes to the nodettes; exit.
-If the left nodette's creation date/time string is greater than the right nodette's creation date/time string, move the right nodette from the right nodettes to the nodettes; repeat.
-Move the left nodette from the left nodettes to the nodettes.
-Repeat.
+Etapas necessárias para que se classifique  alguns nodettes por date:
+Se the nodettes' first é the nodettes' last, cancele.
+Split the nodettes into alguns left nodettes e alguns right nodettes.
+Classifique the left nodettes por date.
+Classifique the right nodettes por date.
+Percorra.
+Coloque the left nodettes' first into um left nodette.
+Coloque the right nodettes' first into um right nodette.
+Se the left nodette for inexistente, posponha the right nodettes to the nodettes; exit.
+Se the right nodette for inexistente, posponha the left nodettes to the nodettes; exit.
+Se the left nodette's creation date/time string for maior do que the right nodette's creation date/time string, mova the right nodette from the right nodettes to the nodettes; repeat.
+Mova the left nodette from the left nodettes to the nodettes.
+Repita.
 
-To sort some nodettes by kind:
-If the nodettes' first is the nodettes' last, exit.
-Split the nodettes into some left nodettes and some right nodettes.
-Sort the left nodettes by kind.
-Sort the right nodettes by kind.
-Loop.
-Put the left nodettes' first into um left nodette.
-Put the right nodettes' first into um right nodette.
-If the left nodette is nil, append the right nodettes to the nodettes; exit.
-If the right nodette is nil, append the left nodettes to the nodettes; exit.
-If the left nodette's kind is greater than the right nodette's kind, move the right nodette from the right nodettes to the nodettes; repeat.
-Move the left nodette from the left nodettes to the nodettes.
-Repeat.
+Etapas necessárias para que se classifique  alguns nodettes por kind:
+Se the nodettes' first é the nodettes' last, cancele.
+Split the nodettes into alguns left nodettes e alguns right nodettes.
+Classifique the left nodettes por kind.
+Classifique the right nodettes por kind.
+Percorra.
+Coloque the left nodettes' first into um left nodette.
+Coloque the right nodettes' first into um right nodette.
+Se the left nodette for inexistente, posponha the right nodettes to the nodettes; exit.
+Se the right nodette for inexistente, posponha the left nodettes to the nodettes; exit.
+Se the left nodette's kind for maior do que the right nodette's kind, mova the right nodette from the right nodettes to the nodettes; repeat.
+Mova the left nodette from the left nodettes to the nodettes.
+Repita.
 
-An total count is um count.
+An total count é um count.
 
-To track um node given um event:
-If the node is nil, exit.
-If the event is nil, exit.
-Clear um node selection.
-Loop.
-If um flag is set, show the desktop with status.
-If the mouse's left button is up, exit.
-Put the mouse's spot into um spot.
-Autoscroll the node given the spot and the flag.
-Extend any selection in the node given the spot.
-If the node's selection is the node selection, repeat.
-Set the flag.
-Put the node's selection into the node selection.
-Repeat.
+Etapas necessárias para que se track um node usando um event:
+Se the node for inexistente, cancele.
+Se the event for inexistente, cancele.
+Limpe um node selection.
+Percorra.
+Se um sinal estiver verde, mostre the desktop with status.
+Se the mouse's left button é up, cancele.
+Coloque the mouse's spot into um spot.
+Autoscroll the node usando the spot e the sinal.
+Extend any selection in the node usando the spot.
+Se the node's selection é the node selection, repita.
+Abra the sinal.
+Coloque the node's selection into the node selection.
+Repita.
